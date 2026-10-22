@@ -1,0 +1,1327 @@
+{
+ "questions": {
+  "L1-TF01": {
+   "text": "递归方法在计算上比迭代方法更高效。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "1a0a84e6d247d91f40e236f1002f3912e411376f2d1736ca2d09fed1dee1352b"
+  },
+  "L2-TF01": {
+   "text": "类总是引用它的对象。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "41135dd826a04efff55d5fd6c4d483e75dc16b52ed295be99b16b4053341de8b"
+  },
+  "L2-TF02": {
+   "text": "对象总是引用它所属的类。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "2acd2aa6b8f7c2972a33e1039489f17e038d2e973c52329d547dd4733844d12c"
+  },
+  "L2-TF03": {
+   "text": "默认构造方法必须是其方法体中的第一条语句。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "f2dd1a9e19a6206265d548c0ed5e2b49c5e0ba75d953cf9ae0c8a849a8b999f3"
+  },
+  "L2-FB01": {
+   "text": "给定语句 Progression arithmeticProgress = new Progression(); new 关键字的作用是 ____[1]。",
+   "options": [],
+   "source_sha256": "50648569255a6126429c46dd755bec82a38bd7aeb4fa1bd2e9731151fd32327c"
+  },
+  "L2-FB02": {
+   "text": "上述语句中的引用变量是 ____[1]。",
+   "options": [],
+   "source_sha256": "1e2624aac99c9d7a3ad6af38eba4ba4d8c4b4eebbf3a9a24aa499dbd6c3b8b96"
+  },
+  "L2-FB03": {
+   "text": "引用变量可以描述为 ____[1]。",
+   "options": [],
+   "source_sha256": "fd0e4843ebb4913c972ba9f8a901161276df0a1c3f6220be767f01f7fd25a985"
+  },
+  "L2-FB04": {
+   "text": "在程序执行期间，堆可以被描述为 ____[1] 内存分配。",
+   "options": [],
+   "source_sha256": "421e19ddeae506f07d7122428c9285f2bd0b0b8e6b983bc523fdc113cccae15d"
+  },
+  "L2-FB05": {
+   "text": "UML 图中给出的符号（实线 + 实心菱形）称为 ____[1]。",
+   "options": [],
+   "source_sha256": "cd4bc9d36866fe14f513affed3818d90a2db2843cb6df3201f9ee68234690274"
+  },
+  "L2-FB06": {
+   "text": "上题中该（组合）符号的含义是 ____[1]。",
+   "options": [],
+   "source_sha256": "d47ada4d50dd3531bebaa40125dc18a942f53dc969d04e315b21703ac908a707"
+  },
+  "L2-FB07": {
+   "text": "UML 图中给出的符号（虚线 + 空心三角）称为 ____[1]。",
+   "options": [],
+   "source_sha256": "6ebfecead0f98a3f7e38f50fdb01e4d04fc7864ba57eca38134375e3efa29898"
+  },
+  "L2-FB08": {
+   "text": "上题中该（实现）符号的含义是 ____[1]。",
+   "options": [],
+   "source_sha256": "e9f0e015a67243ed4ae12c457dd5a3bda0c6060ea7e8a2aa8ad83a0276ab98ce"
+  },
+  "L2-ES01": {
+   "text": "(a) UML 中 is-a 关系与 isPartOf 关系有什么区别？(b) 画出/指出 UML 中 isPartOf 与 is-a 的符号。",
+   "options": [],
+   "source_sha256": "4fb6b9e15f226013abf32f3e5444a81fdba808d3e21a8bd468f46fdd16be6a18"
+  },
+  "L3-TF01": {
+   "text": "泛型框架是一种避免显式类型转换的方式。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "02d8b9b2de36f0a609b6c2bb1607314e02f28af95ea3d1f23ebaebfcca41280e"
+  },
+  "L3-TF02": {
+   "text": "在参数化的泛型类中，实际（具体）类型参数可以是基本类型。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "79791d2d094deec1901e2b846f1189ef0f35d9cca33dcb9019d9a6772bc182b6"
+  },
+  "L3-TF03": {
+   "text": "GenericStack 类型可以比 GenericStack<T> 类型更灵活。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "4d825af9f11d27d0045a6e6058a4f26360b516247e4766732fe8d863b045a4fb"
+  },
+  "L3-MC01": {
+   "text": "给定代码片段，下列哪一项与众不同（说法不对）？",
+   "options": [
+    "没有指定目标对象。",
+    "当列表元素类型不一致时容易出错。",
+    "接受包括基本类型在内的所有类型",
+    "只接受对象类型"
+   ],
+   "source_sha256": "43cc9e4cdf5051287ea891aed7f543c102ef38c35f1ee711c0baf9a5e01a61c4"
+  },
+  "L3-MC02": {
+   "text": "下列关于泛型构造方法的程序语句中，哪一个是错误的？",
+   "options": [
+    "new GenericStack<T>( )",
+    "new GenericStack( )",
+    "new GenericStack<String>( )",
+    "new GenericStack<Number>()"
+   ],
+   "source_sha256": "5a391d031c8d68029218fec39a0c423bf847d3c51b403bb63a2e88b52f2bbdfe"
+  },
+  "L3-MC03": {
+   "text": "下列哪一个被称为无界泛型通配符？",
+   "options": [
+    "< ? super E >",
+    "< ? extends E >",
+    "< E extends Object >",
+    "< Object extends E >"
+   ],
+   "source_sha256": "baa1e09d59ef5e0f29e3de32a8a39bdb8df12c4146f8fe1e4fe946bb77eaa019"
+  },
+  "L3-FB01": {
+   "text": "包装类是 ____[1] 类型。",
+   "options": [],
+   "source_sha256": "1d1f4386be241cb4b9637b18b0c76f11603d56c48214ed910477cf18d3f09b0f"
+  },
+  "L3-FB02": {
+   "text": "泛型是 ____[1] 的能力。",
+   "options": [],
+   "source_sha256": "0b9d9029393bfbeb3470a9ece1760207e09216fb089a0037a5c4933e30cefe71"
+  },
+  "L3-FB03": {
+   "text": "说出下列通配符的名称并各举一例：<? extends T> 是 ____[1]，例如 ____[2]；<? super T> 是 ____[3]，例如 ____[4]。",
+   "options": [],
+   "source_sha256": "b1e8f88278424a1d3752e5b3a3578a9437dff625aba74f044411040a99b88911"
+  },
+  "L3-ES01": {
+   "text": "说明引用类型 GenericStack<T> 与类型 GenericStack 的区别。",
+   "options": [],
+   "source_sha256": "a7a5077b9742cc240c6d448ea2ceb08ef47b166c0113f14df3f3dbe3396780d3"
+  },
+  "L4-TF01": {
+   "text": "Lambda 表达式可以用来实现函数式接口。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "6c44865f7efd262e37d78f760c563e4984e168b7169029b7fb817f5967475fd5"
+  },
+  "L4-TF02": {
+   "text": "Lambda 表达式不能用来实现函数式接口。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "155c7524951e1be0ac433b8aa2ad0ed3b616e9dd425c288a23fe74bb2e6eb83d"
+  },
+  "L4-TF03": {
+   "text": "借助 Lambda 表达式，函数式接口的对象可以实现接口中的方法。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "ac3cfccbc082f4fe505dbba270f727f2bc4eec4d32609677a6f54531a9f1c8c9"
+  },
+  "L4-TF04": {
+   "text": "接口中声明的方法提供实现细节。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "3dabb19fe8c4ffc1b2cb933525f2ce8322adfbf38e1900fdd81414d9b2079fc8"
+  },
+  "L4-TF05": {
+   "text": "接口只能单继承，而抽象类可以多继承。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "2881d189af66f0f84d965b242ef95dd271a80f6beb67d789863a4ddebdbfdb57"
+  },
+  "L4-TF06": {
+   "text": "接口可以多继承，而（抽象）类只能单继承。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "4c101744352a175d34de300fcb8b11bcb321e5a0adb642c2e63c23e9806a4b77"
+  },
+  "L4-TF07": {
+   "text": "接口可以多继承，抽象类也可以多继承。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "5677bf7a027da8e5d82dc2e173dc929d4359aa9eee7dbf6cd33d708497f4bdf9"
+  },
+  "L4-TF08": {
+   "text": "关键字 default 用于接口的方法中。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "8ee39bfeb42e0c62235e230c51f1bc2568f4b0e687d0bb554d812cb31246c711"
+  },
+  "L4-TF09": {
+   "text": "default 关键字允许接口重写并定义其实现方法。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "0e541223cf1ed279ab8866861a26426dac273e542aa0d6ecb7efa04ce5cded10"
+  },
+  "L4-TF10": {
+   "text": "从列表中删除元素会使元素向表尾方向移动。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "f3b6dc42cfff1102d825bab8681a0f0eb89f394a565cfee017d16362c6d73dac"
+  },
+  "L4-FB01": {
+   "text": "接口中声明的方法只是方法头，因为 ____[1]。",
+   "options": [],
+   "source_sha256": "17603bc74c31ed71de3a3f43014c3cb291cb2ef182f9b600de8e980eedc996ab"
+  },
+  "L4-FB02": {
+   "text": "给定代码（依次 add 23、12、37，再 add(2,10)），输出是 ____[1]。",
+   "options": [],
+   "source_sha256": "a5079b9ce2e266931856e16a9a818797cbbf6ddf1b466f57b70148386dd329bc"
+  },
+  "L4-FB03": {
+   "text": "给定代码（add 23、12、37，add(1,56)，add 17，add(4,83)），输出是 ____[1]。",
+   "options": [],
+   "source_sha256": "091dc7bbe41cb5b5092f1202aba42960ea4fbe68c7b8149ec621b26362aa02ed"
+  },
+  "L4-ES01": {
+   "text": "给出函数式接口 NumberMultiply（方法 double mult(double a, double b)），用 Lambda 表达式实现它，并用 2 和 3 调用。",
+   "options": [],
+   "source_sha256": "93fc4b54e9d01d6a76df5addbe3ba3f14f72d87349cf3db13656b6ba8000631c"
+  },
+  "L5-MC01": {
+   "text": "按约定，下列哪一个是队列 ADT 的方法？",
+   "options": [
+    "pop( )",
+    "push( )",
+    "enque( )",
+    "add( )"
+   ],
+   "source_sha256": "c1218eba6650b41219860bc9d0caf4ff47734efbc61b9f31e4fec4d366b3e32e"
+  },
+  "L5-MC02": {
+   "text": "按约定，下列哪一个是栈 ADT 的方法？",
+   "options": [
+    "pop( )",
+    "deque( )",
+    "enque( )",
+    "add( )"
+   ],
+   "source_sha256": "9620ed1d9b6a2d4d4d1c32461e1ba623264815c530ff2e5e88f56511dd21941c"
+  },
+  "L5-FB01": {
+   "text": "栈操作的原则是 ____[1]。",
+   "options": [],
+   "source_sha256": "ce8fb19d73afdc6cb38f7ea0b1edacd4b5094c3a2c43d85f71ae8daccc7cd700"
+  },
+  "L5-FB02": {
+   "text": "队列遵循 ____[1] 原则。",
+   "options": [],
+   "source_sha256": "c5e1a969a35a3594fc9ded60c3f082d41c5219d60d05356e76bf968772b96d57"
+  },
+  "L5-FB03": {
+   "text": "队列只能在 ____[1] 端删除。",
+   "options": [],
+   "source_sha256": "9d1626eb48ce1e32e196c88a5f2adbaa8f2a17b4149d6799cbe9206d13d96df8"
+  },
+  "L5-FB04": {
+   "text": "确定队列中元素个数的公式是 ____[1]。",
+   "options": [],
+   "source_sha256": "566618936a3865b910d2626f5c39d61e0fd9d8024ac384472d0d0f9474d1b248"
+  },
+  "L5-FB05": {
+   "text": "给定队列（下标 3、4、5 依次存 4、11、-1，前三格为空），用元素个数公式，队列有 ____[1] 个元素。",
+   "options": [],
+   "source_sha256": "e3baabf45eb86d546907daeb23e8233a83c82e4bb1887e7faac1f7950fe3fa87"
+  },
+  "L5-FB06": {
+   "text": "给定队列（下标 2–5 依次存 19、24、100、-13），队列有 ____[1] 个元素。",
+   "options": [],
+   "source_sha256": "a497e5d591a09668076d07890d8ee37c432c8ecb862c5d0e1f6e47efa6794512"
+  },
+  "L5-FB07": {
+   "text": "依次 push 1、2、3 后执行 pop 并打印，输出是 ____[1]。",
+   "options": [],
+   "source_sha256": "c1a8ec152c25b4e7df93f79e91da53fdbf1e87a575e108c6279b25009b0b669d"
+  },
+  "L6-TF01": {
+   "text": "HashMap 是有序的数据结构。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "9d841c03f4c1c92f6051e7879d691b5916cdb3b6bfd47e52584fb75326f9b84f"
+  },
+  "L6-TF02": {
+   "text": "LinkedHashMap 的输出遵循插入顺序。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "00ad287c0332fc8c3d427ffa61133a6ac3f6147b114577c354b2c779b9f44d67"
+  },
+  "L6-TF03": {
+   "text": "LinkedHashMap 的输出是与插入顺序不同的某种随机顺序。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "0c90ac47361fd7cabb24951244134f1bfc7f33d552878604cd2f9f54277b57ff"
+  },
+  "L6-TF04": {
+   "text": "LinkedHashSet 的输出不遵循插入顺序。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "28e6a8555f145fa5db8b095332f7b0874f1c2f95fc71290b94775fffc7a4e81a"
+  },
+  "L6-TF05": {
+   "text": "LinkedHashSet 的输出遵循插入顺序。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "7fffb5fbb0e77f87ca196617733f6e6e7884d7be699bb4ed9f3f4497203fb762"
+  },
+  "L6-TF06": {
+   "text": "TreeMap 是有序的数据结构，按升序输出元素。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "b606f60db838ffa4914f62a1b53c3f4a1e88640150d26664e55dd4420a054938"
+  },
+  "L6-TF07": {
+   "text": "LinkedHashSet 允许重复元素。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "c73168ffd215de78b14f7b5f5aedb7c0ec69d79028e390a31b87e43a2931c4c3"
+  },
+  "L6-TF08": {
+   "text": "HashSet 允许重复元素。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "1c62aa8d20f83c9b3fdcd421a53d2ff89ef50134501835fd7d65c40b5218ed1e"
+  },
+  "L6-TF09": {
+   "text": "HashSet 的输出遵循插入顺序。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "30a276700930d38d109484e4b686ff4d85208db87427821832429172510abd15"
+  },
+  "L6-TF10": {
+   "text": "Set 是可以包含重复元素的无序集合。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "3264d676a57bf0bc6e6c55873bbedb61b1a8892fecf024bec061ceba9b5fae53"
+  },
+  "L6-TF11": {
+   "text": "Map 数据结构允许重复的键。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "f2027c52b6c9c9db65545fbcfaf1022699f254dbc8d867d1d9c0d0285bb8bd4f"
+  },
+  "L6-TF12": {
+   "text": "Map<K, V> 数据结构允许重复的值。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "f0bdc8a6d89eafbffbf242bdc8adb77a43e5d39b1cf3e1201aa9fc2098e90713"
+  },
+  "L6-TF13": {
+   "text": "构造语句 LinkedHashMap(16, 0.75f) 用于创建按最近访问顺序输出的 Map。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "d708a4c60e7bcde4ba00a6d2ee40d67f6d56be434eb7e271f293794c8a47b8ed"
+  },
+  "L6-TF14": {
+   "text": "构造语句 LinkedHashMap(16, 0.75f, true) 用于创建按最近访问顺序输出的 Map。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "854ebcc86ba4d999ec3f56a6c4d6432e5028935f06493681863a5429405efa91"
+  },
+  "L6-TF15": {
+   "text": "构造语句 LinkedHashMap( ) 用于创建按插入顺序输出的 Map。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "529a42c6a510ae5af6bd401360f3a3762fbd71618b43cd5862b36bf8e561d22e"
+  },
+  "L6-TF16": {
+   "text": "在 LinkedHashMap(16, 0.75f) 中，增大负载因子可以提高查找的时间效率。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "19f98c869fda58ec79cde01efb3a96553cdab21dee4a982a1a348e75c4a490b0"
+  },
+  "L6-TF17": {
+   "text": "map.size() 在 map 中插入一个对象并返回条目数。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "89a170ac62799570e2d1b6a242fce92881a61607867b5e3c320bba3d037afab5"
+  },
+  "L6-TF18": {
+   "text": "map.keySet() 返回 map 中值的集合。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "e56c4f35b27ff36385b82ef20432eb3333cdad5ef33f49728e0e6ea3a721a4a2"
+  },
+  "L6-MC01": {
+   "text": "下列哪一个用于创建有序的数据结构？",
+   "options": [
+    "HashMap",
+    "HashSet",
+    "LinkedHashMap",
+    "TreeMap"
+   ],
+   "source_sha256": "7958215c113849f12998fffcc1c1a6726499c9653156fc67fb1f2e610dba9590"
+  },
+  "L6-MC02": {
+   "text": "构造语句 LinkedHashMap(16, 0.75f) 中，16 和 0.75f 分别称为 ____ 和 ____。",
+   "options": [
+    "键值对",
+    "初始容量和负载因子",
+    "数据和操作",
+    "对象和地址"
+   ],
+   "source_sha256": "ec39f8fec116f30cc71966f5cd3c44ce6edaf6b31c8f6adb4a42f630e06112f5"
+  },
+  "L6-MC03": {
+   "text": "经理要求你生成一个按条目 (k, v) 递增顺序排列的 Map，下列哪个最合适？",
+   "options": [
+    "TreeMap",
+    "LinkedHashMap",
+    "HashMap",
+    "TreeSet"
+   ],
+   "source_sha256": "5ab89efd2935966ba5c90ba7c6618fee4f86903c364c736b86a9f5f031aeb566"
+  },
+  "L6-MC04": {
+   "text": "下列哪一个不是排序的数据结构？",
+   "options": [
+    "SortedSet",
+    "LinkedList",
+    "TreeSet",
+    "TreeMap"
+   ],
+   "source_sha256": "319d1c20aa7ffd97835d679e26ac835a62c54af68f152d2ed873a043f25141ab"
+  },
+  "L6-MC05": {
+   "text": "下列哪一个是排序的数据结构？",
+   "options": [
+    "HashSet",
+    "LinkedList",
+    "TreeSet",
+    "HashMap"
+   ],
+   "source_sha256": "62aa6998a8dbd4938f8161e83368164c0538c0ac0f0d048a4e3cbf1bf178280c"
+  },
+  "L6-MC06": {
+   "text": "下列哪一个不是排序集合（sorted set）？",
+   "options": [
+    "SortedSet",
+    "LinkedList",
+    "TreeSet",
+    "以上都不是"
+   ],
+   "source_sha256": "4c3ba3218490070bf9d706472a1ef10f07e7d47d9b6c4b8e93daf75aff40c190"
+  },
+  "L6-MC07": {
+   "text": "下列哪一个不是排序集合？",
+   "options": [
+    "SortedSet",
+    "TreeSet",
+    "TreeMap",
+    "HashMap"
+   ],
+   "source_sha256": "98f657737eed554ae53a1ec77ea6df9fddca7eb2c92c2d41f8c0b6d21111b531"
+  },
+  "L6-MC08": {
+   "text": "下列哪一个不是排序集合？",
+   "options": [
+    "HashSet",
+    "LinkedList",
+    "TreeSet",
+    "HashMap"
+   ],
+   "source_sha256": "4dfb93081a3ea1d1b7f85eb3d84d7cc62606513945cf6cf0f4b307ecefc289e0"
+  },
+  "L6-MC09": {
+   "text": "下列哪一种数据结构接受重复元素？",
+   "options": [
+    "HashSet",
+    "HashMap",
+    "LinkedHashSet",
+    "Set"
+   ],
+   "source_sha256": "149f7777a0d8b1912ed30fd22ba7e4a79cb5e74b8d53bc1f44f55a4960ac6717"
+  },
+  "L6-MC10": {
+   "text": "要从一个 set 获得迭代器，可以使用 ______ 方法。",
+   "options": [
+    "getIterator",
+    "findIterator",
+    "iterator",
+    "iterators"
+   ],
+   "source_sha256": "71a075050ae8b5e45a69533675c8918737fcc6b8a7755b317cc71365bb126bee"
+  },
+  "L6-MC11": {
+   "text": "如果两个对象 o1、o2 相等，o1.equals(o2) 和 o1.hashCode() == o2.hashCode() 的值分别是？",
+   "options": [
+    "true true",
+    "true false",
+    "false true",
+    "false false"
+   ],
+   "source_sha256": "75d6269c06cd7c202da688abab46a00d18a9c67a4322343612ab44e9a3989210"
+  },
+  "L6-MC12": {
+   "text": "设 s1 = [1, 2, 5]，s2 = [2, 3, 6]。执行 s1.addAll(s2) 后 s1 是 ______。",
+   "options": [
+    "[1, 2, 2, 3, 5, 6]",
+    "[1, 2, 3, 5, 6]",
+    "[1, 5]",
+    "[2, 3, 6]"
+   ],
+   "source_sha256": "91142fbda2bd22ed0691e9a1748e670ebaf324b202ac488bcc3f41089b86c71c"
+  },
+  "L6-FB01": {
+   "text": "____[1] 和 ____[2] 用来决定数组何时动态翻倍。",
+   "options": [],
+   "source_sha256": "e0d7b2ceec045003534aa3c48616271dc5f9b1d687f219c3a26e667d96c5b1f4"
+  },
+  "L6-FB02": {
+   "text": "用简单计算说明数组何时翻倍（默认容量 16，负载因子 0.75）。阈值 = ____[1]",
+   "options": [],
+   "source_sha256": "34234e2b617eed88d35038fc72d08aa93db4afc55082a4ae8b94f42d00a348c7"
+  },
+  "L6-FB03": {
+   "text": "HashSet 初始容量 28、负载因子 0.75，容量在 ____[1] 时翻倍。",
+   "options": [],
+   "source_sha256": "db933624fb4f698dd99df0cd32cd2285c7e5da727e617b6ee54c8efda045bfa6"
+  },
+  "L6-FB04": {
+   "text": "HashSet 初始容量 24、负载因子 0.75，容量在 ____[1] 时翻倍。",
+   "options": [],
+   "source_sha256": "17084d1165599def52adc7c2dea225097d30847cd2e9835a1351c889361159b8"
+  },
+  "L6-FB05": {
+   "text": "HashSet 初始容量 10、负载因子 0.75，容量在 ____[1] 时翻倍。",
+   "options": [],
+   "source_sha256": "596ad6a2092c3a9a26f4784fa3178a1cf2404f36171a6afb722ac36337944b07"
+  },
+  "L6-FB06": {
+   "text": "补全：在 ____[1] 中不能同时存在 e1.equals(e2) 为 true 的两个元素 e1 和 e2。",
+   "options": [],
+   "source_sha256": "213aad0e20e00ae8bd0bc363c527ee169dd925e73df91dc91827892c8a14c37b"
+  },
+  "L6-FB07": {
+   "text": "HashSet 构造器中的值 16 称为 ____[1]。",
+   "options": [],
+   "source_sha256": "53f17405080b0664c25c303c65ea485648d577e08c9764fcc2c9181ef15bcb7c"
+  },
+  "L6-FB08": {
+   "text": "要从 map 中取得一个对象，使用 ____[1]。",
+   "options": [],
+   "source_sha256": "240bcf506b233b1185753f15b64e91f2b6e55428995094df03dee98352636246"
+  },
+  "L6-FB09": {
+   "text": "给定程序（向 map 放入 1 Jane、2 John、3 Eve、4 Jane），对 map 调用 keySet 方法是 ____[1]。",
+   "options": [],
+   "source_sha256": "de2ac68bbaccaad06edbbc309962e86cbbb6f7c397e30f81fade5b1da1b293c5"
+  },
+  "L6-FB10": {
+   "text": "对同一个 map，调用 iterator 方法的写法是 ____[1]。",
+   "options": [],
+   "source_sha256": "16a510b0c2abae0ff16d1a8f56dc1f14e8e5d8be079b2d745cc4588ae24a9d31"
+  },
+  "L6-FB11": {
+   "text": "迭代器对象上的 hasNext() 和 next() 的作用是 ____[1]。",
+   "options": [],
+   "source_sha256": "887f5fd41b92159ed954a26166170cd981a8e39a9878b43e954bf91c02e968ed"
+  },
+  "L7-MC01": {
+   "text": "单链表的节点包含 ______。",
+   "options": [
+    "头指针和尾指针",
+    "头指针和数据",
+    "节点和数据",
+    "数据和 next 指针"
+   ],
+   "source_sha256": "2c7a69223f589609450c4a05b0bf2ab332257f1175957a95e022a0bae92e4651"
+  },
+  "L7-FB01": {
+   "text": "在 LinkedList 开头插入的时间复杂度是 ____[1]。",
+   "options": [],
+   "source_sha256": "63c2702dd16b49f43b427b603eb0616e12b1c4bb48c90e726d4aa1354e3a4bc1"
+  },
+  "L7-FB02": {
+   "text": "从列表中间删除一个元素会使 ____[1]。",
+   "options": [],
+   "source_sha256": "0ca6b09dd8618def67915ada8a7f963cffb267c8a7953c9140578bd88fde9dd8"
+  },
+  "L7-ES01": {
+   "text": "给定链表 4 → 1 → 3 → 7，写一个方法（代码片段）在表头插入 80。",
+   "options": [],
+   "source_sha256": "9ba345392211ab2ad37ec7a7ac257a3e524815e975efda1e539173f84e701a4e"
+  },
+  "L8-TF01": {
+   "text": "在堆中，插入元素时发生 down-heap bubbling（下沉）。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "19b0ea293f30472f94ba7888d81dfd39f149279644ae056171a99baa44739866"
+  },
+  "L8-TF02": {
+   "text": "在堆中，删除元素时发生 down-heap bubbling（下沉）。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "7e33674f6e35fb61e1c607c043316add0a586eaf16133a2b7bcb224e95831bcd"
+  },
+  "L8-TF03": {
+   "text": "在堆中，任何被删除的节点都由最后一个节点替换。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "9c578821f51cccaf40cd2ad53207863f49ede46be65d6768c9f306c1c68913be"
+  },
+  "L8-MC01": {
+   "text": "下列关于二叉堆关系性质（relational property）的说法哪个正确？",
+   "options": [
+    "∀ v ≠ root → key(v) ≅ key(parent(v))",
+    "∀ v ≠ root → key(v) ≥ key(parent(v))",
+    "∀ v ≠ root → key(v) < key(parent(v))",
+    "∀ v ≠ root → key(v) > key(parent(v))"
+   ],
+   "source_sha256": "572ef52b65e502f541ab4de3f796c54d2c92ac6d3c792cfa7a67b839ace0fe0c"
+  },
+  "L8-MC02": {
+   "text": "下列哪一个是二叉堆？（见图 a–d）",
+   "options": [
+    "图 a",
+    "图 b",
+    "图 c",
+    "图 d"
+   ],
+   "source_sha256": "9bb88348264202333ad4107f31653c1205a741f69d6ace84279abffc869afe17"
+  },
+  "L8-MC03": {
+   "text": "下列哪一个不是二叉堆？（见图 a–d）",
+   "options": [
+    "图 a",
+    "图 b",
+    "图 c",
+    "图 d"
+   ],
+   "source_sha256": "31a5aa0409175ad461e48a4537cdf112b3ddeab17c21585e386a0db81ed1ec17"
+  },
+  "L8-MC04": {
+   "text": "若节点的左、右孩子按 2i+1、2i+2 计算，节点 i 的父节点公式是 ______。",
+   "options": [
+    "(i+2)/2",
+    "i/2",
+    "(i+1)/2",
+    "(i-1)/2"
+   ],
+   "source_sha256": "fe8bc83033283bc044208b28dcac3db62836b0c130d8c2b99d1af759417463ea"
+  },
+  "L8-MC05": {
+   "text": "若节点的左、右孩子按 2i、2i+1 计算，节点 i 的父节点公式是 ______。",
+   "options": [
+    "(i+2)/2",
+    "i/2",
+    "(i+1)/2",
+    "(i-1)/2"
+   ],
+   "source_sha256": "442ca2fc166407ccc1c7ac9b41be2f40d95e739954c41e2c227403530d582dd3"
+  },
+  "L8-MC06": {
+   "text": "在堆中删除一个节点后，由 ______ 替换被删节点。",
+   "options": [
+    "根节点",
+    "左孩子",
+    "最后一个节点",
+    "右孩子"
+   ],
+   "source_sha256": "f27034304d40152a26b828870d22e62b5b9821d9de320de8d3ac1a60f62b6140"
+  },
+  "L8-FB01": {
+   "text": "从堆中删除的节点由 ____[1] 替换。",
+   "options": [],
+   "source_sha256": "1b9d258c15e5674f3ce855fe94bc4289c5ecae3b196f751090ce666afa574396"
+  },
+  "L8-FB02": {
+   "text": "堆满足两个重要性质：____[1] 和 ____[2]。",
+   "options": [],
+   "source_sha256": "b4dfa8ad69f47442127dc9c6d872a71237ec1ad11d18ca6b0e19c8a328e06746"
+  },
+  "L8-FB03": {
+   "text": "____[1] 性质定义了堆的形状。",
+   "options": [],
+   "source_sha256": "e305dbcf173220083a930881a86ad9d43ee35539fde763ff7af49d37f476ccc9"
+  },
+  "L8-FB04": {
+   "text": "堆最好的描述是 ____[1]。",
+   "options": [],
+   "source_sha256": "5e259bfd5da17a36943cc2da33328e6e59ec0aa05a2024cb93dd6ca8161f2f10"
+  },
+  "L8-FB05": {
+   "text": "根下标为 1，节点在下标 14：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
+   "options": [],
+   "source_sha256": "5a5880aeceb84b06b8241b2165fc0510951ba1c6c38f124597a7a55ef97ae77f"
+  },
+  "L8-FB06": {
+   "text": "根下标为 0，节点在下标 14：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
+   "options": [],
+   "source_sha256": "8c256166910aa0bcaca1b52a105c07d8716628c8cc0ba63fefc847bd6e0ecaf4"
+  },
+  "L8-FB07": {
+   "text": "根下标为 1，节点在下标 17：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
+   "options": [],
+   "source_sha256": "c023f97746d00aa31eed4a3e6aa048560254a6a4ff0a284f042396e5abb0ad15"
+  },
+  "L8-ES01": {
+   "text": "队列与优先队列的区别是 ______。",
+   "options": [],
+   "source_sha256": "b85124a88cac0a19c3af0407ec421ad1949e7b10ea9f54428f5ea29b516236ea"
+  },
+  "L9-MC01": {
+   "text": "下列哪一个不是哈希技术？",
+   "options": [
+    "平方取中法",
+    "均值平方法",
+    "抽取法",
+    "除法（取模）"
+   ],
+   "source_sha256": "9a87f6e6165b2473cc6998d7388b0632c5f0173c33fe0b4acd36e61bf8db7197"
+  },
+  "L9-MC02": {
+   "text": "数组大小 N = 11，用 Shift Folding 计算键 1642811509 的下标是 ______。",
+   "options": [
+    "10",
+    "11",
+    "3",
+    "9"
+   ],
+   "source_sha256": "dc84a38d910fcd8475a59305430e9d02de1d96eb943a8c9fb1557b0dfe0b6786"
+  },
+  "L9-MC03": {
+   "text": "数组大小 N = 11，用 Boundary Folding 计算键 123456789 的下标是 ______。",
+   "options": [
+    "7",
+    "3",
+    "6",
+    "4"
+   ],
+   "source_sha256": "3b547436bb853dcb2f940cb90fbe7d376fa55160af761b2cab1c937eec238e39"
+  },
+  "L9-MC04": {
+   "text": "移位表达式 67 >> 4 的结果是 ______。",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "8"
+   ],
+   "source_sha256": "bbc442e20863feef1cad18bdce60e4f33aa9be02b6f81e8f884d7f5c12cd935e"
+  },
+  "L9-MC05": {
+   "text": "移位表达式 67 >> 3 的结果是 ______。",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "8"
+   ],
+   "source_sha256": "f5a4b30d8ae6932bdc54f255429891cd1a67670e60ffdbb181a78fd60e1b9ed7"
+  },
+  "L9-MC06": {
+   "text": "移位表达式 87 >> 4 的结果是 ______。",
+   "options": [
+    "5",
+    "3",
+    "4",
+    "8"
+   ],
+   "source_sha256": "7d07820d545f674f7eb05797ad3083c058a901b276cd873b81777bce720c1186"
+  },
+  "L9-MC07": {
+   "text": "移位表达式 87 >> 3 的结果是 ______。",
+   "options": [
+    "5",
+    "10",
+    "4",
+    "8"
+   ],
+   "source_sha256": "51c457ff1d3a7a1e1fc0d129558fcc1730cf0eac310ceaf3e8d0106e6869ccdf"
+  },
+  "L9-MC08": {
+   "text": "下列哪一个是双重哈希的数学表达式？",
+   "options": [
+    "(K + j) % N",
+    "(K + j²) % N",
+    "(K + j * 7 – K % 7) % N",
+    "(K + 1 * 7 – K % 7) % N"
+   ],
+   "source_sha256": "8690d79df48e734f7865ac5bbc36f16497435b7a7152f1503ee3bd06ec504b45"
+  },
+  "L9-FB01": {
+   "text": "四种哈希技术是 ____[1]、____[2]、____[3] 和 ____[4]。",
+   "options": [],
+   "source_sha256": "27108662618d8f4fdb280c7765a7b0d497161fd1f4df4fb366b0f468e8fef62f"
+  },
+  "L9-FB02": {
+   "text": "哈希函数的两个部分是 ____[1] 和 ____[2]。",
+   "options": [],
+   "source_sha256": "b72c183cd076117b1311ff1f7b5f394b99695340cbd74e0b5038bc5351737c99"
+  },
+  "L9-FB03": {
+   "text": "数组大小 N = 11，分别用 a) Shift Folding、b) Boundary Folding 求键 164281509 的下标：a) ____[1]  b) ____[2]",
+   "options": [],
+   "source_sha256": "7fc76d3bc6e867759a70b5b8929cda6ce781d54d1de16993f2970e181cf09b74"
+  },
+  "L9-FB04": {
+   "text": "N = 11，PRIME = 7，键 89 的主哈希位置已满，求 i = 1、2 时的下一个下标：i=1 ____[1]，i=2 ____[2]",
+   "options": [],
+   "source_sha256": "4910ff66da93183e82d96a752d9ad4e8441541efbac159b8340744cc793d26af"
+  },
+  "L9-FB05": {
+   "text": "N = 11，PRIME = 7，键 15 的主哈希位置已满，求 i = 1、2 时的下一个下标：i=1 ____[1]，i=2 ____[2]",
+   "options": [],
+   "source_sha256": "b456c61505d9bae53630a83abc17bd5519af4dee30d1cf5fd9a83f9c8f4f24e0"
+  },
+  "L9-ES01": {
+   "text": "数组 A 长度 N = 20，要放入 bucket array 的键值对为 (1,4)、(42,7)、(39,3)、(4,14)、(2,21)。(a) 用取模写一个计算哈希码的函数；(b) 计算每个条目的下标；(c) 画图说明如何放入 bucket array。",
+   "options": [],
+   "source_sha256": "0a6e5a22e9cffb4238896dbb76793f19d82a9b5e3a04e5b21c89010f3a3d1661"
+  },
+  "L9-ES02": {
+   "text": "数组 A 长度 N = 21，键值对为 (4,10)、(42,7)、(1,89)、(39,3)、(4,14)、(2,21)、(31,45)。(31) 用取模写哈希函数；(32) 计算各条目下标；(33) 画出 bucket array。",
+   "options": [],
+   "source_sha256": "08e05054e9200df06b2bbcf891c593cc0922fcf848ebebcc472b4d75713b5519"
+  },
+  "L9-ES03": {
+   "text": "给定字符串 s = hello，用多项式规则 s0·a^(n−1) + … + s(n−1)（a = 31，si = charAt(i)）计算哈希码，写出详细步骤。",
+   "options": [],
+   "source_sha256": "b48f0cf4c5d77b6f11eaa9903795abdbcd847409d6103c52c0ee9351514e65f8"
+  },
+  "L9-ES04": {
+   "text": "给定字符串 s = tops，用多项式规则（a = 31）计算哈希码，写出详细步骤。",
+   "options": [],
+   "source_sha256": "2a835971a024351513bc087a672aaefbd74b38c4a4f87e847dcd5870b5620f78"
+  },
+  "L9-ES05": {
+   "text": "给定字符串 hello world、stop、algorithm，分别用多项式规则（a = 31）计算哈希码。",
+   "options": [],
+   "source_sha256": "b7b127aeb9c36d4292ec0b8b8685c0647f0dd1fa648638a8e972dc69613df63b"
+  },
+  "L9-ES06": {
+   "text": "用线性探测，依次插入键 34、29、53、44、120、39、45、40，画出大小为 11 的哈希表。",
+   "options": [],
+   "source_sha256": "a6053998899f8b4134c217f013da42633dbf6de094c8e7906d0dae83c08291e8"
+  },
+  "L9-ES07": {
+   "text": "分别写出线性探测、二次探测和双重哈希的算法。",
+   "options": [],
+   "source_sha256": "c4ae48e4f9d4a4c195bca5711f209a1ed6e76b616fe05826449c93bb76a4db9e"
+  },
+  "L10-TF01": {
+   "text": "如果列表已排序，查找位于首尾之间的键的最佳策略是线性查找。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "4a1816a2b4c7abaca79b291f1c4017f797c4f7c543264c9b462240d3a040c6af"
+  },
+  "L10-TF02": {
+   "text": "如果列表已排序，查找键的最佳策略是线性查找。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "06f37c160139c7cd4ee35797224b1e054fd42c41a1c6ac14fc5f1a5e3f5282ec"
+  },
+  "L10-TF03": {
+   "text": "位于下标 N-1 的键用线性查找比二分查找更快。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "61f8ee298a0eaf919cb265c332cdded84ac2a1025dba336475b541290b5bdb10"
+  },
+  "L10-TF04": {
+   "text": "位于下标 N-1 的键用二分查找比线性查找更快。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "388dd012f2d6b6ff1d0207624739038c37f667588b270787351befc31e928a50"
+  },
+  "L10-FB01": {
+   "text": "O(n log n) 时间复杂度称为 ____[1]。",
+   "options": [],
+   "source_sha256": "f5c4c7b0885a319c0a0db44b31a3637d1343efe084a6828683f0cb076e0543d4"
+  },
+  "L10-FB02": {
+   "text": "时间复杂度 O(2ⁿ) 适用于 ____[1] 问题。",
+   "options": [],
+   "source_sha256": "3b74b185006e3d4d53f8e68e516b0457aac435e514b47c42e26d2c4e22cad654"
+  },
+  "L10-FB03": {
+   "text": "时间复杂度 O(2ⁿ) 适用于 ____[1] 排序。",
+   "options": [],
+   "source_sha256": "9ddde1a1b24dbb4ac2b4e73dfb28a527264e1914acda890778ce3bfccc6ad11b"
+  },
+  "L10-FB04": {
+   "text": "哈密顿回路是经过图中每个 ____[1] 恰好一次并回到 ____[2] 的回路。",
+   "options": [],
+   "source_sha256": "f0fad1485e1f8d51723f3f11a8e0125c23d8a023fb2249651303fe5064afdc6f"
+  },
+  "L10-FB05": {
+   "text": "当 n = 16、32、256 时，T(N) = log₂n 分别为 ____[1]、____[2]、____[3]。",
+   "options": [],
+   "source_sha256": "f04f8f1575d33bfacf80da2b4389d9068404c00bd927d90d6d28cf821f5b5294"
+  },
+  "L10-FB06": {
+   "text": "f(n) = 8n + 100 的时间复杂度是 ____[1]。",
+   "options": [],
+   "source_sha256": "9df8af3c439de04e4ec3f6f7190405c9b4d9fd440bd47de637097cacb9206d95"
+  },
+  "L10-FB07": {
+   "text": "下面嵌套循环的时间复杂度是 ____[1]。",
+   "options": [],
+   "source_sha256": "1105e9af304379a6663cb2d2883b96d4f3847500023eec78e5a4db242aed5205"
+  },
+  "L10-FB08": {
+   "text": "前两万个正整数之和是 ____[1]。",
+   "options": [],
+   "source_sha256": "89aa8871b9bdec074c3160655cf79fd0c30825c83d4574e958a09dc1e0c0ead0"
+  },
+  "L10-FB09": {
+   "text": "前九千个正整数之和是 ____[1]。",
+   "options": [],
+   "source_sha256": "6d2455480ff1b5aaa2634f97fc08800b91e6fb4b4e7b38b39e953616a06a8830"
+  },
+  "L10-ES01": {
+   "text": "写出公式，再用 Java 写一个计算前五千个数之和的算法。",
+   "options": [],
+   "source_sha256": "5992a3db9eac0463c53fca089a991e1ce0d3ac21e7a668bc0dfabf69da2b2153"
+  },
+  "L10-ES02": {
+   "text": "给定循环（i 从 0 到 n−1，每次 k = k + 7），逐步证明其时间复杂度是线性的。",
+   "options": [],
+   "source_sha256": "2fa7df00aec63fd629a915f6acdd0cceb3be982f1fa65d90f3dcecf8e242bbbb"
+  },
+  "L10-ES03": {
+   "text": "计算下面两层 n 次循环的时间复杂度，写出步骤。",
+   "options": [],
+   "source_sha256": "9bf24f48cf9fa8ba1156948e7150f8ff9f47513cb9182638b10bc0e5ff99eec1"
+  },
+  "L10-ES04": {
+   "text": "计算外层 n 次、内层 5 次的循环的时间复杂度。",
+   "options": [],
+   "source_sha256": "3c5f1f2609970b5d91f2d32daa571701d9ab387357095cc89714a2c1f7aa8019"
+  },
+  "L11-FB01": {
+   "text": "快速排序的最坏时间复杂度是 ____[1]。",
+   "options": [],
+   "source_sha256": "b989d3bd786361a0cd5f17bc60c6778bcf196dec9553f3ed1cdf27813843db6f"
+  },
+  "L11-ES01": {
+   "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 3 -1 5 2 排序。",
+   "options": [],
+   "source_sha256": "2461a711db591a5cbf7d16d81db58d61b197273b43057cbd3d1455e32dca0fe4"
+  },
+  "L11-ES02": {
+   "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 -1 3 5 2 排序。",
+   "options": [],
+   "source_sha256": "444886cb34d67f16c91eb08f018b0660d4caa35c6b0da6be2ec84fe2cddc2bd9"
+  },
+  "L11-ES03": {
+   "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 38 81 22 48 13 69 93 14 45 58 79 72 排序。",
+   "options": [],
+   "source_sha256": "b5183c24f5fa9575242fa8a84ca3b5fee907a82f215ecd78089b00ed6eb2bbce"
+  },
+  "L11-ES04": {
+   "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 4 5 2 4 1 3 5 9 3 8 9 7 排序。",
+   "options": [],
+   "source_sha256": "37ea1fdde151b0ade05e85c2b7c5f9626133dd770d821e46b6c34751d2e9abdc"
+  },
+  "L11-ES05": {
+   "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 5 2 9 3 8 4 0 1 6 7 排序。",
+   "options": [],
+   "source_sha256": "6c23001eb3c029885e737d2c505bdbf5a1a3fee1af33c7f9f38d14e810715c32"
+  },
+  "L11-ES06": {
+   "text": "写出归并排序算法。",
+   "options": [],
+   "source_sha256": "c27954064283960e682ffd744d270e85d5e9dae0cb3bb89e40a9134002791228"
+  },
+  "L11-ES07": {
+   "text": "写出快速排序算法。",
+   "options": [],
+   "source_sha256": "0c440e4bf12f09e6e28c65a0698cfb245cc7bb330332d098d3a4d7552c8b9011"
+  },
+  "L11-ES08": {
+   "text": "写出选择排序算法。",
+   "options": [],
+   "source_sha256": "4a182ab463dd43a4b49e285a57cbb8966aed4400a88066eb7cc5cb189d60fcc8"
+  },
+  "L11-ES09": {
+   "text": "写出插入排序算法。",
+   "options": [],
+   "source_sha256": "f9152b77f9fd3bb5a71ed929b919731c849e828ff8f3abdbaf2bc2d30ec6c787"
+  },
+  "L13-TF01": {
+   "text": "逻辑式 ∀ parentNode(n) → leftChild(l) < parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "accf62ff205123ad99dc5e54b8c5acc7d1293433f425df75ce05c1b266c1884d"
+  },
+  "L13-TF02": {
+   "text": "逻辑式 ∀ parentNode(n) → leftChild(l) ≤ parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "57292947978b0b6857451023184eb7380b0d81a91191f23915b8bf349958266b"
+  },
+  "L13-MC01": {
+   "text": "下列哪一个满足 BST 性质？",
+   "options": [
+    "∀parent → lChild > Parent ≤ rChild",
+    "∀parent → lChild ≥ Parent ≥ rChild",
+    "∀parent → lChild < Parent ≤ rChild",
+    "∀parent → lChild ≥ Parent ≤ rChild"
+   ],
+   "source_sha256": "65ae4619a38967d2d8630c9f990128d0cd62febee35b4b30961db8842006a66a"
+  },
+  "L13-MC02": {
+   "text": "下列哪一个用高度来平衡树？",
+   "options": [
+    "红黑树",
+    "二叉搜索树",
+    "AVL 树",
+    "优先堆"
+   ],
+   "source_sha256": "eb093ba3147471b22541c482e5aa46f806f4c5ff722e745afdcd9244230da3bd"
+  },
+  "L13-MC03": {
+   "text": "在 AVL 树中，______ 用于平衡树。",
+   "options": [
+    "节点颜色",
+    "节点平衡因子",
+    "节点高度",
+    "节点深度"
+   ],
+   "source_sha256": "290a1362515462e7c1f01a892b4df3c1e7327247f4242d9a239a382d9c7d7fd7"
+  },
+  "L13-FB01": {
+   "text": "二叉搜索树的性质（规则）是 ____[1]。",
+   "options": [],
+   "source_sha256": "480d955c5811bb6168e439d2e90624fe86760659cb8a4b8ae27dd68bc7cc5777"
+  },
+  "L13-FB02": {
+   "text": "从 BST 中删除的节点由 ____[1] 替换。",
+   "options": [],
+   "source_sha256": "9e2b997e5b8ab0b23de2443b034f753d0112a4f8cb078263c7fea72bd64e5883"
+  },
+  "L13-FB03": {
+   "text": "AVL 树中平衡因子的公式是 ____[1]。",
+   "options": [],
+   "source_sha256": "cfd6bd17946d0c9076d80a06cfaeffbc213cef82e6cbe6811ba8e0f5bcadef69"
+  },
+  "L13-FB04": {
+   "text": "AVL 中平衡因子的取值范围是 ____[1]。",
+   "options": [],
+   "source_sha256": "dc9ad408df15bc53d5a090a08523a1cdb1356411d29f42262dc02589779bd863"
+  },
+  "L13-FB05": {
+   "text": "给定 AVL 树：i) 节点 100 的高度 ____[1]；ii) 节点 60 的平衡因子 ____[2]；iii) 根据平衡因子，节点 60 是 ____[3] heavy。",
+   "options": [],
+   "source_sha256": "2cb3cd540b520aadc59f33749e40235fdd7ff38965bcf3ca32a318f5272f2cfd"
+  },
+  "L13-FB06": {
+   "text": "作为 BST，若删除节点 115，由哪个节点替换？____[1]",
+   "options": [],
+   "source_sha256": "8e35e8935f0653b649d303a0a010b22450ecbed283421cb5ce38fbd46d888588"
+  },
+  "L13-ES01": {
+   "text": "写出图中树 1（根 60 的 BST）的前序、后序、中序遍历。",
+   "options": [],
+   "source_sha256": "93c5852c5c957277252820c9fe8db37311c5a13c6e0b96e22063489f73af8238"
+  },
+  "L13-ES02": {
+   "text": "写出图中树 2a（a–k）的前序、后序、中序遍历。",
+   "options": [],
+   "source_sha256": "93c5852c5c957277252820c9fe8db37311c5a13c6e0b96e22063489f73af8238"
+  },
+  "L13-ES03": {
+   "text": "写出图中树 2b（绿色，根 g）的前序、后序、中序遍历。",
+   "options": [],
+   "source_sha256": "93c5852c5c957277252820c9fe8db37311c5a13c6e0b96e22063489f73af8238"
+  },
+  "L13-ES04": {
+   "text": "写出图中树 3（根 7，含 15）的前序、后序、中序遍历。",
+   "options": [],
+   "source_sha256": "93c5852c5c957277252820c9fe8db37311c5a13c6e0b96e22063489f73af8238"
+  },
+  "L13-ES05": {
+   "text": "写出图中树 4（根 7，不含 15）的前序、后序、中序遍历。",
+   "options": [],
+   "source_sha256": "93c5852c5c957277252820c9fe8db37311c5a13c6e0b96e22063489f73af8238"
+  },
+  "L13-ES06": {
+   "text": "写出在 BST 中查找元素的算法。",
+   "options": [],
+   "source_sha256": "9e555f039b8b833b4a01519fe65910962b3c80d9bd794a21f49d487da2cf00b5"
+  },
+  "L13-ES07": {
+   "text": "给定 BST，删除节点 20 后树会变成新结构，画出新结构。",
+   "options": [],
+   "source_sha256": "ee30ee10cc9d1feea67ee0be3a57435daf660cbbe8cc81c126e8ae57a0a55a5f"
+  },
+  "L13-ES08": {
+   "text": "给定 AVL 树，计算各节点平衡因子，并做适当的旋转使树重新平衡，写出详细步骤。",
+   "options": [],
+   "source_sha256": "d9bf6f758f906650d13f2d4425007970d3ce55386c9b631d2605de6d1f3bc75b"
+  },
+  "L13-ES09": {
+   "text": "用元素 a, b, c, d, e, d, f, g, i, j, k, l 构建 AVL 树，写出过程。",
+   "options": [],
+   "source_sha256": "95c19bfcb8d60cfede9b879355d26e5776aeda7f01a9d41ffd32c8c6fcc63fcd"
+  },
+  "L14-TF01": {
+   "text": "在红黑树中，从一个节点到其后代叶子的每条简单路径包含相同数量的黑色节点。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "102f1a9aa9aa00cba54af0dfdf17d5459ba9902bc15ec27383557a8afcf777e9"
+  },
+  "L14-TF02": {
+   "text": "在红黑树中，两个相邻节点可以都是红色。",
+   "options": [
+    "正确（True）",
+    "错误（False）"
+   ],
+   "source_sha256": "76136b5bcb75a22ab38609edf72fefece05e13b60c2d27396098a91bf672642c"
+  },
+  "L14-MC01": {
+   "text": "下列关于红黑树性质的说法哪个不正确？",
+   "options": [
+    "每个节点不是红色就是黑色。",
+    "每个叶子节点都是红色。",
+    "若节点是红色，它的两个孩子都是黑色。",
+    "以上都不是（另一版：插入的节点总是红色）"
+   ],
+   "source_sha256": "1dd78337473ab9007004c3cf8f5cc97a92768aba5c6b458daeb175fd84382c2a"
+  },
+  "L14-MC02": {
+   "text": "下列关于红黑树的说法哪个不正确？",
+   "options": [
+    "每个插入的节点都是红节点。",
+    "根节点总是黑色。",
+    "若两个连续节点都是红色，则违规且树是平衡的。",
+    "以上都不是"
+   ],
+   "source_sha256": "69125be63bda65d5d8e129bb4234da725a8139409f6c3c68f27c83b14bd60eaf"
+  },
+  "L14-MC03": {
+   "text": "在红黑树中，从节点到后代叶子的每条简单路径包含相同数量的 ______ 节点。",
+   "options": [
+    "红色",
+    "父",
+    "子",
+    "黑色"
+   ],
+   "source_sha256": "a53fa4362748c718f677f4963a4be802c360226a4bad015ec789212875d42c68"
+  },
+  "L14-MC04": {
+   "text": "在红黑树中，case 2a 是 ______。",
+   "options": [
+    "RR",
+    "LL",
+    "RL",
+    "LR"
+   ],
+   "source_sha256": "13c44d1eb9cb28d374e5b406795f29a97b884c59b95d98fd4803a85664d5281e"
+  },
+  "L14-MC05": {
+   "text": "在红黑树中插入 x，出现 RL 型时，先旋转 ______。",
+   "options": [
+    "g(x)",
+    "p(x)",
+    "u(x)",
+    "x"
+   ],
+   "source_sha256": "f9dbfad26b9d32f27b88976d4ff76d4ed8d582a1ac3fb3b0cd91c5620c35eeb0"
+  },
+  "L14-MC06": {
+   "text": "红黑树 LL 型中，旋转节点 ______。",
+   "options": [
+    "g",
+    "p",
+    "u",
+    "x"
+   ],
+   "source_sha256": "ac33dd6499d1caa0e94229aedf91fc5617294944b6c2ca67a5455ae4b6139e15"
+  },
+  "L14-MC07": {
+   "text": "在红黑树中，若插入节点 x 的叔叔 u 是红色，则 ______。",
+   "options": [
+    "旋转并换色",
+    "交换 g 与 p、u 两者的颜色",
+    "交换 g 和 p 的颜色",
+    "交换 u 和 x 的颜色"
+   ],
+   "source_sha256": "9aa10200211eed3583b4a7c02630ea9624975b7787c64ab5040ea48bf06c02ae"
+  },
+  "L14-MC08": {
+   "text": "在红黑树中，若插入节点 x 的叔叔 u 是黑色且为 RR 型，则 ______。",
+   "options": [
+    "右旋 g，交换 g 与 p 的颜色",
+    "右旋 g，交换 g 与 u 的颜色",
+    "左旋 g，交换 g 与 p 的颜色",
+    "左旋 g，交换 g 与 x 的颜色"
+   ],
+   "source_sha256": "a4b9a8ddc785f106ab996620625ffe6eb1552d311cd029e982734a316a167cb5"
+  },
+  "L14-MC09": {
+   "text": "下列哪一个用颜色来平衡树？",
+   "options": [
+    "二叉搜索树",
+    "AVL",
+    "堆",
+    "红黑树"
+   ],
+   "source_sha256": "eee6580b6dcd09d4fbc22cb354d94beca08bf5931e8cfc557c4748e5b89753bd"
+  },
+  "L14-FB01": {
+   "text": "在红黑树中，新插入的节点总是 ____[1] 色。",
+   "options": [],
+   "source_sha256": "f34fb4cc26427cfcd8f52ed2eab0b0a724bdf61f0a22efd0c3690450692221e9"
+  },
+  "L14-ES01": {
+   "text": "用 1 2 3 4 5 6 7 依次构建红黑树，使任意简单路径黑高相同，写出详细步骤。",
+   "options": [],
+   "source_sha256": "6c0adba7aac6217acd8740512703bf55e52fcd6c5a41ddfa1032f5458e2f93cc"
+  },
+  "L14-ES02": {
+   "text": "给定红黑树 (a)，先删除 50，再删除 40（产生双黑），然后重新平衡。",
+   "options": [],
+   "source_sha256": "d980a738740a8c8d3f12f0d628e9fcea31c80e2e38b5b72f545454cf0f700f2f"
+  },
+  "L14-ES03": {
+   "text": "给定红黑树 (b)，先删除 29，再删除 28（产生双黑），然后重新平衡。",
+   "options": [],
+   "source_sha256": "845662846c8033cf422184be36ae1e56f4d1103b0477bbfb7429e970d7599a3e"
+  },
+  "L14-ES04": {
+   "text": "结合图示，逐行解释 LEFT-ROTATE 算法。",
+   "options": [],
+   "source_sha256": "8b78d23da0496c92c70f865b6b2820df8bc194c14e22ef1a3710e29ab1e80a77"
+  },
+  "L14-ES05": {
+   "text": "结合同一图示，写出 RIGHT-ROTATE 算法并逐行解释。",
+   "options": [],
+   "source_sha256": "240ade89433a61dc6bda99a2117b317ecd2471f119f626e15aa908b17a6c2f93"
+  },
+  "L14-ES06": {
+   "text": "补全图中空白框，说明这棵红黑树如何一步步恢复平衡（黑圈为黑色，绿色为红色）。",
+   "options": [],
+   "source_sha256": "2b87c583cc95e885d1d65245f1dd5a7926c76011f9f53c47998920510201db0a"
+  }
+ }
+}
