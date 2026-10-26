@@ -54,6 +54,7 @@ Lecture 12 has no matching question in the supplied banks or papers.
 
 ## Practice controls
 
+- The **期中 · L1–6 / 期末 · L7–14** switch at the top limits everything to one exam scope: 87 midterm questions (Lecture 1–6, the default) or 106 final questions (Lecture 7–14). Counts, progress and the incorrect-answer list follow the selected scope; answers in the other scope are kept. Four 24春期中 questions from Lecture 7 and 9 appear under 期末.
 - Labels show lecture, type and number: `L13-TF01`, `L13-MC01`, `L13-FB01`, `L13-ES01`. Search a complete label or keyword; Chinese keywords also work.
 - True/false and multiple choice are graded automatically, with the reasoning and a note on every option.
 - Fill and essay questions accept an optional draft. **查看答案与讲解** reveals the reference answer — essays include tree diagrams, code and step tables — then **答对了** or **需巩固** records a self-assessment. Revealing alone does not count as completion.
