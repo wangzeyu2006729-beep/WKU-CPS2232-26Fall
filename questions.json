@@ -355,8 +355,8 @@
    ],
    "answer": "A",
    "answers": [],
-   "explanation": "题库批注与 2024 春期中均按 True 给分。课上的意思：构造方法中调用 this(...) 或 super(...) 必须是方法体的第一条语句。题干措辞本身不严谨，考试按 True 作答。",
-   "note": "",
+   "explanation": "按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
+   "note": "24春期中第 4 题学生选 True。该页 Part A 得 75/85（错 2 题），照片上没有逐题对错标记，无法确认这一题是否给分。",
    "references": "Lecture 2 · Objects, Classes & References",
    "review_revision": "2026-10-22.1",
    "sources": [
@@ -373,8 +373,8 @@
     "M24"
    ],
    "option_explanations": [
-    "应选。题库批注与 2024 春期中均按 True 给分。课上的意思：构造方法中调用 this(...) 或 super(...) 必须是方法体的第一条语句。题干措辞本身不严谨，考试按 True 作答。",
-    "不选。题库批注与 2024 春期中均按 True 给分。课上的意思：构造方法中调用 this(...) 或 super(...) 必须是方法体的第一条语句。题干措辞本身不严谨，考试按 True 作答。"
+    "应选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
+    "不选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。"
    ],
    "zh": {
     "text": "默认构造方法必须是其方法体中的第一条语句。",

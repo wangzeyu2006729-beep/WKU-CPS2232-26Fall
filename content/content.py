@@ -85,8 +85,9 @@ tf(2, "obj-ref-class", "An object always references its class.", "T",
    "每个对象都是某个类的实例，可以通过它找到所属的类（如 getClass()）。题库批注为 True。",
    "A B", "对象总是引用它所属的类。")
 tf(2, "default-ctor", "Default constructors must be the first statement in its method body.", "T",
-   "题库批注与 2024 春期中均按 True 给分。课上的意思：构造方法中调用 this(...) 或 super(...) 必须是方法体的第一条语句。题干措辞本身不严谨，考试按 True 作答。",
-   "A B M24", "默认构造方法必须是其方法体中的第一条语句。", exam={"M24": "4"})
+   "按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
+   "A B M24", "默认构造方法必须是其方法体中的第一条语句。", exam={"M24": "4"},
+   note="24春期中第 4 题学生选 True。该页 Part A 得 75/85（错 2 题），照片上没有逐题对错标记，无法确认这一题是否给分。")
 fb(2, "new-kw", "Given the following statement\n    Progression arithmeticProgress = new Progression();\nThe function (job) of the new keyword is ____[1].",
    ["to create (instantiate) a new Progression object: allocate memory for it on the heap, call the constructor, and return its reference"],
    "new 创建对象：在堆上分配内存、调用构造方法，并把对象的引用（地址）返回给引用变量 arithmeticProgress。",
