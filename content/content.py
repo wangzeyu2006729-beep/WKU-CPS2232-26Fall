@@ -33,9 +33,14 @@ EXAMS = {
                 parts=[(1, "Part A: True or False (10 questions: 100 points, 10pt each)"), (11, "Part B: Multiple Choice (10 questions: 100 points, 10pt each)"),
                        (21, "Part C: Short answers/Fill-in the gap (10 questions: 100 points: 10pts each)"), (31, "Part D: Essay (4 questions: 100 points: 25pts each)")]),
 }
+# 期中前 = Lecture 1–7 (both past midterms test lists from Lecture 7), plus the Lecture 9 hashing items both
+# midterms test: bucket-array modulo indexing (already in the Lecture 6 slides) and polynomial string hash codes.
+# Everything else (Lecture 8, the rest of Lecture 9, Lecture 10–14) is 期中后.
+MID_LAST_LECTURE = 7
+MID_EXTRA_KEYS = {"hash-n20", "hash-n21", "hc-hello", "hc-tops", "hc-three"}
 
 Q = []
-TF_ZH = ["正确（True）", "错误（False）"]
+TF_ZH =["正确（True）", "错误（False）"]
 
 
 def _add(**d):

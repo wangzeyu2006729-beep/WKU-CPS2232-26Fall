@@ -247,6 +247,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。递归每次调用都要压栈（保存参数、局部变量和返回地址），有额外的时间和空间开销，一般不比等价的迭代写法高效；递归的优点是写法简洁、适合递归结构的问题。",
     "应选。递归每次调用都要压栈（保存参数、局部变量和返回地址），有额外的时间和空间开销，一般不比等价的迭代写法高效；递归的优点是写法简洁、适合递归结构的问题。"
@@ -290,6 +291,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。是对象（通过引用变量）指向某个类的实例，而不是类去引用它的对象。2024 春期中有同学选 True 被判错。",
     "应选。是对象（通过引用变量）指向某个类的实例，而不是类去引用它的对象。2024 春期中有同学选 True 被判错。"
@@ -329,6 +331,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。每个对象都是某个类的实例，可以通过它找到所属的类（如 getClass()）。题库批注为 True。",
     "不选。每个对象都是某个类的实例，可以通过它找到所属的类（如 getClass()）。题库批注为 True。"
@@ -372,6 +375,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
     "不选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。"
@@ -414,6 +418,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定语句 Progression arithmeticProgress = new Progression(); new 关键字的作用是 ____[1]。",
     "options": []
@@ -449,6 +454,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "上述语句中的引用变量是 ____[1]。",
     "options": []
@@ -480,6 +486,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "引用变量可以描述为 ____[1]。",
     "options": []
@@ -511,6 +518,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "在程序执行期间，堆可以被描述为 ____[1] 内存分配。",
     "options": []
@@ -546,6 +554,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "UML 图中给出的符号（实线 + 实心菱形）称为 ____[1]。",
     "options": []
@@ -581,6 +590,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "上题中该（组合）符号的含义是 ____[1]。",
     "options": []
@@ -612,6 +622,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "UML 图中给出的符号（虚线 + 空心三角）称为 ____[1]。",
     "options": []
@@ -643,6 +654,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "上题中该（实现）符号的含义是 ____[1]。",
     "options": []
@@ -672,6 +684,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "html": "<p><b>(a)</b> <b>is-a</b>：泛化 / 继承（generalization / inheritance），子类是父类的一种，例如 Dog is-a Animal。<br>\n<b>isPartOf</b>：整体-部分关系（aggregation / composition），例如 Engine isPartOf Car；composition 中部分不能脱离整体独立存在。</p>\n<p><b>(b)</b> is-a：<b>实线 + 空心三角箭头</b>，箭头指向父类（实现接口用虚线 + 空心三角）。<br>\nisPartOf：<b>菱形</b>画在整体一端；空心菱形 = aggregation（部分可独立存在），<b>实心菱形 = composition</b>（部分不能脱离整体存在）。</p>",
    "zh": {
     "text": "(a) UML 中 is-a 关系与 isPartOf 关系有什么区别？(b) 画出/指出 UML 中 isPartOf 与 is-a 的符号。",
@@ -709,6 +722,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。使用泛型后编译器知道元素类型，取出元素时不需要显式强制类型转换，类型错误在编译期就能发现。",
     "不选。使用泛型后编译器知道元素类型，取出元素时不需要显式强制类型转换，类型错误在编译期就能发现。"
@@ -752,6 +766,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。泛型的实际类型参数必须是引用类型，例如 ArrayList<Integer>，不能写 ArrayList<int>；基本类型要用包装类。",
     "应选。泛型的实际类型参数必须是引用类型，例如 ArrayList<Integer>，不能写 ArrayList<int>；基本类型要用包装类。"
@@ -795,6 +810,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。GenericStack 是原始类型（raw type），编译器不做类型检查，取出元素要强转，容易在运行时出错，不能说比泛型类型“更灵活”。",
     "应选。GenericStack 是原始类型（raw type），编译器不做类型检查，取出元素要强转，容易在运行时出错，不能说比泛型类型“更灵活”。"
@@ -840,6 +856,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "静态方法，没有指定调用对象，描述成立。",
     "Object[] 可以混装不同类型的元素，类型不一致时容易出错，描述成立。",
@@ -892,6 +909,7 @@
     "M24",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。不正确：创建对象时 T 不是具体类型，无法实例化。",
     "原始类型构造，可以编译（有警告）。",
@@ -941,6 +959,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "下界（lower bounded）通配符：E 或 E 的父类。",
     "上界（upper bounded）通配符：E 或 E 的子类，不是无界。",
@@ -987,6 +1006,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "包装类是 ____[1] 类型。",
     "options": []
@@ -1018,6 +1038,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "泛型是 ____[1] 的能力。",
     "options": []
@@ -1052,6 +1073,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "说出下列通配符的名称并各举一例：<? extends T> 是 ____[1]，例如 ____[2]；<? super T> 是 ____[3]，例如 ____[4]。",
     "options": []
@@ -1081,6 +1103,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "html": "<p><b>GenericStack&lt;T&gt;</b>：参数化（泛型）类型，使用时指定具体类型，如 GenericStack&lt;String&gt;；编译器做类型检查，取元素不用强制转换，类型错误在编译期发现，类型安全。<br>\n<b>GenericStack</b>：原始类型（raw type），相当于 GenericStack&lt;Object&gt;，什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>",
    "zh": {
     "text": "说明引用类型 GenericStack<T> 与类型 GenericStack 的区别。",
@@ -1114,6 +1137,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。函数式接口只有一个抽象方法，Lambda 表达式就是这个方法的实现。",
     "不选。函数式接口只有一个抽象方法，Lambda 表达式就是这个方法的实现。"
@@ -1151,6 +1175,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。与上一题相反，Lambda 正是用来实现函数式接口的。",
     "应选。与上一题相反，Lambda 正是用来实现函数式接口的。"
@@ -1190,6 +1215,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。Lambda 表达式生成函数式接口的对象，并实现接口中唯一的抽象方法。",
     "不选。Lambda 表达式生成函数式接口的对象，并实现接口中唯一的抽象方法。"
@@ -1233,6 +1259,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。",
     "应选。接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。"
@@ -1276,6 +1303,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。正好相反：一个接口可以继承多个接口、一个类可以实现多个接口；类（包括抽象类）只能单继承。题库A 原文为 “…abstract classes can also have multiple inheritance”。",
     "应选。正好相反：一个接口可以继承多个接口、一个类可以实现多个接口；类（包括抽象类）只能单继承。题库A 原文为 “…abstract classes can also have multiple inheritance”。"
@@ -1313,6 +1341,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。接口可多继承，类只能 extends 一个父类。",
     "不选。接口可多继承，类只能 extends 一个父类。"
@@ -1352,6 +1381,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。抽象类也是类，只能单继承。",
     "应选。抽象类也是类，只能单继承。"
@@ -1395,6 +1425,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。Java 8 起，接口中可以用 default 关键字定义带方法体的默认方法。",
     "不选。Java 8 起，接口中可以用 default 关键字定义带方法体的默认方法。"
@@ -1434,6 +1465,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。default 方法让接口自己提供方法实现，实现类可以直接继承或重写。",
     "不选。default 方法让接口自己提供方法实现，实现类可以直接继承或重写。"
@@ -1477,6 +1509,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。从数组表中删除一个元素后，它后面的元素都向表头（head）方向前移一位来填补空位，不是向表尾移动。",
     "应选。从数组表中删除一个元素后，它后面的元素都向表头（head）方向前移一位来填补空位，不是向表尾移动。"
@@ -1519,6 +1552,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "接口中声明的方法只是方法头，因为 ____[1]。",
     "options": []
@@ -1554,6 +1588,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定代码（依次 add 23、12、37，再 add(2,10)），输出是 ____[1]。",
     "options": []
@@ -1585,6 +1620,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定代码（add 23、12、37，add(1,56)，add 17，add(4,83)），输出是 ____[1]。",
     "options": []
@@ -1618,6 +1654,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "html": "<pre class=\"code\">public class Test {\n    public static void main(String[] args) {\n        NumberMultiply nm = (a, b) -&gt; a * b;   // lambda 实现唯一的抽象方法 mult\n        System.out.println(nm.mult(2, 3));     // 输出 6.0\n    }\n}</pre><p>Lambda 的参数 (a, b) 对应 mult 的两个 double 参数，箭头右边是方法体。注意调用的方法名就是 mult（题库A 学长批注写成 nm.Doublemult(2,3) 是错的）。</p>",
    "zh": {
     "text": "给出函数式接口 NumberMultiply（方法 double mult(double a, double b)），用 Lambda 表达式实现它，并用 2 和 3 调用。",
@@ -1655,6 +1692,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "栈的出栈操作。",
     "栈的入栈操作。",
@@ -1698,6 +1736,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。栈的出栈操作，应选。",
     "队列出队操作。",
@@ -1740,6 +1779,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "栈操作的原则是 ____[1]。",
     "options": []
@@ -1771,6 +1811,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "队列遵循 ____[1] 原则。",
     "options": []
@@ -1806,6 +1847,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "队列只能在 ____[1] 端删除。",
     "options": []
@@ -1846,6 +1888,7 @@
     "F25",
     "K"
    ],
+   "part": "mid",
    "zh": {
     "text": "确定队列中元素个数的公式是 ____[1]。",
     "options": []
@@ -1884,6 +1927,7 @@
     "M24",
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定队列（下标 3、4、5 依次存 4、11、-1，前三格为空），用元素个数公式，队列有 ____[1] 个元素。",
     "options": []
@@ -1913,6 +1957,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定队列（下标 2–5 依次存 19、24、100、-13），队列有 ____[1] 个元素。",
     "options": []
@@ -1944,6 +1989,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "依次 push 1、2、3 后执行 pop 并打印，输出是 ____[1]。",
     "options": []
@@ -1980,6 +2026,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。HashMap 按哈希值存放，输出顺序不确定。",
     "应选。HashMap 按哈希值存放，输出顺序不确定。"
@@ -2023,6 +2070,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。LinkedHashMap 用双向链表记录插入顺序（默认），遍历时按插入顺序输出。",
     "不选。LinkedHashMap 用双向链表记录插入顺序（默认），遍历时按插入顺序输出。"
@@ -2062,6 +2110,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。LinkedHashMap 默认按插入顺序输出，不是随机顺序。",
     "应选。LinkedHashMap 默认按插入顺序输出，不是随机顺序。"
@@ -2101,6 +2150,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。LinkedHashSet 按插入顺序输出。",
     "应选。LinkedHashSet 按插入顺序输出。"
@@ -2144,6 +2194,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。LinkedHashSet = HashSet + 链表记录插入顺序。",
     "不选。LinkedHashSet = HashSet + 链表记录插入顺序。"
@@ -2187,6 +2238,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。TreeMap 按键排序（默认升序，基于红黑树）。",
     "不选。TreeMap 按键排序（默认升序，基于红黑树）。"
@@ -2230,6 +2282,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。所有 Set 都不允许重复元素。2024 春期中选 False 判对。",
     "应选。所有 Set 都不允许重复元素。2024 春期中选 False 判对。"
@@ -2269,6 +2322,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。Set 不允许重复元素，add 重复元素会返回 false。",
     "应选。Set 不允许重复元素，add 重复元素会返回 false。"
@@ -2308,6 +2362,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。HashSet 无序；要保持插入顺序用 LinkedHashSet。",
     "应选。HashSet 无序；要保持插入顺序用 LinkedHashSet。"
@@ -2347,6 +2402,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。Set 是不含重复元素的集合（Liang：store unordered, non-duplicate elements）。",
     "应选。Set 是不含重复元素的集合（Liang：store unordered, non-duplicate elements）。"
@@ -2390,6 +2446,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。Map 的键唯一；put 已存在的键会覆盖旧值。",
     "应选。Map 的键唯一；put 已存在的键会覆盖旧值。"
@@ -2436,6 +2493,7 @@
     "M24",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。不同的键可以对应相同的值。",
     "不选。不同的键可以对应相同的值。"
@@ -2479,6 +2537,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。两参数构造器（初始容量 16、负载因子 0.75）按插入顺序；要按访问顺序需要 LinkedHashMap(16, 0.75f, true)。",
     "应选。两参数构造器（初始容量 16、负载因子 0.75）按插入顺序；要按访问顺序需要 LinkedHashMap(16, 0.75f, true)。"
@@ -2516,6 +2575,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。第三个参数 accessOrder = true 时，按访问顺序（最近访问的在最后）输出。",
     "不选。第三个参数 accessOrder = true 时，按访问顺序（最近访问的在最后）输出。"
@@ -2555,6 +2615,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。无参构造器默认 accessOrder = false，即插入顺序。",
     "不选。无参构造器默认 accessOrder = false，即插入顺序。"
@@ -2594,6 +2655,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。负载因子越大，扩容前表越满，冲突越多，查找反而变慢；提高负载因子只节省空间。",
     "应选。负载因子越大，扩容前表越满，冲突越多，查找反而变慢；提高负载因子只节省空间。"
@@ -2637,6 +2699,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。size() 只返回键值对个数，不插入任何东西；插入用 put。",
     "应选。size() 只返回键值对个数，不插入任何东西；插入用 put。"
@@ -2674,6 +2737,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "不选。keySet() 返回所有键组成的 Set；values() 才返回值的集合。",
     "应选。keySet() 返回所有键组成的 Set；values() 才返回值的集合。"
@@ -2719,6 +2783,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "无序。",
     "无序。",
@@ -2768,6 +2833,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "不是键值对。",
     "应选：初始容量和负载因子。",
@@ -2820,6 +2886,7 @@
     "M24",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。按键升序的 Map，应选。",
     "插入顺序，不是递增顺序。",
@@ -2867,6 +2934,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "有序。",
     "应选。不排序，应选。",
@@ -2910,6 +2978,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "无序。",
     "不排序。",
@@ -2955,6 +3024,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "排序集合接口。",
     "应选。",
@@ -2998,6 +3068,7 @@
    "src": [
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "排序。",
     "排序。",
@@ -3043,6 +3114,7 @@
    "src": [
     "M24"
    ],
+   "part": "mid",
    "option_explanations": [
     "也不排序，但考试未按此给分。",
     "应选。考试答案。",
@@ -3088,6 +3160,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "option_explanations": [
     "Set，不允许重复。",
     "应选。值可以重复，应选。",
@@ -3133,6 +3206,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "没有这个方法。",
     "没有这个方法。",
@@ -3178,6 +3252,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "应选。",
     "违反 hashCode 约定。",
@@ -3223,6 +3298,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "Set 不允许重复的 2。",
     "应选。并集，应选。",
@@ -3270,6 +3346,7 @@
     "B",
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "____[1] 和 ____[2] 用来决定数组何时动态翻倍。",
     "options": []
@@ -3301,6 +3378,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "用简单计算说明数组何时翻倍（默认容量 16，负载因子 0.75）。阈值 = ____[1]",
     "options": []
@@ -3332,6 +3410,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "HashSet 初始容量 28、负载因子 0.75，容量在 ____[1] 时翻倍。",
     "options": []
@@ -3363,6 +3442,7 @@
    "src": [
     "M24"
    ],
+   "part": "mid",
    "zh": {
     "text": "HashSet 初始容量 24、负载因子 0.75，容量在 ____[1] 时翻倍。",
     "options": []
@@ -3394,6 +3474,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "HashSet 初始容量 10、负载因子 0.75，容量在 ____[1] 时翻倍。",
     "options": []
@@ -3425,6 +3506,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "补全：在 ____[1] 中不能同时存在 e1.equals(e2) 为 true 的两个元素 e1 和 e2。",
     "options": []
@@ -3456,6 +3538,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "HashSet 构造器中的值 16 称为 ____[1]。",
     "options": []
@@ -3487,6 +3570,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "要从 map 中取得一个对象，使用 ____[1]。",
     "options": []
@@ -3518,6 +3602,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "给定程序（向 map 放入 1 Jane、2 John、3 Eve、4 Jane），对 map 调用 keySet 方法是 ____[1]。",
     "options": []
@@ -3549,6 +3634,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "对同一个 map，调用 iterator 方法的写法是 ____[1]。",
     "options": []
@@ -3580,6 +3666,7 @@
     "A",
     "B"
    ],
+   "part": "mid",
    "zh": {
     "text": "迭代器对象上的 hasNext() 和 next() 的作用是 ____[1]。",
     "options": []
@@ -3616,6 +3703,7 @@
     "B",
     "F25"
    ],
+   "part": "mid",
    "option_explanations": [
     "属于链表对象，不在节点里。",
     "head 不在节点里。",
@@ -3658,6 +3746,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "在 LinkedList 开头插入的时间复杂度是 ____[1]。",
     "options": []
@@ -3696,6 +3785,7 @@
     "M24",
     "F25"
    ],
+   "part": "mid",
    "zh": {
     "text": "从列表中间删除一个元素会使 ____[1]。",
     "options": []
@@ -3725,6 +3815,7 @@
    "src": [
     "M24"
    ],
+   "part": "mid",
    "html": "<pre class=\"code\">// 方法一：java.util.LinkedList\nLinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;(Arrays.asList(4, 1, 3, 7));\nlist.addFirst(80);                 // 80 -&gt; 4 -&gt; 1 -&gt; 3 -&gt; 7\n\n// 方法二：自己实现的单链表\npublic void addFirst(E e) {\n    Node&lt;E&gt; newNode = new Node&lt;&gt;(e);\n    newNode.next = head;           // 新节点指向原来的头节点\n    head = newNode;                // head 指向新节点\n    size++;\n    if (tail == null) tail = head; // 原来是空表时，tail 也指向它\n}</pre><p>只改指针，时间复杂度 O(1)。</p>",
    "zh": {
     "text": "给定链表 4 → 1 → 3 → 7，写一个方法（代码片段）在表头插入 80。",
@@ -3756,6 +3847,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。插入时新元素放在最后位置，再向上比较交换，是 up-heap bubbling（上浮）。",
     "应选。插入时新元素放在最后位置，再向上比较交换，是 up-heap bubbling（上浮）。"
@@ -3793,6 +3885,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。删除（removeMin/Max）时把最后一个节点放到根，再向下比较交换，即 down-heap bubbling。",
     "不选。删除（removeMin/Max）时把最后一个节点放到根，再向下比较交换，即 down-heap bubbling。"
@@ -3830,6 +3923,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。",
     "不选。堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。"
@@ -3871,6 +3965,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "“约等于”不是堆序。",
     "应选：讲义原文的 heap-order property。",
@@ -3914,6 +4009,7 @@
    "src": [
     "A"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。完全且满足堆序，批注答案。",
     "也是合法的最大堆（完全二叉树）。",
@@ -3957,6 +4053,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "合法的堆。",
     "合法的堆。",
@@ -4000,6 +4097,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "这是根下标为 1 时的公式。",
@@ -4043,6 +4141,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "应选。",
@@ -4086,6 +4185,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "不对。",
@@ -4128,6 +4228,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "从堆中删除的节点由 ____[1] 替换。",
     "options": []
@@ -4160,6 +4261,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "堆满足两个重要性质：____[1] 和 ____[2]。",
     "options": []
@@ -4191,6 +4293,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "____[1] 性质定义了堆的形状。",
     "options": []
@@ -4222,6 +4325,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "堆最好的描述是 ____[1]。",
     "options": []
@@ -4255,6 +4359,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "根下标为 1，节点在下标 14：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
     "options": []
@@ -4288,6 +4393,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "根下标为 0，节点在下标 14：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
     "options": []
@@ -4319,6 +4425,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "根下标为 1，节点在下标 17：左孩子 ____[1]，右孩子 ____[2]，父节点 ____[3]。",
     "options": []
@@ -4348,6 +4455,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p><b>Queue</b>：FIFO，先进先出，元素按到达顺序出队。<br><b>Priority queue</b>：每个元素带优先级（key），出队的是优先级最高（或 key 最小/最大）的元素，与插入顺序无关，通常用堆实现，插入和删除都是 O(log n)。</p>",
    "zh": {
     "text": "队列与优先队列的区别是 ______。",
@@ -4383,6 +4491,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "平方取中，是。",
     "应选。不存在，应选。",
@@ -4428,6 +4537,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。",
     "下标范围是 0–10，不可能是 11。",
@@ -4473,6 +4583,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "计算错误。",
     "计算错误。",
@@ -4518,6 +4629,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "不对。",
@@ -4561,6 +4673,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "不对。",
@@ -4606,6 +4719,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。",
     "不对。",
@@ -4649,6 +4763,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "这是 87 >> 4。",
     "应选。",
@@ -4692,6 +4807,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "线性探测。",
     "二次探测。",
@@ -4737,6 +4853,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "四种哈希技术是 ____[1]、____[2]、____[3] 和 ____[4]。",
     "options": []
@@ -4769,6 +4886,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "哈希函数的两个部分是 ____[1] 和 ____[2]。",
     "options": []
@@ -4801,6 +4919,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "数组大小 N = 11，分别用 a) Shift Folding、b) Boundary Folding 求键 164281509 的下标：a) ____[1]  b) ____[2]",
     "options": []
@@ -4833,6 +4952,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "N = 11，PRIME = 7，键 89 的主哈希位置已满，求 i = 1、2 时的下一个下标：i=1 ____[1]，i=2 ____[2]",
     "options": []
@@ -4863,6 +4983,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "N = 11，PRIME = 7，键 15 的主哈希位置已满，求 i = 1、2 时的下一个下标：i=1 ____[1]，i=2 ____[2]",
     "options": []
@@ -4898,6 +5019,7 @@
     "M24",
     "K"
    ],
+   "part": "mid",
    "html": "<p><b>(a)</b></p><pre class=\"code\">public static int hashCode(int key) {\n    return key % 20;          // N = 20\n}</pre><p><b>(b)</b> 1 % 20 = 1；42 % 20 = 2；39 % 20 = 19；4 % 20 = 4；2 % 20 = 2（与 42 冲突）</p><p><b>(c)</b> 冲突的条目在同一个 bucket 中用链表串起来：</p><table class=\"ans-table bucket\"><tr><th>index</th><th>bucket（chaining）</th></tr><tr><td>0</td><td></td></tr><tr><td>1</td><td>(1, 4)</td></tr><tr><td>2</td><td>(42, 7) → (2, 21)</td></tr><tr><td>3</td><td></td></tr><tr><td>4</td><td>(4, 14)</td></tr><tr><td>5 … 18</td><td></td></tr><tr><td>19</td><td>(39, 3)</td></tr></table><p>课堂例题（会考照片）：N = 20，(1,20)(2,70)(42,80)(4,25)(12,44)(14,32)(17,11)(13,78)(37,98) → 下标 1, 2, 2, 4, 12, 14, 17, 13, 17。</p>",
    "zh": {
     "text": "数组 A 长度 N = 20，要放入 bucket array 的键值对为 (1,4)、(42,7)、(39,3)、(4,14)、(2,21)。(a) 用取模写一个计算哈希码的函数；(b) 计算每个条目的下标；(c) 画图说明如何放入 bucket array。",
@@ -4928,6 +5050,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "html": "<p><b>(31)</b></p><pre class=\"code\">public static int hashCode(int key, int N) {\n    return key % N;           // N = 21\n}</pre><p><b>(32)</b> 4 % 21 = 4；42 % 21 = 0；1 % 21 = 1；39 % 21 = 18；4 % 21 = 4；2 % 21 = 2；31 % 21 = 10</p><p><b>(33)</b></p><table class=\"ans-table bucket\"><tr><th>index</th><th>bucket</th></tr><tr><td>0</td><td>(42, 7)</td></tr><tr><td>1</td><td>(1, 89)</td></tr><tr><td>2</td><td>(2, 21)</td></tr><tr><td>3</td><td></td></tr><tr><td>4</td><td>(4, 10) → (4, 14)</td></tr><tr><td>5 … 9</td><td></td></tr><tr><td>10</td><td>(31, 45)</td></tr><tr><td>11 … 17</td><td></td></tr><tr><td>18</td><td>(39, 3)</td></tr><tr><td>19, 20</td><td></td></tr></table><p>key 4 出现两次：按 bucket array 画法两条都挂在 4 号桶；若当作 Map 存储，(4, 14) 会覆盖 (4, 10)，可在答卷中注明。</p>",
    "zh": {
     "text": "数组 A 长度 N = 21，键值对为 (4,10)、(42,7)、(1,89)、(39,3)、(4,14)、(2,21)、(31,45)。(31) 用取模写哈希函数；(32) 计算各条目下标；(33) 画出 bucket array。",
@@ -4960,6 +5083,7 @@
     "A",
     "M24"
    ],
+   "part": "mid",
    "html": "<p><b>s = “hello”</b>，n = 5，最高次幂 n−1 = 4；h=104，e=101，l=108，l=108，o=111<br>= 104×31<sup>4</sup> + 101×31<sup>3</sup> + 108×31<sup>2</sup> + 108×31<sup>1</sup> + 111×31<sup>0</sup><br>= 96,046,184 + 3,008,891 + 103,788 + 3,348 + 111<br>= <b>99,162,322</b><br>2024 春期中按此作答得满分。</p>",
    "zh": {
     "text": "给定字符串 s = hello，用多项式规则 s0·a^(n−1) + … + s(n−1)（a = 31，si = charAt(i)）计算哈希码，写出详细步骤。",
@@ -4990,6 +5114,7 @@
    "src": [
     "F25"
    ],
+   "part": "mid",
    "html": "<p><b>s = “tops”</b>，n = 4，最高次幂 n−1 = 3；t=116，o=111，p=112，s=115<br>= 116×31<sup>3</sup> + 111×31<sup>2</sup> + 112×31<sup>1</sup> + 115×31<sup>0</sup><br>= 3,455,756 + 106,671 + 3,472 + 115<br>= <b>3,566,014</b></p>",
    "zh": {
     "text": "给定字符串 s = tops，用多项式规则（a = 31）计算哈希码，写出详细步骤。",
@@ -5020,6 +5145,7 @@
     "B",
     "K"
    ],
+   "part": "mid",
    "html": "<p><b>s = “hello world”</b>，n = 11，最高次幂 n−1 = 10；h=104，e=101，l=108，l=108，o=111，空格=32，w=119，o=111，r=114，l=108，d=100<br>= 104×31<sup>10</sup> + 101×31<sup>9</sup> + 108×31<sup>8</sup> + 108×31<sup>7</sup> + 111×31<sup>6</sup> + 32×31<sup>5</sup> + 119×31<sup>4</sup> + 111×31<sup>3</sup> + 114×31<sup>2</sup> + 108×31<sup>1</sup> + 100×31<sup>0</sup><br>= 85,241,341,846,003,304 + 2,670,401,838,227,771 + 92,112,232,043,628 + 2,971,362,323,988 + 98,512,908,591 + 916,132,832 + 109,898,999 + 3,306,801 + 109,554 + 3,348 + 100<br>= <b>88,006,926,820,958,916</b><br><span class='muted'>（Java 中 int 会溢出，\"hello world\".hashCode() 实际返回 1794106052；考试写数学结果即可。）</span></p><p><b>s = “stop”</b>，n = 4，最高次幂 n−1 = 3；s=115，t=116，o=111，p=112<br>= 115×31<sup>3</sup> + 116×31<sup>2</sup> + 111×31<sup>1</sup> + 112×31<sup>0</sup><br>= 3,425,965 + 111,476 + 3,441 + 112<br>= <b>3,540,994</b><br>与课堂幻灯片 “stop” 例题一致。</p><p><b>s = “algorithm”</b>，n = 9，最高次幂 n−1 = 8；a=97，l=108，g=103，o=111，r=114，i=105，t=116，h=104，m=109<br>= 97×31<sup>8</sup> + 108×31<sup>7</sup> + 103×31<sup>6</sup> + 111×31<sup>5</sup> + 114×31<sup>4</sup> + 105×31<sup>3</sup> + 116×31<sup>2</sup> + 104×31<sup>1</sup> + 109×31<sup>0</sup><br>= 82,730,430,631,777 + 2,971,362,323,988 + 91,412,879,143 + 3,177,835,761 + 105,281,394 + 3,128,055 + 111,476 + 3,224 + 109<br>= <b>85,796,492,194,927</b><br><span class='muted'>（Java 中 int 会溢出，\"algorithm\".hashCode() 实际返回 225490031；考试写数学结果即可。）</span></p><p class='muted'>题库B 题干把 algorithm 印成了 algorith。</p>",
    "zh": {
     "text": "给定字符串 hello world、stop、algorithm，分别用多项式规则（a = 31）计算哈希码。",
@@ -5050,6 +5176,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>h(k) = k % 11，冲突时依次看 (k + j) % 11，j = 1, 2, …</p><p>34→1，29→7，53→9，44→0，120→10，39→6，45→1 冲突 → 2，40→7 冲突 → 8</p><table class=\"ans-table \"><tr><th>index</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr><tr><td>key</td><td>44</td><td>34</td><td>45</td><td></td><td></td><td></td><td>39</td><td>29</td><td>40</td><td>53</td><td>120</td></tr></table>",
    "zh": {
     "text": "用线性探测，依次插入键 34、29、53、44、120、39、45、40，画出大小为 11 的哈希表。",
@@ -5078,6 +5205,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "html": "<p>三种都是开放地址法（open addressing），从 k = h(key) = key % N 开始，位置被占就按规则找下一个（j = 0, 1, 2, …）：</p><p><b>(a) Linear probing</b>：index = (k + j) % N，逐格往后找；缺点是一次聚集（primary clustering）。<br><b>(b) Quadratic probing</b>：index = (k + j²) % N，依次看 k, k+1, k+4, k+9, …；避免一次聚集，但有二次聚集（secondary clustering）。<br><b>(c) Double hashing</b>：index = (h(key) + j·h'(key)) % N，h'(key) = PRIME − key % PRIME（PRIME 是小于 N 的素数，如 7）。</p><pre class=\"code\">int insert(int key) {\n    int k = key % N;\n    for (int j = 0; j &lt; N; j++) {\n        int index = (k + j) % N;          // (b) 改为 (k + j*j) % N；(c) 改为 (k + j*h2(key)) % N\n        if (table[index] == null) {\n            table[index] = key;\n            return index;\n        }\n    }\n    return -1;                            // 表满：rehash（容量翻倍后重新插入）\n}</pre><p>开放地址法一般保持负载因子 λ &lt; 0.5，超过就 rehashing。</p>",
    "zh": {
     "text": "分别写出线性探测、二次探测和双重哈希的算法。",
@@ -5111,6 +5239,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。有序表应使用二分查找 O(log n)，线性查找是 O(n)。",
     "应选。有序表应使用二分查找 O(log n)，线性查找是 O(n)。"
@@ -5150,6 +5279,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。同上，有序时二分查找更好。",
     "应选。同上，有序时二分查找更好。"
@@ -5189,6 +5319,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。",
     "应选。位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。"
@@ -5228,6 +5359,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。二分查找约 log₂N 次比较，远少于线性查找的 N 次。",
     "不选。二分查找约 log₂N 次比较，远少于线性查找的 N 次。"
@@ -5266,6 +5398,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "O(n log n) 时间复杂度称为 ____[1]。",
     "options": []
@@ -5295,6 +5428,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "时间复杂度 O(2ⁿ) 适用于 ____[1] 问题。",
     "options": []
@@ -5324,6 +5458,7 @@
    "src": [
     "A"
    ],
+   "part": "final",
    "zh": {
     "text": "时间复杂度 O(2ⁿ) 适用于 ____[1] 排序。",
     "options": []
@@ -5356,6 +5491,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "哈密顿回路是经过图中每个 ____[1] 恰好一次并回到 ____[2] 的回路。",
     "options": []
@@ -5389,6 +5525,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "当 n = 16、32、256 时，T(N) = log₂n 分别为 ____[1]、____[2]、____[3]。",
     "options": []
@@ -5420,6 +5557,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "f(n) = 8n + 100 的时间复杂度是 ____[1]。",
     "options": []
@@ -5451,6 +5589,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "下面嵌套循环的时间复杂度是 ____[1]。",
     "options": []
@@ -5482,6 +5621,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "前两万个正整数之和是 ____[1]。",
     "options": []
@@ -5511,6 +5651,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "前九千个正整数之和是 ____[1]。",
     "options": []
@@ -5540,6 +5681,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>公式：1 + 2 + … + n = n(n+1)/2 = (first + last)(last − first + 1)/2；前 5000 个数之和 = 5000 × 5001 / 2 = 12,502,500。</p><pre class=\"code\">public static int addNumbers() {\n    int first = 1;\n    int last = 5000;\n    int sum = (first + last) * (last - first + 1) / 2;   // 12,502,500\n    return sum;\n}</pre><p class='muted'>题库A 学长批注漏了 int sum 声明和乘号 *，上面已补全。也可以用 for 循环累加，但公式法是 O(1)。</p>",
    "zh": {
     "text": "写出公式，再用 Java 写一个计算前五千个数之和的算法。",
@@ -5570,6 +5712,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i = 0 执行 1 次：O(1)<br>i &lt; n 判断 n + 1 次：O(n)<br>i++ 执行 n 次：O(n)<br>k = k + 7 执行 n 次：O(n)<br>T(n) = O(1) + O(n) + O(n) + O(n) = O(1) + 3·O(n) = <b>O(n)</b>，所以是线性的。</p>",
    "zh": {
     "text": "给定循环（i 从 0 到 n−1，每次 k = k + 7），逐步证明其时间复杂度是线性的。",
@@ -5600,6 +5743,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>外层循环执行 n 次；外层每执行一次，内层循环执行 n 次；循环体 k = k + 1 共执行 n × n = n² 次。<br>T(n) = c·n² + （循环控制的低阶项）= <b>O(n²)</b>。</p>",
    "zh": {
     "text": "计算下面两层 n 次循环的时间复杂度，写出步骤。",
@@ -5630,6 +5774,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>外层 n 次，内层固定 5 次，循环体执行 5n 次。<br>T(n) = 5n = <b>O(n)</b>（常数 5 忽略）。</p>",
    "zh": {
     "text": "计算外层 n 次、内层 5 次的循环的时间复杂度。",
@@ -5660,6 +5805,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "快速排序的最坏时间复杂度是 ____[1]。",
     "options": []
@@ -5689,6 +5835,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 3 −1 5 2]，p=0</td><td>3 ↔ −1</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 3 -1 5 2 排序。",
@@ -5719,6 +5866,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 −1 3 5 2]，p=0</td><td>无交换</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 -1 3 5 2 排序。",
@@ -5749,6 +5897,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=38</td><td>81 ↔ 14，48 ↔ 13</td><td>[13 14 22] <b>38</b> [48 69 93 81 45 58 79 72]</td></tr><tr><td>[13 14 22]，p=13</td><td>无</td><td><b>13</b> [14 22]，再 p=14 → <b>14</b> [22]</td></tr><tr><td>[48 69 93 81 45 58 79 72]，p=48</td><td>69 ↔ 45</td><td>[45] <b>48</b> [93 81 69 58 79 72]</td></tr><tr><td>[93 81 69 58 79 72]，p=93</td><td>无</td><td>[72 81 69 58 79] <b>93</b></td></tr><tr><td>[72 81 69 58 79]，p=72</td><td>81 ↔ 58</td><td>[69 58] <b>72</b> [81 79]</td></tr><tr><td>[69 58]，p=69；[81 79]，p=81</td><td>无</td><td>58 <b>69</b>；79 <b>81</b></td></tr></table><p>结果：<b>13 14 22 38 45 48 58 69 72 79 81 93</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 38 81 22 48 13 69 93 14 45 58 79 72 排序。",
@@ -5779,6 +5928,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=4</td><td>5 ↔ 3</td><td>[3 3 2 4 1] <b>4</b> [5 9 5 8 9 7]</td></tr><tr><td>[3 3 2 4 1]，p=3</td><td>4 ↔ 1</td><td>[1 3 2] <b>3</b> [4]</td></tr><tr><td>[1 3 2]，p=1；[3 2]，p=3</td><td>无</td><td><b>1</b> [3 2] → [2] <b>3</b></td></tr><tr><td>[5 9 5 8 9 7]，p=5</td><td>9 ↔ 5</td><td>[5] <b>5</b> [9 8 9 7]</td></tr><tr><td>[9 8 9 7]，p=9</td><td>无</td><td>[7 8 9] <b>9</b></td></tr><tr><td>[7 8 9]，p=7；[8 9]，p=8</td><td>无</td><td><b>7</b> [8 9] → <b>8</b> [9]</td></tr></table><p>结果：<b>1 2 3 3 4 4 5 5 7 8 9 9</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 4 5 2 4 1 3 5 9 3 8 9 7 排序。",
@@ -5809,6 +5959,7 @@
     "B",
     "K"
    ],
+   "part": "final",
    "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=5</td><td>9 ↔ 1，8 ↔ 0 → 5 2 1 3 0 4 8 9 6 7</td><td>[4 2 1 3 0] <b>5</b> [8 9 6 7]</td></tr><tr><td>[4 2 1 3 0]，p=4</td><td>无</td><td>[0 2 1 3] <b>4</b></td></tr><tr><td>[0 2 1 3]，p=0；[2 1 3]，p=2</td><td>无</td><td><b>0</b> [2 1 3] → [1] <b>2</b> [3]</td></tr><tr><td>[8 9 6 7]，p=8</td><td>9 ↔ 7</td><td>[6 7] <b>8</b> [9]</td></tr><tr><td>[6 7]，p=6</td><td>无</td><td><b>6</b> [7]</td></tr></table><p>结果：<b>0 1 2 3 4 5 6 7 8 9</b>（第一轮的两次交换与课堂板书一致）</p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 5 2 9 3 8 4 0 1 6 7 排序。",
@@ -5839,6 +5990,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">MERGE-SORT(A, low, high)                     // 分治，O(n log n)\n1  if low &lt; high\n2      mid = (low + high) / 2\n3      mergeSort(A, low, mid)                // 递归排序左半\n4      mergeSort(A, mid + 1, high)           // 递归排序右半\n5      merge(A, low, mid, high)              // 合并两个有序段\n\nmerge：用两个下标分别扫描左右两段，每次把较小的元素放进临时数组，\n       一段用完后把另一段剩余元素整体复制过去，最后拷回 A。</pre>",
    "zh": {
     "text": "写出归并排序算法。",
@@ -5869,6 +6021,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">QUICK-SORT(list, first, last)                // 分治，平均 O(n log n)，最坏 O(n^2)\n1  if last &gt; first\n2      pivotIndex = partition(list, first, last)\n3      quickSort(list, first, pivotIndex - 1)\n4      quickSort(list, pivotIndex + 1, last)\n\npartition(list, first, last):\n    pivot = list[first]; low = first + 1; high = last\n    while high &gt; low:\n        while low &lt;= high and list[low] &lt;= pivot: low++\n        while low &lt;= high and list[high] &gt; pivot: high--\n        if high &gt; low: swap(list[low], list[high])\n    while high &gt; first and list[high] &gt;= pivot: high--\n    if pivot &gt; list[high]:\n        list[first] = list[high]; list[high] = pivot; return high\n    else: return first</pre>",
    "zh": {
     "text": "写出快速排序算法。",
@@ -5897,6 +6050,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">SELECTION-SORT(list)                         // O(n^2)\n    for i = 0 to n - 2:\n        minIndex = i\n        for j = i + 1 to n - 1:              // 在 list[i..n-1] 中找最小值\n            if list[j] &lt; list[minIndex]: minIndex = j\n        swap(list[i], list[minIndex])        // 放到第 i 个位置</pre>",
    "zh": {
     "text": "写出选择排序算法。",
@@ -5925,6 +6079,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">INSERTION-SORT(list)                         // O(n^2)\n    for i = 1 to n - 1:\n        currentElement = list[i]\n        k = i - 1\n        while k &gt;= 0 and list[k] &gt; currentElement:\n            list[k + 1] = list[k]            // 比它大的元素后移\n            k--\n        list[k + 1] = currentElement         // 插入到正确位置</pre>",
    "zh": {
     "text": "写出插入排序算法。",
@@ -5958,6 +6113,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。课上定义：左 < 父 ≤ 右，重复元素放到右子树。",
     "不选。课上定义：左 < 父 ≤ 右，重复元素放到右子树。"
@@ -5995,6 +6151,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。",
     "应选。左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。"
@@ -6036,6 +6193,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "左边方向反了。",
     "左右都反了。",
@@ -6081,6 +6239,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "用颜色。",
     "普通 BST 不自平衡。",
@@ -6124,6 +6283,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "红黑树用颜色。",
     "应选。",
@@ -6166,6 +6326,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "二叉搜索树的性质（规则）是 ____[1]。",
     "options": []
@@ -6197,6 +6358,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "从 BST 中删除的节点由 ____[1] 替换。",
     "options": []
@@ -6228,6 +6390,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "AVL 树中平衡因子的公式是 ____[1]。",
     "options": []
@@ -6259,6 +6422,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "AVL 中平衡因子的取值范围是 ____[1]。",
     "options": []
@@ -6292,6 +6456,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "给定 AVL 树：i) 节点 100 的高度 ____[1]；ii) 节点 60 的平衡因子 ____[2]；iii) 根据平衡因子，节点 60 是 ____[3] heavy。",
     "options": []
@@ -6323,6 +6488,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "作为 BST，若删除节点 115，由哪个节点替换？____[1]",
     "options": []
@@ -6352,6 +6518,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i) Pre-order（根 左 右）：<b>60 55 45 57 59 100 67 107 101</b><br>ii) Post-order（左 右 根）：<b>45 59 57 55 67 101 107 100 60</b><br>iii) In-order（左 根 右）：<b>45 55 57 59 60 67 100 101 107</b></p><p class='muted'>BST 的中序遍历是升序，可用来自检。</p>",
    "zh": {
     "text": "写出图中树 1（根 60 的 BST）的前序、后序、中序遍历。",
@@ -6382,6 +6549,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i) Pre-order（根 左 右）：<b>a b d h e i j c f k g</b><br>ii) Post-order（左 右 根）：<b>h d i j e b k f g c a</b><br>iii) In-order（左 根 右）：<b>h d b i e j a f k c g</b></p><p class='muted'>k 是 f 的右孩子。</p>",
    "zh": {
     "text": "写出图中树 2a（a–k）的前序、后序、中序遍历。",
@@ -6412,6 +6580,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i) Pre-order（根 左 右）：<b>g c b a c e d f k i h j m l n</b><br>ii) Post-order（左 右 根）：<b>a c b d f e c h j i l n m k g</b><br>iii) In-order（左 根 右）：<b>a b c c d e f g h i j k l m n</b></p><p class='muted'>第一个 c 是根的左孩子，第二个 c 是 b 的右孩子。</p>",
    "zh": {
     "text": "写出图中树 2b（绿色，根 g）的前序、后序、中序遍历。",
@@ -6442,6 +6611,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i) Pre-order（根 左 右）：<b>7 2 1 3 12 11 16 15</b><br>ii) Post-order（左 右 根）：<b>1 3 2 11 15 16 12 7</b><br>iii) In-order（左 根 右）：<b>1 2 3 7 11 12 15 16</b></p><p class='muted'>15 是 16 的左孩子。</p>",
    "zh": {
     "text": "写出图中树 3（根 7，含 15）的前序、后序、中序遍历。",
@@ -6472,6 +6642,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>i) Pre-order（根 左 右）：<b>7 2 1 3 12 11 16</b><br>ii) Post-order（左 右 根）：<b>1 3 2 11 16 12 7</b><br>iii) In-order（左 根 右）：<b>1 2 3 7 11 12 16</b></p>",
    "zh": {
     "text": "写出图中树 4（根 7，不含 15）的前序、后序、中序遍历。",
@@ -6502,6 +6673,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">public static Node search(Node root, int key) {\n    if (root == null || root.value == key)    // 空树或找到\n        return root;\n    if (key &lt; root.value)                     // 比当前小 → 去左子树\n        return search(root.left, key);\n    return search(root.right, key);           // 否则 → 去右子树\n}</pre><p>时间复杂度 O(h)，h 为树高（平衡时 O(log n)，退化成链时 O(n)）。<span class='muted'>题库A 批注的版本返回类型写成 void 却 return root，判空写成 root.value == null，已修正。</span></p>",
    "zh": {
     "text": "写出在 BST 中查找元素的算法。",
@@ -6532,6 +6704,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>20 有左孩子 → 找左子树中最右（最大）的节点 <b>19</b>，用 19 替换 20，再删去原来的 19（它没有孩子）。</p><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"322\" height=\"219\" viewBox=\"0 0 322 219\"><line x1=\"142.3\" y1=\"18.0\" x2=\"66.7\" y2=\"64.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"66.7\" y1=\"64.8\" x2=\"28.9\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"66.7\" y1=\"64.8\" x2=\"104.5\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"142.3\" y1=\"18.0\" x2=\"255.7\" y2=\"64.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"255.7\" y1=\"64.8\" x2=\"217.9\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"217.9\" y1=\"111.6\" x2=\"180.1\" y2=\"158.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"255.7\" y1=\"64.8\" x2=\"293.5\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"28.9\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"28.9\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">8</text><circle cx=\"66.7\" cy=\"64.8\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"66.7\" y=\"68.7\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">10</text><circle cx=\"104.5\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"104.5\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">12</text><circle cx=\"142.3\" cy=\"18.0\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"142.3\" y=\"21.9\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"180.1\" cy=\"158.4\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"180.1\" y=\"162.3\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">16</text><circle cx=\"217.9\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"217.9\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">18</text><circle cx=\"255.7\" cy=\"64.8\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"255.7\" y=\"68.7\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">19</text><circle cx=\"293.5\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"293.5\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">30</text><text x=\"161.2\" y=\"213.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">删除 20 之后</text></svg></figure></div>",
    "zh": {
     "text": "给定 BST，删除节点 20 后树会变成新结构，画出新结构。",
@@ -6562,6 +6735,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>高度（叶子 = 1）：48、54、88 = 1；62 = 2；50 = 3；78 = 4。<br>\nbf = h(right) − h(left)：bf(48) = bf(54) = bf(88) = 0；bf(62) = 0 − 1 = <b>−1</b>；bf(50) = 2 − 1 = <b>+1</b>；bf(78) = 1 − 3 = <b>−2</b> → 78 失衡。<br>\n78 的左孩子 50 偏右（新节点在 50 的右子树 62 下）→ <b>LR 型，双旋</b>：① 左旋 50（z = 78，y = 50，x = 62），变成 LL；② 右旋 78。</p><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"234\" height=\"209\" viewBox=\"0 0 234 209\"><line x1=\"170.6\" y1=\"17.0\" x2=\"63.5\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"61.2\" x2=\"27.8\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"61.2\" x2=\"134.9\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"134.9\" y1=\"105.4\" x2=\"99.2\" y2=\"149.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"170.6\" y1=\"17.0\" x2=\"206.3\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"27.8\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"27.8\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">48</text><circle cx=\"63.5\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"63.5\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">50</text><text x=\"78.3\" y=\"52.4\" font-size=\"8.5\" fill=\"#1565c0\" font-family=\"Helvetica,Arial\">bf=+1</text><circle cx=\"99.2\" cy=\"149.6\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"99.2\" y=\"153.3\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">54</text><circle cx=\"134.9\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"134.9\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">62</text><text x=\"149.7\" y=\"96.6\" font-size=\"8.5\" fill=\"#1565c0\" font-family=\"Helvetica,Arial\">bf=−1</text><circle cx=\"170.6\" cy=\"17.0\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"170.6\" y=\"20.7\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">78</text><text x=\"185.4\" y=\"8.2\" font-size=\"8.5\" fill=\"#1565c0\" font-family=\"Helvetica,Arial\">bf=−2</text><circle cx=\"206.3\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"206.3\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">88</text><text x=\"117.1\" y=\"202.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">原树</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"234\" height=\"209\" viewBox=\"0 0 234 209\"><line x1=\"170.6\" y1=\"17.0\" x2=\"134.9\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"134.9\" y1=\"61.2\" x2=\"63.5\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"105.4\" x2=\"27.8\" y2=\"149.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"105.4\" x2=\"99.2\" y2=\"149.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"170.6\" y1=\"17.0\" x2=\"206.3\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"27.8\" cy=\"149.6\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"27.8\" y=\"153.3\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">48</text><circle cx=\"63.5\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"63.5\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">50</text><circle cx=\"99.2\" cy=\"149.6\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"99.2\" y=\"153.3\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">54</text><circle cx=\"134.9\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"134.9\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">62</text><circle cx=\"170.6\" cy=\"17.0\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"170.6\" y=\"20.7\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">78</text><circle cx=\"206.3\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"206.3\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">88</text><text x=\"117.1\" y=\"202.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">① 左旋 50</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"234\" height=\"165\" viewBox=\"0 0 234 165\"><line x1=\"134.9\" y1=\"17.0\" x2=\"63.5\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"61.2\" x2=\"27.8\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"63.5\" y1=\"61.2\" x2=\"99.2\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"134.9\" y1=\"17.0\" x2=\"170.6\" y2=\"61.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"170.6\" y1=\"61.2\" x2=\"206.3\" y2=\"105.4\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"27.8\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"27.8\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">48</text><circle cx=\"63.5\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"63.5\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">50</text><circle cx=\"99.2\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"99.2\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">54</text><circle cx=\"134.9\" cy=\"17.0\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"134.9\" y=\"20.7\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">62</text><circle cx=\"170.6\" cy=\"61.2\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"170.6\" y=\"64.9\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">78</text><circle cx=\"206.3\" cy=\"105.4\" r=\"12.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"206.3\" y=\"109.1\" font-size=\"10.2\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">88</text><text x=\"117.1\" y=\"158.6\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">② 右旋 78，平衡</text></svg></figure></div><p>结果：62 为根，左 50（48, 54），右 78（右孩子 88）；bf(78) = +1，其余为 0。</p>",
    "zh": {
     "text": "给定 AVL 树，计算各节点平衡因子，并做适当的旋转使树重新平衡，写出详细步骤。",
@@ -6592,6 +6766,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>按字母顺序比较。第二个 d 是重复元素，插入时忽略。每次插入后自底向上算 bf = h(right) − h(left)，|bf| = 2 就旋转。元素按递增顺序插入，所以每次失衡都是 <b>RR 型 → 左旋</b>：</p><ol><li>插入 c：节点 a bf=+2，RR 型 → 左旋 a</li><li>插入 e：节点 c bf=+2，RR 型 → 左旋 c</li><li>d 重复，忽略</li><li>插入 f：节点 b bf=+2，RR 型 → 左旋 b</li><li>插入 g：节点 e bf=+2，RR 型 → 左旋 e</li><li>插入 j：节点 g bf=+2，RR 型 → 左旋 g</li><li>插入 k：节点 f bf=+2，RR 型 → 左旋 f</li><li>插入 l：节点 j bf=+2，RR 型 → 左旋 j</li></ol><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"171\" height=\"144\" viewBox=\"0 0 171 144\"><line x1=\"55.4\" y1=\"14.4\" x2=\"25.1\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"14.4\" x2=\"115.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"51.8\" x2=\"85.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"51.8\" x2=\"146.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">a</text><circle cx=\"55.4\" cy=\"14.4\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">b</text><circle cx=\"85.6\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">c</text><circle cx=\"115.8\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">d</text><circle cx=\"146.1\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">e</text><text x=\"85.6\" y=\"138.3\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 e 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"201\" height=\"144\" viewBox=\"0 0 201 144\"><line x1=\"115.8\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"85.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"14.4\" x2=\"146.1\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"146.1\" y1=\"51.8\" x2=\"176.3\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">a</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">b</text><circle cx=\"85.6\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">c</text><circle cx=\"115.8\" cy=\"14.4\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">d</text><circle cx=\"146.1\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">e</text><circle cx=\"176.3\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">f</text><text x=\"100.7\" y=\"138.3\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 f 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"262\" height=\"182\" viewBox=\"0 0 262 182\"><line x1=\"115.8\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"85.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"14.4\" x2=\"176.3\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"176.3\" y1=\"51.8\" x2=\"146.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"176.3\" y1=\"51.8\" x2=\"206.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"89.3\" x2=\"236.8\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">a</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">b</text><circle cx=\"85.6\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">c</text><circle cx=\"115.8\" cy=\"14.4\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">d</text><circle cx=\"146.1\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">e</text><circle cx=\"176.3\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">f</text><circle cx=\"206.6\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">g</text><circle cx=\"236.8\" cy=\"126.7\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">i</text><text x=\"131.0\" y=\"175.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 i 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"322\" height=\"182\" viewBox=\"0 0 322 182\"><line x1=\"115.8\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"85.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"14.4\" x2=\"236.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"236.8\" y1=\"51.8\" x2=\"176.3\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"176.3\" y1=\"89.3\" x2=\"146.1\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"176.3\" y1=\"89.3\" x2=\"206.6\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"236.8\" y1=\"51.8\" x2=\"267.0\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"267.0\" y1=\"89.3\" x2=\"297.3\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">a</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">b</text><circle cx=\"85.6\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">c</text><circle cx=\"115.8\" cy=\"14.4\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">d</text><circle cx=\"146.1\" cy=\"126.7\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">e</text><circle cx=\"176.3\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">f</text><circle cx=\"206.6\" cy=\"126.7\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">g</text><circle cx=\"236.8\" cy=\"51.8\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">i</text><circle cx=\"267.0\" cy=\"89.3\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"267.0\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">j</text><circle cx=\"297.3\" cy=\"126.7\" r=\"10.8\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"297.3\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">k</text><text x=\"161.2\" y=\"175.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 k 后</text></svg></figure></div><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"436\" height=\"219\" viewBox=\"0 0 436 219\"><line x1=\"142.3\" y1=\"18.0\" x2=\"66.7\" y2=\"64.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"66.7\" y1=\"64.8\" x2=\"28.9\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"66.7\" y1=\"64.8\" x2=\"104.5\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"142.3\" y1=\"18.0\" x2=\"293.5\" y2=\"64.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"293.5\" y1=\"64.8\" x2=\"217.9\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"217.9\" y1=\"111.6\" x2=\"180.1\" y2=\"158.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"217.9\" y1=\"111.6\" x2=\"255.7\" y2=\"158.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"293.5\" y1=\"64.8\" x2=\"369.1\" y2=\"111.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"369.1\" y1=\"111.6\" x2=\"331.3\" y2=\"158.4\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"369.1\" y1=\"111.6\" x2=\"406.9\" y2=\"158.4\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"28.9\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"28.9\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">a</text><circle cx=\"66.7\" cy=\"64.8\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"66.7\" y=\"68.7\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">b</text><circle cx=\"104.5\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"104.5\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">c</text><circle cx=\"142.3\" cy=\"18.0\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"142.3\" y=\"21.9\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">d</text><circle cx=\"180.1\" cy=\"158.4\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"180.1\" y=\"162.3\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">e</text><circle cx=\"217.9\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"217.9\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">f</text><circle cx=\"255.7\" cy=\"158.4\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"255.7\" y=\"162.3\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">g</text><circle cx=\"293.5\" cy=\"64.8\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"293.5\" y=\"68.7\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">i</text><circle cx=\"331.3\" cy=\"158.4\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"331.3\" y=\"162.3\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">j</text><circle cx=\"369.1\" cy=\"111.6\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"369.1\" y=\"115.5\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">k</text><circle cx=\"406.9\" cy=\"158.4\" r=\"13.5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"1.5\"/><text x=\"406.9\" y=\"162.3\" font-size=\"10.8\" text-anchor=\"middle\" fill=\"#111\" font-family=\"Helvetica,Arial\">l</text><text x=\"217.9\" y=\"213.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">最终 AVL 树</text></svg></figure></div><p>最终：根 d；左 b(a, c)；右 i，i 的左 f(e, g)、右 k(j, l)。</p>",
    "zh": {
     "text": "用元素 a, b, c, d, e, d, f, g, i, j, k, l 构建 AVL 树，写出过程。",
@@ -6625,6 +6800,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。红黑树性质：从任一节点到其后代叶子（NIL）的每条简单路径上黑节点数相同（black height）。",
     "不选。红黑树性质：从任一节点到其后代叶子（NIL）的每条简单路径上黑节点数相同（black height）。"
@@ -6664,6 +6840,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不选。红节点的孩子必须是黑色，不能有两个相邻（父子）红节点；出现即违规，需要重新着色或旋转。",
     "应选。红节点的孩子必须是黑色，不能有两个相邻（父子）红节点；出现即违规，需要重新着色或旋转。"
@@ -6705,6 +6882,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "正确性质。",
     "应选。错误说法，应选。",
@@ -6750,6 +6928,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "正确。",
     "正确。",
@@ -6793,6 +6972,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不对。",
     "不对。",
@@ -6836,6 +7016,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "Case 3(b)。",
     "Case 3(a)。",
@@ -6879,6 +7060,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "第二步才旋转 g。",
     "应选。",
@@ -6922,6 +7104,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "应选。",
     "不对。",
@@ -6965,6 +7148,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "叔叔红时不旋转。",
     "应选。",
@@ -7008,6 +7192,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "这是 LL。",
     "不对。",
@@ -7053,6 +7238,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "option_explanations": [
     "不自平衡。",
     "用高度。",
@@ -7095,6 +7281,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "zh": {
     "text": "在红黑树中，新插入的节点总是 ____[1] 色。",
     "options": []
@@ -7124,6 +7311,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>新节点一律插成红色；根据叔叔 u 的颜色决定 case（按 Lecture 14 编号）：</p><ol><li>插入 1：根节点 → 涂黑</li><li>插入 2：父节点为黑，无需调整</li><li>插入 3：Case 3(b) RR：左旋 g=1，交换 g=1 与 p=2 的颜色</li><li>插入 4：Case 1（叔叔 1 为红）：p=3、u=1 涂黑，g=2 涂红；根变红 → 重新涂黑</li><li>插入 5：Case 3(b) RR：左旋 g=3，交换 g=3 与 p=4 的颜色</li><li>插入 6：Case 1（叔叔 3 为红）：p=5、u=3 涂黑，g=4 涂红</li><li>插入 7：Case 3(b) RR：左旋 g=5，交换 g=5 与 p=6 的颜色</li></ol><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"114\" height=\"110\" viewBox=\"0 0 114 110\"><line x1=\"57.2\" y1=\"15.0\" x2=\"25.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"57.2\" y1=\"15.0\" x2=\"88.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.8\" cy=\"54.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"25.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">1</text><circle cx=\"57.2\" cy=\"15.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"57.2\" y=\"18.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">2</text><circle cx=\"88.8\" cy=\"54.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"88.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><text x=\"57.2\" y=\"104.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 3 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"146\" height=\"149\" viewBox=\"0 0 146 149\"><line x1=\"57.2\" y1=\"15.0\" x2=\"25.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"57.2\" y1=\"15.0\" x2=\"88.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"88.8\" y1=\"54.0\" x2=\"120.2\" y2=\"93.0\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.8\" cy=\"54.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">1</text><circle cx=\"57.2\" cy=\"15.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"57.2\" y=\"18.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">2</text><circle cx=\"88.8\" cy=\"54.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"88.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"120.2\" cy=\"93.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"120.2\" y=\"96.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">4</text><text x=\"73.0\" y=\"143.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 4 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"178\" height=\"149\" viewBox=\"0 0 178 149\"><line x1=\"57.2\" y1=\"15.0\" x2=\"25.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"57.2\" y1=\"15.0\" x2=\"120.2\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"120.2\" y1=\"54.0\" x2=\"88.8\" y2=\"93.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"120.2\" y1=\"54.0\" x2=\"151.8\" y2=\"93.0\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.8\" cy=\"54.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">1</text><circle cx=\"57.2\" cy=\"15.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"57.2\" y=\"18.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">2</text><circle cx=\"88.8\" cy=\"93.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"88.8\" y=\"96.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"120.2\" cy=\"54.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"120.2\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">4</text><circle cx=\"151.8\" cy=\"93.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"151.8\" y=\"96.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">5</text><text x=\"88.8\" y=\"143.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 5 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"209\" height=\"188\" viewBox=\"0 0 209 188\"><line x1=\"57.2\" y1=\"15.0\" x2=\"25.8\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"57.2\" y1=\"15.0\" x2=\"120.2\" y2=\"54.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"120.2\" y1=\"54.0\" x2=\"88.8\" y2=\"93.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"120.2\" y1=\"54.0\" x2=\"151.8\" y2=\"93.0\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"151.8\" y1=\"93.0\" x2=\"183.2\" y2=\"132.0\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.8\" cy=\"54.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.8\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">1</text><circle cx=\"57.2\" cy=\"15.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"57.2\" y=\"18.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">2</text><circle cx=\"88.8\" cy=\"93.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"88.8\" y=\"96.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"120.2\" cy=\"54.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"120.2\" y=\"57.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">4</text><circle cx=\"151.8\" cy=\"93.0\" r=\"11.2\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"151.8\" y=\"96.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">5</text><circle cx=\"183.2\" cy=\"132.0\" r=\"11.2\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"183.2\" y=\"135.2\" font-size=\"9.0\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">6</text><text x=\"104.5\" y=\"182.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 6 后</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"255\" height=\"198\" viewBox=\"0 0 255 198\"><line x1=\"60.4\" y1=\"16.0\" x2=\"26.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"16.0\" x2=\"127.6\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"127.6\" y1=\"57.6\" x2=\"94.0\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"127.6\" y1=\"57.6\" x2=\"194.8\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"194.8\" y1=\"99.2\" x2=\"161.2\" y2=\"140.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"194.8\" y1=\"99.2\" x2=\"228.4\" y2=\"140.8\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">1</text><circle cx=\"60.4\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">2</text><circle cx=\"94.0\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"127.6\" cy=\"57.6\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"127.6\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">4</text><circle cx=\"161.2\" cy=\"140.8\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"161.2\" y=\"144.3\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">5</text><circle cx=\"194.8\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"194.8\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">6</text><circle cx=\"228.4\" cy=\"140.8\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"228.4\" y=\"144.3\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">7</text><text x=\"127.6\" y=\"192.4\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">最终（插入 7 后）</text></svg></figure></div><p>检查：根到每个 NIL 的路径都经过 2 个黑节点（如 2→1、2→4→3、2→4→6→5），没有相邻红节点。</p>",
    "zh": {
     "text": "用 1 2 3 4 5 6 7 依次构建红黑树，使任意简单路径黑高相同，写出详细步骤。",
@@ -7154,6 +7342,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>① 删除 50：v = 50 是<b>红</b>叶子 → Case 1 简单情形，直接删除，黑高不变。<br>\n② 删除 40：v = 40 是黑叶子，顶替它的 u = NIL（黑）→ Black + Black = <b>DB（双黑）</b>（Case 2）。<br>\n③ DB 的兄弟 s = 20 是黑色，且两个孩子都是黑（NIL）→ <b>Case 3b</b>：s 变红（B − B = R），双黑上推给父亲 30：30 原为黑 → B + B = DB；30 是根 → <b>Case 3d</b>：根的双黑直接变单黑。</p><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"154\" height=\"157\" viewBox=\"0 0 154 157\"><line x1=\"60.4\" y1=\"16.0\" x2=\"26.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"16.0\" x2=\"94.0\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"94.0\" y1=\"57.6\" x2=\"127.6\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"60.4\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"94.0\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">40</text><circle cx=\"127.6\" cy=\"99.2\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"127.6\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">50</text><text x=\"77.2\" y=\"150.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">原树 (a)</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"121\" height=\"115\" viewBox=\"0 0 121 115\"><line x1=\"60.4\" y1=\"16.0\" x2=\"26.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"16.0\" x2=\"94.0\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"60.4\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"94.0\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">40</text><text x=\"60.4\" y=\"109.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">删 50</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"121\" height=\"115\" viewBox=\"0 0 121 115\"><line x1=\"60.4\" y1=\"16.0\" x2=\"26.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"16.0\" x2=\"94.0\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"60.4\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"94.0\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"94.0\" cy=\"57.6\" r=\"14.8\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">NIL</text><text x=\"60.4\" y=\"109.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">删 40 → DB</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"87\" height=\"115\" viewBox=\"0 0 87 115\"><line x1=\"60.4\" y1=\"16.0\" x2=\"26.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"57.6\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"60.4\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><text x=\"43.6\" y=\"109.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">结果</text></svg></figure></div><p>检查：根到每个 NIL 的路径都只经过 1 个黑节点（30），没有相邻红节点。</p>",
    "zh": {
     "text": "给定红黑树 (a)，先删除 50，再删除 40（产生双黑），然后重新平衡。",
@@ -7184,6 +7373,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>① 删除 29：红叶子，直接删除。<br>\n② 删除 28：黑叶子，NIL 顶替 → <b>DB</b>（在 25 的右孩子位置）。<br>\n③ 兄弟 s = 15 是黑色，两个孩子都是黑 → <b>Case 3b</b>：s = 15 变红；父亲 25 是<b>红</b> → red + double black = single black，25 变黑，结束（不再上推）。</p><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"222\" height=\"198\" viewBox=\"0 0 222 198\"><line x1=\"161.2\" y1=\"16.0\" x2=\"60.4\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"57.6\" x2=\"26.8\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"57.6\" x2=\"94.0\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"94.0\" y1=\"99.2\" x2=\"127.6\" y2=\"140.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"161.2\" y1=\"16.0\" x2=\"194.8\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"60.4\" cy=\"57.6\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"94.0\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">28</text><circle cx=\"127.6\" cy=\"140.8\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"127.6\" y=\"144.3\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">29</text><circle cx=\"161.2\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"161.2\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"194.8\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"194.8\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">100</text><text x=\"110.8\" y=\"192.4\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">原树 (b)</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"188\" height=\"157\" viewBox=\"0 0 188 157\"><line x1=\"127.6\" y1=\"16.0\" x2=\"60.4\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"57.6\" x2=\"26.8\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"57.6\" x2=\"94.0\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"127.6\" y1=\"16.0\" x2=\"161.2\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"60.4\" cy=\"57.6\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"94.0\" cy=\"99.2\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"94.0\" cy=\"99.2\" r=\"14.8\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">NIL</text><circle cx=\"127.6\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"127.6\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"161.2\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"161.2\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">100</text><text x=\"94.0\" y=\"150.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">删 29、删 28 → DB</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"154\" height=\"157\" viewBox=\"0 0 154 157\"><line x1=\"94.0\" y1=\"16.0\" x2=\"60.4\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"60.4\" y1=\"57.6\" x2=\"26.8\" y2=\"99.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"94.0\" y1=\"16.0\" x2=\"127.6\" y2=\"57.6\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"26.8\" cy=\"99.2\" r=\"12.0\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"26.8\" y=\"102.7\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"60.4\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"60.4\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"94.0\" cy=\"16.0\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"19.5\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">30</text><circle cx=\"127.6\" cy=\"57.6\" r=\"12.0\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"127.6\" y=\"61.1\" font-size=\"9.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">100</text><text x=\"77.2\" y=\"150.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">结果</text></svg></figure></div><p>检查：根到每个 NIL 的路径都经过 2 个黑节点（30→25、30→100），没有相邻红节点。</p>",
    "zh": {
     "text": "给定红黑树 (b)，先删除 29，再删除 28（产生双黑），然后重新平衡。",
@@ -7214,6 +7404,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<p>LEFT-ROTATE 把 x 的右孩子 y 提上来，x 下沉成为 y 的左孩子；中序顺序 α x β y γ 不变。</p>\n<p>第 1 行：y 指向 x 的右孩子。<br>第 2 行：把 y 的左子树 β 挂成 x 的右子树。<br>第 3–4 行：若 β 非空，把 β 的父指针改为 x。<br>\n第 5 行：y 的父指针改为 x 原来的父亲（y 接替 x 的位置）。<br>第 6–7 行：若 x 原来是根，则 y 成为新根；<br>第 8–9 行：否则若 x 是父亲的左孩子，父亲的左孩子改为 y；<br>\n第 10 行：否则父亲的右孩子改为 y。<br>第 11 行：x 成为 y 的左孩子。<br>第 12 行：x 的父指针指向 y。</p>\n<p class=\"muted\">原题把第 5 行缩进到 if 里，实际第 5 行不在 if 里；题库B 还把第 1 行误印成 y.left = x.right。旋转只改指针，O(1)，不破坏 BST 性质。</p>",
    "zh": {
     "text": "结合图示，逐行解释 LEFT-ROTATE 算法。",
@@ -7244,6 +7435,7 @@
     "A",
     "B"
    ],
+   "part": "final",
    "html": "<pre class=\"code\">RIGHT-ROTATE(T, y)\n1  x = y.left               // x 是 y 的左孩子\n2  y.left = x.right         // x 的右子树 β 挂到 y 的左边\n3  if x.right ≠ T.nil\n4      x.right.p = y        // β 的父指针改为 y\n5  x.p = y.p                // x 接替 y 的位置\n6  if y.p == T.nil\n7      T.root = x           // y 原来是根 → x 成为根\n8  elseif y == y.p.right\n9      y.p.right = x        // y 是右孩子 → 父亲的右孩子改为 x\n10 else y.p.left = x        // y 是左孩子 → 父亲的左孩子改为 x\n11 x.right = y              // y 成为 x 的右孩子\n12 y.p = x                  // y 的父指针指向 x</pre><p>与 LEFT-ROTATE 完全对称：把 x 和 y、left 和 right 互换。</p>",
    "zh": {
     "text": "结合同一图示，写出 RIGHT-ROTATE 算法并逐行解释。",
@@ -7272,6 +7464,7 @@
    "src": [
     "B"
    ],
+   "part": "final",
    "html": "<p>刚插入 27（红），父亲 25（红）→ 两个红节点相邻。<br>\n<b>第 1 个空框</b>：叔叔 u = 16 是<b>红</b> → <b>Case 1</b>：p = 25、u = 16 涂黑，g = 20 涂红（得到图中第 2 棵树）。<br>\n此时 20（红）与父亲 15（红）冲突：x = 20，p = 15，g = 34，叔叔 u = 50 是<b>黑</b>；p 是左孩子、x 是右孩子 → <b>Case 2(a) LR</b>。<br>\n<b>第 2 个空框</b>：左旋 p = 15，得到 34 的左孩子 20（红），20 的左孩子 15（红，挂 3、16），20 的右孩子 25 → 变成 <b>LL</b>。<br>\n最后 <b>Case 3(a) LL</b>：右旋 g = 34，交换 34 与 20 的颜色 → 20 成为黑色的根（题图最后一棵）。</p><div class=\"tree-row\"><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"262\" height=\"219\" viewBox=\"0 0 262 219\"><line x1=\"206.6\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"115.8\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"89.3\" x2=\"85.6\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"89.3\" x2=\"146.1\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"146.1\" y1=\"126.7\" x2=\"176.3\" y2=\"164.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"14.4\" x2=\"236.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"85.6\" cy=\"126.7\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">16</text><circle cx=\"115.8\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"146.1\" cy=\"126.7\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"176.3\" cy=\"164.2\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"167.3\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">27</text><circle cx=\"206.6\" cy=\"14.4\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">34</text><circle cx=\"236.8\" cy=\"51.8\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">50</text><text x=\"131.0\" y=\"213.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">插入 27</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"262\" height=\"219\" viewBox=\"0 0 262 219\"><line x1=\"206.6\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"115.8\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"89.3\" x2=\"85.6\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"89.3\" x2=\"146.1\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"146.1\" y1=\"126.7\" x2=\"176.3\" y2=\"164.2\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"14.4\" x2=\"236.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"85.6\" cy=\"126.7\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">16</text><circle cx=\"115.8\" cy=\"89.3\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"146.1\" cy=\"126.7\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"176.3\" cy=\"164.2\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"167.3\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">27</text><circle cx=\"206.6\" cy=\"14.4\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">34</text><circle cx=\"236.8\" cy=\"51.8\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">50</text><text x=\"131.0\" y=\"213.2\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">空框 1：Case 1 重新着色</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"262\" height=\"182\" viewBox=\"0 0 262 182\"><line x1=\"206.6\" y1=\"14.4\" x2=\"115.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"51.8\" x2=\"55.4\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"89.3\" x2=\"25.1\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"89.3\" x2=\"85.6\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"51.8\" x2=\"146.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"146.1\" y1=\"89.3\" x2=\"176.3\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"14.4\" x2=\"236.8\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"126.7\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"55.4\" cy=\"89.3\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"85.6\" cy=\"126.7\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">16</text><circle cx=\"115.8\" cy=\"51.8\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"146.1\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"176.3\" cy=\"126.7\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">27</text><circle cx=\"206.6\" cy=\"14.4\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">34</text><circle cx=\"236.8\" cy=\"51.8\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">50</text><text x=\"131.0\" y=\"175.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">空框 2：左旋 15（LR→LL）</text></svg></figure><figure class=\"tree-box\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"262\" height=\"182\" viewBox=\"0 0 262 182\"><line x1=\"115.8\" y1=\"14.4\" x2=\"55.4\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"25.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"55.4\" y1=\"51.8\" x2=\"85.6\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"115.8\" y1=\"14.4\" x2=\"206.6\" y2=\"51.8\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"51.8\" x2=\"146.1\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"146.1\" y1=\"89.3\" x2=\"176.3\" y2=\"126.7\" stroke=\"#555\" stroke-width=\"1.3\"/><line x1=\"206.6\" y1=\"51.8\" x2=\"236.8\" y2=\"89.3\" stroke=\"#555\" stroke-width=\"1.3\"/><circle cx=\"25.1\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"25.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">3</text><circle cx=\"55.4\" cy=\"51.8\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"55.4\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">15</text><circle cx=\"85.6\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"85.6\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">16</text><circle cx=\"115.8\" cy=\"14.4\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"115.8\" y=\"17.5\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">20</text><circle cx=\"146.1\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"146.1\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">25</text><circle cx=\"176.3\" cy=\"126.7\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"176.3\" y=\"129.8\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">27</text><circle cx=\"206.6\" cy=\"51.8\" r=\"10.8\" fill=\"#e53935\" stroke=\"#b71c1c\" stroke-width=\"1.5\"/><text x=\"206.6\" y=\"55.0\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">34</text><circle cx=\"236.8\" cy=\"89.3\" r=\"10.8\" fill=\"#2b2b2b\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"236.8\" y=\"92.4\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"Helvetica,Arial\">50</text><text x=\"131.0\" y=\"175.8\" font-size=\"12\" text-anchor=\"middle\" fill=\"#333\" font-family=\"PingFang SC,Helvetica\">右旋 34 + 换色</text></svg></figure></div>",
    "zh": {
     "text": "补全图中空白框，说明这棵红黑树如何一步步恢复平衡（黑圈为黑色，绿色为红色）。",

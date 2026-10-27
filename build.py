@@ -7,7 +7,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 sys.path[:0] = [str(ROOT), str(ROOT / "content")]
-from content import LECTURES, SOURCES, EXAMS  # noqa: E402
+from content import LECTURES, SOURCES, EXAMS, MID_LAST_LECTURE, MID_EXTRA_KEYS  # noqa: E402
 from dataset import QS, PAPERS, TYPE_ZH  # noqa: E402
 from practice_ui import prepare_ui, source_hash  # noqa: E402
 
@@ -28,12 +28,14 @@ def option_notes(q):
 
 def build():
     questions, translations = [], {}
+    assert MID_EXTRA_KEYS <= {q["key"] for q in QS}, MID_EXTRA_KEYS - {q["key"] for q in QS}
     for q in QS:
         item = dict(id=q["id"], label=q["label"], key=q["key"], chapter=q["ch"] - 1, bank=q["type"], type=q["type"],
                     text=q["text"], options=q["options"], answer=q.get("answer"), answers=q.get("answers", []),
                     explanation=q["ex"], note=q["note"], references=f"Lecture {q['ch']} · {LECTURES[q['ch'] - 1][1]}",
                     review_revision=REVISION, sources=[SOURCES[s] for s in q["src"]],
-                    exam={e: n for e, n in q["exam"].items()}, src=q["src"], figs=[data_uri(f) for f in q["fig"]])
+                    exam={e: n for e, n in q["exam"].items()}, src=q["src"], figs=[data_uri(f) for f in q["fig"]],
+                    part="mid" if q["ch"] <= MID_LAST_LECTURE or q["key"] in MID_EXTRA_KEYS else "final")
         if q["type"] in ("tf", "mc"):
             item["option_explanations"] = option_notes(q)
         if q["type"] == "essay":
