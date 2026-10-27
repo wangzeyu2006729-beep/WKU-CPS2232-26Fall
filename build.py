@@ -8,7 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parent
 sys.path[:0] = [str(ROOT), str(ROOT / "content")]
 from content import LECTURES, SOURCES, EXAMS, MID_LAST_LECTURE, MID_EXTRA_KEYS  # noqa: E402
-from dataset import QS, PAPERS, TYPE_ZH  # noqa: E402
+from dataset import QS, PAPERS, TYPE_ZH, IDS, IDS_BY_KEY  # noqa: E402
 from practice_ui import prepare_ui, source_hash  # noqa: E402
 
 REVISION = "2026-10-22.1"
@@ -42,6 +42,7 @@ def build():
             item["html"] = q["html"]
         questions.append(item)
         translations[q["label"]] = dict(text=q["zh"], options=q["zo"], source_sha256=source_hash(item))
+    IDS.write_text(json.dumps(IDS_BY_KEY, ensure_ascii=False, indent=0) + "\n")
     (ROOT / "translations.json").write_text(json.dumps(dict(questions=translations), ensure_ascii=False, indent=1) + "\n")
     papers = {e: dict(title=m["title"], short=m["short"], note=m["note"],
                       order=list(dict.fromkeys(q["id"] for _, q in PAPERS[e])), numbers={str(q["id"]): q["exam"][e] for _, q in PAPERS[e]})

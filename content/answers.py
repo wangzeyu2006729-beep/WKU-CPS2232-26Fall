@@ -278,3 +278,145 @@ isPartOf：<b>菱形</b>画在整体一端；空心菱形 = aggregation（部分
 
 A["genstack-diff"] = """<p><b>GenericStack&lt;T&gt;</b>：参数化（泛型）类型，使用时指定具体类型，如 GenericStack&lt;String&gt;；编译器做类型检查，取元素不用强制转换，类型错误在编译期发现，类型安全。<br>
 <b>GenericStack</b>：原始类型（raw type），相当于 GenericStack&lt;Object&gt;，什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>"""
+
+# ---- 作业 1（AS1 U1–4）与会考补充
+A["as1-rec-iter"] = """<p><b>一般来说迭代循环更高效</b>（与 L1-TF01 的结论一致）。</p>
+<ol><li><b>时间开销</b>：每次递归调用都要压栈一个栈帧（参数、局部变量、返回地址），调用和返回本身有开销；循环只是在同一个栈帧里改变量。</li>
+<li><b>空间开销</b>：递归深度为 n 时需要 O(n) 的栈空间，循环通常只要 O(1)；递归太深会抛 <code>StackOverflowError</code>。</li>
+<li><b>重复计算</b>：朴素递归可能反复解同一个子问题，例如递归求斐波那契是 O(2<sup>n</sup>)，用循环是 O(n)。</li></ol>
+<p>递归的优点是代码更简洁、更贴近问题本身，适合天然递归的问题（树的遍历、全排列、汉诺塔、快速排序/归并排序）。所以结论是：效率上选循环，可读性和问题结构需要时再用递归。</p>"""
+
+A["as1-sum-loop"] = code("""
+int s = 0;
+for (int i = 1; i <= 4; i++) {        // 外层：i = 1..4
+    for (int j = 1; j <= 5; j++) {    // 内层：j = 1..5
+        s += 2 * i * i;               // 每次加 2i²
+    }
+}
+System.out.println("s = " + s);       // s = 300""") + \
+    "<p>验算：内层的 2i² 与 j 无关，所以每个 i 被加 5 次：s = 5 × 2 × (1² + 2² + 3² + 4²) = 10 × 30 = <b>300</b>。</p>"
+
+A["as1-fib"] = code("""
+import java.math.BigInteger;
+
+public class Fibonacci {
+    // 迭代求第 n 项：F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)
+    public static BigInteger fib(int n) {
+        BigInteger a = BigInteger.ZERO, b = BigInteger.ONE;
+        for (int i = 0; i < n; i++) {
+            BigInteger next = a.add(b);
+            a = b;
+            b = next;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 11; i++)          // 数列的前 11 项
+            System.out.print(fib(i) + " ");
+        System.out.println();
+        System.out.println("F(11)  = " + fib(11));
+        System.out.println("F(100) = " + fib(100));
+    }
+}""") + "<p>输出：</p>" + code("""
+0 1 1 2 3 5 8 13 21 34 55
+F(11)  = 89
+F(100) = 354224848179261915075""") + \
+    "<p>“Test with n = 11” 可以理解为打印前 11 项，也可以理解为求第 11 项，答卷里两种都写出来最稳妥。<b>n = 100 必须用 BigInteger</b>："\
+    "long 最大约 9.22 × 10<sup>18</sup>，只能存到 F(92) = 7,540,113,804,746,346,429，F(93) 起就会溢出成负数。循环只用两个变量，时间 O(n)、空间 O(1)。</p>"
+
+A["as1-perm"] = code("""
+import java.util.Scanner;
+
+public class StringPermutation {
+    public static void displayPermutation(String s) {
+        displayPermutation("", s);
+    }
+
+    // s1：已经排好的前缀；s2：还没用的字符
+    public static void displayPermutation(String s1, String s2) {
+        if (s2.isEmpty()) {                       // 基本情况：字符用完，输出一个排列
+            System.out.println(s1);
+            return;
+        }
+        for (int i = 0; i < s2.length(); i++)     // 依次把 s2 的第 i 个字符移到 s1 末尾
+            displayPermutation(s1 + s2.charAt(i),
+                               s2.substring(0, i) + s2.substring(i + 1));
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        displayPermutation(input.nextLine());
+    }
+}""") + table(["调用 (s1, s2)", "继续展开", "输出"], [
+    ["(\"\", \"abc\")", "(\"a\",\"bc\")、(\"b\",\"ac\")、(\"c\",\"ab\")", ""],
+    ["(\"a\", \"bc\")", "(\"ab\",\"c\") → (\"abc\",\"\")；(\"ac\",\"b\") → (\"acb\",\"\")", "abc, acb"],
+    ["(\"b\", \"ac\")", "(\"ba\",\"c\")；(\"bc\",\"a\")", "bac, bca"],
+    ["(\"c\", \"ab\")", "(\"ca\",\"b\")；(\"cb\",\"a\")", "cab, cba"]]) + \
+    "<p>输出顺序正好是 abc、acb、bac、bca、cab、cba。长度为 n 的字符串有 n! 个排列（字符不重复时）。注意题目提示里的初始调用是 displayPermutation(\"\", s)，前缀是空串；写成 \" \"（空格）会让每行多一个前导空格。</p>"
+
+A["as1-gen-product"] = code("""
+public class Product<T extends Number> {     // 有界类型参数：T 必须是 Number 的子类
+    private final T x, y;
+
+    public Product(T x, T y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double multiply() {
+        return x.doubleValue() * y.doubleValue();
+    }
+
+    public static void main(String[] args) {
+        Product<Double> p = new Product<>(5.5, 7.7);   // 5.5、7.7 自动装箱为 Double
+        System.out.println("x * y = " + p.multiply());
+    }
+}""") + "<p>输出：<code>x * y = 42.35</code></p>" + \
+    "<p>要点：泛型参数只能是引用类型（Double，不能写 double）；T 未限定时编译器只把它当 Object，不能直接用 *，所以写成 <code>&lt;T extends Number&gt;</code> 再调用 <code>doubleValue()</code>。</p>"
+
+A["as1-array-list"] = "<p><b>(a)</b></p>" + table(["", "数组 array", "ArrayList"], [
+    ["大小", "创建时固定，不能改变", "动态增长/缩小"],
+    ["元素类型", "基本类型和对象都可以", "只能放对象（基本类型靠包装类 + 自动装箱）"],
+    ["长度", "<code>arr.length</code>（属性）", "<code>list.size()</code>（方法）"],
+    ["访问", "<code>arr[i]</code>", "<code>list.get(i)</code>、<code>list.set(i, e)</code>"],
+    ["增删", "没有现成方法，要自己移动元素或建新数组", "<code>add</code>、<code>remove</code> 等方法，删除后后面的元素自动前移"],
+    ["类型检查", "声明时确定元素类型", "用泛型 <code>ArrayList&lt;E&gt;</code> 在编译期检查"]]) + "<p><b>(b)</b></p>" + code("""
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayVsArrayList {
+    public static void main(String[] args) {
+        int[] arr = new int[3];                         // 固定长度 3，可放基本类型
+        arr[0] = 10; arr[1] = 20; arr[2] = 30;
+        System.out.println("array: " + Arrays.toString(arr) + ", length = " + arr.length);
+
+        ArrayList<Integer> list = new ArrayList<>();    // 动态长度，只能放对象
+        list.add(10); list.add(20); list.add(30);       // 自动装箱 int -> Integer
+        list.add(40);                                   // 还能继续增长
+        list.remove(Integer.valueOf(20));               // 删除 20，后面的元素前移
+        System.out.println("ArrayList: " + list + ", size = " + list.size() + ", get(1) = " + list.get(1));
+    }
+}""") + "<p>输出：</p>" + code("""
+array: [10, 20, 30], length = 3
+ArrayList: [10, 30, 40], size = 3, get(1) = 30""")
+
+A["hash-class20"] = "<p><b>(a)</b> hash(k) = k % 20：</p>" + table(["entry", "key", "k % 20", "index"], [
+    ["(1, 20)", "1", "1 % 20 = 1", "1"], ["(2, 70)", "2", "2 % 20 = 2", "2"], ["(42, 80)", "42", "42 % 20 = 2", "2"],
+    ["(4, 25)", "4", "4 % 20 = 4", "4"], ["(12, 44)", "12", "12 % 20 = 12", "12"], ["(14, 32)", "14", "14 % 20 = 14", "14"],
+    ["(17, 11)", "17", "17 % 20 = 17", "17"], ["(13, 78)", "13", "13 % 20 = 13", "13"], ["(37, 98)", "37", "37 % 20 = 17", "17"]]) + \
+    "<p><b>(b)</b> 冲突：<b>2 和 42</b> 都落在下标 2；<b>17 和 37</b> 都落在下标 17。每个 bucket 用链表把冲突的条目串起来（separate chaining）：</p>" + \
+    table(["index", "bucket"], [["0", ""], ["1", "(1, 20)"], ["2", "(2, 70) → (42, 80)"], ["3", ""], ["4", "(4, 25)"], ["5 … 11", ""], ["12", "(12, 44)"],
+                                ["13", "(13, 78)"], ["14", "(14, 32)"], ["15, 16", ""], ["17", "(17, 11) → (37, 98)"], ["18, 19", ""]], "bucket") + \
+    "<p>哈希只用键 k，值 v 不参与计算。</p>"
+
+A["qs-last"] = "<p>方法（课上 Partition around the last element 的画法）：pivot = 子表最后一个元素；i 标记“小于 pivot 区”的末尾，j 从左向右扫描，遇到 a[j] &lt; pivot 就 i++ 并交换 a[i]、a[j]；扫描完把 pivot 与 a[i+1] 交换，pivot 归位。</p>" + \
+    table(["子表 / pivot", "过程", "pivot 归位后"], [
+        ["[10 80 30 90 40 50 70]，p=70", "10 不动；30 ↔ 80 → 10 30 80 90 40 50 70；40 ↔ 80 → 10 30 40 90 80 50 70；50 ↔ 90 → 10 30 40 50 80 90 70；pivot 70 ↔ 80",
+         "[10 30 40 50] <b>70</b> [90 80]"],
+        ["[10 30 40 50]，p=50", "都 &lt; 50，无交换", "[10 30 40] <b>50</b>"],
+        ["[10 30 40]，p=40", "无交换", "[10 30] <b>40</b>"],
+        ["[10 30]，p=30", "无交换", "[10] <b>30</b>"],
+        ["[90 80]，p=80", "90 不小于 80；pivot 80 ↔ 90", "<b>80</b> [90]"]]) + \
+    "<p>结果：<b>10 30 40 50 70 80 90</b>。划分顺序和课堂图一致：先 around 70，左边依次 around 50、40、30，右边 around 80。注意这题取<b>最后一个</b>元素为 pivot，和题库里“every first element as pivot”的题方法不同。</p>"

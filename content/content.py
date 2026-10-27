@@ -22,6 +22,7 @@ SOURCES = {
     "M24": "2023/24 春季期中真题",
     "F25": "2025 秋季考试真题",
     "K": "课堂/会考提示",
+    "AS1": "作业1 · AS CPS2232 DSA_Unit1-4.pdf",
 }
 EXAMS = {
     "M24": dict(title="2023/24 Spring Mid-Term Exam", short="24春期中",
@@ -587,3 +588,23 @@ es(2, "isa-partof", "(a) What is the difference between the is-a relationship an
    "", "A B", "(a) UML 中 is-a 关系与 isPartOf 关系有什么区别？(b) 画出/指出 UML 中 isPartOf 与 is-a 的符号。")
 es(3, "genstack-diff", "State the difference between the reference type GenericStack<T> and the type GenericStack.", "", "A B",
    "说明引用类型 GenericStack<T> 与类型 GenericStack 的区别。")
+
+# =====================================================================  作业 1（AS1 U1–4）与会考补充
+es(1, "as1-rec-iter", "Explain which is more efficient between recursive method calls and iterative loops, and why.", "", "AS1",
+   "说明递归方法调用和迭代循环哪个更高效，并解释原因。")
+es(1, "as1-sum-loop", "Given the expression\n    s = Σ(i=1..4) Σ(j=1..5) 2i²\nwrite the equivalent for loop code.", "", "AS1",
+   "给定表达式 s = Σ(i=1..4) Σ(j=1..5) 2i²，写出等价的 for 循环代码。")
+es(1, "as1-fib", "Write a program that uses an iterative loop (e.g. for) to compute the Fibonacci series. Test with n = 11, and 100, respectively.",
+   "", "AS1", "用迭代循环（例如 for）写程序计算斐波那契数列，分别用 n = 11 和 n = 100 测试。")
+es(1, "as1-perm", "(String permutation) Write a recursive method to print all the permutations of a string. For example, for the string abc, the permutations are\n    abc  acb  bac  bca  cab  cba\nHint: define the following two methods; the second is a helper method.\n    public static void displayPermutation(String s)\n    public static void displayPermutation(String s1, String s2)\nThe first method simply invokes displayPermutation(\"\", s). The second method uses a loop to move a character from s2 to s1 and recursively invokes itself with the new s1 and s2. The base case is that s2 is empty: print s1 to the console.\nWrite a test program that prompts the user to enter a string and displays all its permutations.",
+   "", "AS1", "（字符串全排列）写一个递归方法，打印字符串的所有排列，例如 abc 的排列为 abc、acb、bac、bca、cab、cba。提示：定义 displayPermutation(String s) 和辅助方法 displayPermutation(String s1, String s2)；前者直接调用 displayPermutation(\"\", s)；后者用循环把 s2 中的一个字符移到 s1，再用新的 s1、s2 递归调用；s2 为空时打印 s1。写测试程序：让用户输入字符串并输出它的所有排列。")
+es(3, "as1-gen-product", "With the use of a generic type class, find the product of x = 5.5, and y = 7.7.", "", "AS1",
+   "用泛型类求 x = 5.5 与 y = 7.7 的乘积。")
+es(4, "as1-array-list", "State\n(a) the differences between an array and the ArrayList class.\n(b) Support your answers with program code and output from your code.", "", "AS1",
+   "(a) 说明数组与 ArrayList 类的区别；(b) 用程序代码及其输出来支持你的答案。")
+es(6, "hash-class20", "Hashing (using the modulo operator): a hash table of size N = 20 stores the following items in the (k, v) format:\n    (1, 20), (2, 70), (42, 80), (4, 25), (12, 44), (14, 32), (17, 11), (13, 78), (37, 98)\n(a) Compute the hash (array index) of each key with the modulo operator.\n(b) Which entries collide? Show how all entries are stored in the bucket array.",
+   "", "K", "哈希（取模）：大小 N = 20 的哈希表要以 (k, v) 形式存入 (1,20)、(2,70)、(42,80)、(4,25)、(12,44)、(14,32)、(17,11)、(13,78)、(37,98)。(a) 用取模算出每个键的下标；(b) 哪些条目冲突？画出所有条目在 bucket array 中的存放方式。",
+   note="课堂例题：2024-04-02 会考照片，Lecture 6 课件「Hashing and Hash Table」一页。")
+es(11, "qs-last", "With the partition technique of the quick sort, sort the following list of numbers using the last element of every sub-list as pivot:\n    10, 80, 30, 90, 40, 50, 70",
+   "", "K", "用快速排序的划分（partition）方法，每次取子表最后一个元素为 pivot，对列表 10, 80, 30, 90, 40, 50, 70 排序。",
+   note="课堂例题：2024-05-09 会考照片（Partition around 70 / 80）；会考提示：Lecture 11 的 quick sort 会考。")

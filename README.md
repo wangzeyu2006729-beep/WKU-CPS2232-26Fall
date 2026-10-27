@@ -4,7 +4,7 @@
 
 [Practice online](https://wangzeyu2006729-beep.github.io/WKU-CPS2232-26Fall/) · Other courses: [MATH3700](https://wangzeyu2006729-beep.github.io/WKU-MATH3700-26Fall/) · [CPS2390](https://wangzeyu2006729-beep.github.io/WKU-CPS2390-26Fall/)
 
-193 de-duplicated questions from two question banks and two past exam papers, grouped by Lecture 1–14: 46 true/false, 44 multiple choice, 63 fill-in-the-blank and 40 essay questions, each with an answer, a Chinese explanation and its source. This is one of the repository owner's Fall 2026 courses at WKU. All three course sites use a compact dark interface and independent browser progress.
+201 de-duplicated questions from two question banks, two past exam papers, Assignment 1 and classroom revision hints, grouped by Lecture 1–14: 46 true/false, 44 multiple choice, 63 fill-in-the-blank and 48 essay questions, each with an answer, a Chinese explanation and its source. This is one of the repository owner's Fall 2026 courses at WKU. All three course sites use a compact dark interface and independent browser progress.
 
 ## Course information
 
@@ -23,7 +23,7 @@ The **试卷** menu selects one source:
 
 | Source | Questions | Order |
 |---|---:|---|
-| 全部来源 | 193 | Lecture order |
+| 全部来源 | 201 | Lecture order |
 | 题库（A+B） | 174 | Lecture order |
 | 2023/24 Spring Mid-Term | 37 (original Q1–39) | Original paper numbering |
 | 2025 Fall Exam | 30 (original Q1–34) | Original paper numbering |
@@ -34,27 +34,27 @@ It combines with the question-type tabs, the lecture menu, random practice, inco
 
 | Lecture | Topic | TF | MC | Fill | Essay | Total |
 |---|---|---:|---:|---:|---:|---:|
-| 1 | Recursion | 1 | | | | 1 |
+| 1 | Recursion | 1 | | | 4 | 5 |
 | 2 | Objects, classes & references | 3 | | 8 | 1 | 12 |
-| 3 | Generics | 3 | 3 | 3 | 1 | 10 |
-| 4 | ADTs, interfaces, lambda & lists | 10 | | 3 | 1 | 14 |
+| 3 | Generics | 3 | 3 | 3 | 2 | 11 |
+| 4 | ADTs, interfaces, lambda & lists | 10 | | 3 | 2 | 15 |
 | 5 | Stacks & queues | | 2 | 7 | | 9 |
-| 6 | Sets, maps & hash tables | 18 | 12 | 11 | | 41 |
+| 6 | Sets, maps & hash tables | 18 | 12 | 11 | 1 | 42 |
 | 7 | List implementation | | 1 | 2 | 1 | 4 |
 | 8 | Heaps & priority queues | 3 | 6 | 7 | 1 | 17 |
 | 9 | Hashing | | 8 | 5 | 7 | 20 |
 | 10 | Analysis of algorithms | 4 | | 9 | 4 | 17 |
-| 11 | Sorting | | | 1 | 9 | 10 |
+| 11 | Sorting | | | 1 | 10 | 11 |
 | 12 | Dynamic programming | | | | | 0 |
 | 13 | BST & AVL trees | 2 | 3 | 6 | 9 | 20 |
 | 14 | Red-black trees | 2 | 9 | 1 | 6 | 18 |
-| **Total** | | **46** | **44** | **63** | **40** | **193** |
+| **Total** | | **46** | **44** | **63** | **48** | **201** |
 
 Lecture 12 has no matching question in the supplied banks or papers.
 
 ## Practice controls
 
-- The **期中前 / 期中后** switch at the top limits everything to one exam scope: 96 questions before the midterm (the default) or 97 after it. Counts, progress and the incorrect-answer list follow the selected scope; answers in the other scope are kept.
+- The **期中前 / 期中后** switch at the top limits everything to one exam scope: 103 questions before the midterm (the default) or 98 after it. Counts, progress and the incorrect-answer list follow the selected scope; answers in the other scope are kept.
   - 期中前 is Lecture 1–7 plus five Lecture 9 hashing questions: bucket-array modulo indexing (L9-ES01/02, already in the Lecture 6 slides) and polynomial string hash codes (L9-ES03/04/05). Both past midterms (24春期中, 25秋考试) test exactly Lecture 2–7 and these two hashing skills.
   - 期中后 is Lecture 8, the rest of Lecture 9 (hash-function types, folding, shifts, probing, double hashing) and Lecture 10–14. The split is set by `MID_LAST_LECTURE` and `MID_EXTRA_KEYS` in `content/content.py`.
 - Labels show lecture, type and number: `L13-TF01`, `L13-MC01`, `L13-FB01`, `L13-ES01`. Search a complete label or keyword; Chinese keywords also work.
@@ -70,7 +70,8 @@ Lecture 12 has no matching question in the supplied banks or papers.
 | 题库B | `2025.12.8 stud bank DSA Bank.pdf`, 24 pages, no answers; extends 题库A |
 | 24春期中 | 2023/24 Spring Mid-Term Exam, 7 photos with the instructor's marking |
 | 25秋考试 | 2025 Fall exam, 4 photos, no answers |
-| 课堂 | Classroom photos and revision hints |
+| 课堂 | Classroom photos and revision hints (会考): String hashCode, the N = 20 modulo hash table, quick sort with first- and last-element pivots, the queue size formula |
+| 作业1 | `AS CPS2232 DSA_Unit1-4.pdf`, Assignment 1 (Units 1–4); Q4, drawing a UML class diagram with a tool, is not included |
 
 Questions were transcribed from the page images. Variants that differ only in numbers (for example HashSet capacity 28 / 24 / 10, or `67 >> 4` / `67 >> 3`) are separate questions; exact duplicates appear once with every source listed.
 

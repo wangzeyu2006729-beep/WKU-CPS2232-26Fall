@@ -261,6 +261,122 @@
    }
   },
   {
+   "id": 194,
+   "label": "L1-ES01",
+   "key": "as1-rec-iter",
+   "chapter": 0,
+   "bank": "essay",
+   "type": "essay",
+   "text": "Explain which is more efficient between recursive method calls and iterative loops, and why.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 1 · Recursion (Ch18)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<p><b>一般来说迭代循环更高效</b>（与 L1-TF01 的结论一致）。</p>\n<ol><li><b>时间开销</b>：每次递归调用都要压栈一个栈帧（参数、局部变量、返回地址），调用和返回本身有开销；循环只是在同一个栈帧里改变量。</li>\n<li><b>空间开销</b>：递归深度为 n 时需要 O(n) 的栈空间，循环通常只要 O(1)；递归太深会抛 <code>StackOverflowError</code>。</li>\n<li><b>重复计算</b>：朴素递归可能反复解同一个子问题，例如递归求斐波那契是 O(2<sup>n</sup>)，用循环是 O(n)。</li></ol>\n<p>递归的优点是代码更简洁、更贴近问题本身，适合天然递归的问题（树的遍历、全排列、汉诺塔、快速排序/归并排序）。所以结论是：效率上选循环，可读性和问题结构需要时再用递归。</p>",
+   "zh": {
+    "text": "说明递归方法调用和迭代循环哪个更高效，并解释原因。",
+    "options": []
+   }
+  },
+  {
+   "id": 195,
+   "label": "L1-ES02",
+   "key": "as1-sum-loop",
+   "chapter": 0,
+   "bank": "essay",
+   "type": "essay",
+   "text": "Given the expression\n    s = Σ(i=1..4) Σ(j=1..5) 2i²\nwrite the equivalent for loop code.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 1 · Recursion (Ch18)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<pre class=\"code\">int s = 0;\nfor (int i = 1; i &lt;= 4; i++) {        // 外层：i = 1..4\n    for (int j = 1; j &lt;= 5; j++) {    // 内层：j = 1..5\n        s += 2 * i * i;               // 每次加 2i²\n    }\n}\nSystem.out.println(&quot;s = &quot; + s);       // s = 300</pre><p>验算：内层的 2i² 与 j 无关，所以每个 i 被加 5 次：s = 5 × 2 × (1² + 2² + 3² + 4²) = 10 × 30 = <b>300</b>。</p>",
+   "zh": {
+    "text": "给定表达式 s = Σ(i=1..4) Σ(j=1..5) 2i²，写出等价的 for 循环代码。",
+    "options": []
+   }
+  },
+  {
+   "id": 196,
+   "label": "L1-ES03",
+   "key": "as1-fib",
+   "chapter": 0,
+   "bank": "essay",
+   "type": "essay",
+   "text": "Write a program that uses an iterative loop (e.g. for) to compute the Fibonacci series. Test with n = 11, and 100, respectively.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 1 · Recursion (Ch18)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<pre class=\"code\">import java.math.BigInteger;\n\npublic class Fibonacci {\n    // 迭代求第 n 项：F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)\n    public static BigInteger fib(int n) {\n        BigInteger a = BigInteger.ZERO, b = BigInteger.ONE;\n        for (int i = 0; i &lt; n; i++) {\n            BigInteger next = a.add(b);\n            a = b;\n            b = next;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        for (int i = 0; i &lt; 11; i++)          // 数列的前 11 项\n            System.out.print(fib(i) + &quot; &quot;);\n        System.out.println();\n        System.out.println(&quot;F(11)  = &quot; + fib(11));\n        System.out.println(&quot;F(100) = &quot; + fib(100));\n    }\n}</pre><p>输出：</p><pre class=\"code\">0 1 1 2 3 5 8 13 21 34 55\nF(11)  = 89\nF(100) = 354224848179261915075</pre><p>“Test with n = 11” 可以理解为打印前 11 项，也可以理解为求第 11 项，答卷里两种都写出来最稳妥。<b>n = 100 必须用 BigInteger</b>：long 最大约 9.22 × 10<sup>18</sup>，只能存到 F(92) = 7,540,113,804,746,346,429，F(93) 起就会溢出成负数。循环只用两个变量，时间 O(n)、空间 O(1)。</p>",
+   "zh": {
+    "text": "用迭代循环（例如 for）写程序计算斐波那契数列，分别用 n = 11 和 n = 100 测试。",
+    "options": []
+   }
+  },
+  {
+   "id": 197,
+   "label": "L1-ES04",
+   "key": "as1-perm",
+   "chapter": 0,
+   "bank": "essay",
+   "type": "essay",
+   "text": "(String permutation) Write a recursive method to print all the permutations of a string. For example, for the string abc, the permutations are\n    abc  acb  bac  bca  cab  cba\nHint: define the following two methods; the second is a helper method.\n    public static void displayPermutation(String s)\n    public static void displayPermutation(String s1, String s2)\nThe first method simply invokes displayPermutation(\"\", s). The second method uses a loop to move a character from s2 to s1 and recursively invokes itself with the new s1 and s2. The base case is that s2 is empty: print s1 to the console.\nWrite a test program that prompts the user to enter a string and displays all its permutations.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 1 · Recursion (Ch18)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<pre class=\"code\">import java.util.Scanner;\n\npublic class StringPermutation {\n    public static void displayPermutation(String s) {\n        displayPermutation(&quot;&quot;, s);\n    }\n\n    // s1：已经排好的前缀；s2：还没用的字符\n    public static void displayPermutation(String s1, String s2) {\n        if (s2.isEmpty()) {                       // 基本情况：字符用完，输出一个排列\n            System.out.println(s1);\n            return;\n        }\n        for (int i = 0; i &lt; s2.length(); i++)     // 依次把 s2 的第 i 个字符移到 s1 末尾\n            displayPermutation(s1 + s2.charAt(i),\n                               s2.substring(0, i) + s2.substring(i + 1));\n    }\n\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(&quot;Enter a string: &quot;);\n        displayPermutation(input.nextLine());\n    }\n}</pre><table class=\"ans-table \"><tr><th>调用 (s1, s2)</th><th>继续展开</th><th>输出</th></tr><tr><td>(\"\", \"abc\")</td><td>(\"a\",\"bc\")、(\"b\",\"ac\")、(\"c\",\"ab\")</td><td></td></tr><tr><td>(\"a\", \"bc\")</td><td>(\"ab\",\"c\") → (\"abc\",\"\")；(\"ac\",\"b\") → (\"acb\",\"\")</td><td>abc, acb</td></tr><tr><td>(\"b\", \"ac\")</td><td>(\"ba\",\"c\")；(\"bc\",\"a\")</td><td>bac, bca</td></tr><tr><td>(\"c\", \"ab\")</td><td>(\"ca\",\"b\")；(\"cb\",\"a\")</td><td>cab, cba</td></tr></table><p>输出顺序正好是 abc、acb、bac、bca、cab、cba。长度为 n 的字符串有 n! 个排列（字符不重复时）。注意题目提示里的初始调用是 displayPermutation(\"\", s)，前缀是空串；写成 \" \"（空格）会让每行多一个前导空格。</p>",
+   "zh": {
+    "text": "（字符串全排列）写一个递归方法，打印字符串的所有排列，例如 abc 的排列为 abc、acb、bac、bca、cab、cba。提示：定义 displayPermutation(String s) 和辅助方法 displayPermutation(String s1, String s2)；前者直接调用 displayPermutation(\"\", s)；后者用循环把 s2 中的一个字符移到 s1，再用新的 s1、s2 递归调用；s2 为空时打印 s1。写测试程序：让用户输入字符串并输出它的所有排列。",
+    "options": []
+   }
+  },
+  {
    "id": 2,
    "label": "L2-TF01",
    "key": "class-ref-obj",
@@ -1111,6 +1227,35 @@
    }
   },
   {
+   "id": 198,
+   "label": "L3-ES02",
+   "key": "as1-gen-product",
+   "chapter": 2,
+   "bank": "essay",
+   "type": "essay",
+   "text": "With the use of a generic type class, find the product of x = 5.5, and y = 7.7.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 3 · Generics (Ch19)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<pre class=\"code\">public class Product&lt;T extends Number&gt; {     // 有界类型参数：T 必须是 Number 的子类\n    private final T x, y;\n\n    public Product(T x, T y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public double multiply() {\n        return x.doubleValue() * y.doubleValue();\n    }\n\n    public static void main(String[] args) {\n        Product&lt;Double&gt; p = new Product&lt;&gt;(5.5, 7.7);   // 5.5、7.7 自动装箱为 Double\n        System.out.println(&quot;x * y = &quot; + p.multiply());\n    }\n}</pre><p>输出：<code>x * y = 42.35</code></p><p>要点：泛型参数只能是引用类型（Double，不能写 double）；T 未限定时编译器只把它当 Object，不能直接用 *，所以写成 <code>&lt;T extends Number&gt;</code> 再调用 <code>doubleValue()</code>。</p>",
+   "zh": {
+    "text": "用泛型类求 x = 5.5 与 y = 7.7 的乘积。",
+    "options": []
+   }
+  },
+  {
    "id": 24,
    "label": "L4-TF01",
    "key": "lambda-can",
@@ -1658,6 +1803,35 @@
    "html": "<pre class=\"code\">public class Test {\n    public static void main(String[] args) {\n        NumberMultiply nm = (a, b) -&gt; a * b;   // lambda 实现唯一的抽象方法 mult\n        System.out.println(nm.mult(2, 3));     // 输出 6.0\n    }\n}</pre><p>Lambda 的参数 (a, b) 对应 mult 的两个 double 参数，箭头右边是方法体。注意调用的方法名就是 mult（题库A 学长批注写成 nm.Doublemult(2,3) 是错的）。</p>",
    "zh": {
     "text": "给出函数式接口 NumberMultiply（方法 double mult(double a, double b)），用 Lambda 表达式实现它，并用 2 和 3 调用。",
+    "options": []
+   }
+  },
+  {
+   "id": 199,
+   "label": "L4-ES02",
+   "key": "as1-array-list",
+   "chapter": 3,
+   "bank": "essay",
+   "type": "essay",
+   "text": "State\n(a) the differences between an array and the ArrayList class.\n(b) Support your answers with program code and output from your code.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "",
+   "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
+   ],
+   "exam": {},
+   "src": [
+    "AS1"
+   ],
+   "part": "mid",
+   "html": "<p><b>(a)</b></p><table class=\"ans-table \"><tr><th></th><th>数组 array</th><th>ArrayList</th></tr><tr><td>大小</td><td>创建时固定，不能改变</td><td>动态增长/缩小</td></tr><tr><td>元素类型</td><td>基本类型和对象都可以</td><td>只能放对象（基本类型靠包装类 + 自动装箱）</td></tr><tr><td>长度</td><td><code>arr.length</code>（属性）</td><td><code>list.size()</code>（方法）</td></tr><tr><td>访问</td><td><code>arr[i]</code></td><td><code>list.get(i)</code>、<code>list.set(i, e)</code></td></tr><tr><td>增删</td><td>没有现成方法，要自己移动元素或建新数组</td><td><code>add</code>、<code>remove</code> 等方法，删除后后面的元素自动前移</td></tr><tr><td>类型检查</td><td>声明时确定元素类型</td><td>用泛型 <code>ArrayList&lt;E&gt;</code> 在编译期检查</td></tr></table><p><b>(b)</b></p><pre class=\"code\">import java.util.ArrayList;\nimport java.util.Arrays;\n\npublic class ArrayVsArrayList {\n    public static void main(String[] args) {\n        int[] arr = new int[3];                         // 固定长度 3，可放基本类型\n        arr[0] = 10; arr[1] = 20; arr[2] = 30;\n        System.out.println(&quot;array: &quot; + Arrays.toString(arr) + &quot;, length = &quot; + arr.length);\n\n        ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();    // 动态长度，只能放对象\n        list.add(10); list.add(20); list.add(30);       // 自动装箱 int -&gt; Integer\n        list.add(40);                                   // 还能继续增长\n        list.remove(Integer.valueOf(20));               // 删除 20，后面的元素前移\n        System.out.println(&quot;ArrayList: &quot; + list + &quot;, size = &quot; + list.size() + &quot;, get(1) = &quot; + list.get(1));\n    }\n}</pre><p>输出：</p><pre class=\"code\">array: [10, 20, 30], length = 3\nArrayList: [10, 30, 40], size = 3, get(1) = 30</pre>",
+   "zh": {
+    "text": "(a) 说明数组与 ArrayList 类的区别；(b) 用程序代码及其输出来支持你的答案。",
     "options": []
    }
   },
@@ -3669,6 +3843,35 @@
    "part": "mid",
    "zh": {
     "text": "迭代器对象上的 hasNext() 和 next() 的作用是 ____[1]。",
+    "options": []
+   }
+  },
+  {
+   "id": 200,
+   "label": "L6-ES01",
+   "key": "hash-class20",
+   "chapter": 5,
+   "bank": "essay",
+   "type": "essay",
+   "text": "Hashing (using the modulo operator): a hash table of size N = 20 stores the following items in the (k, v) format:\n    (1, 20), (2, 70), (42, 80), (4, 25), (12, 44), (14, 32), (17, 11), (13, 78), (37, 98)\n(a) Compute the hash (array index) of each key with the modulo operator.\n(b) Which entries collide? Show how all entries are stored in the bucket array.",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "课堂例题：2024-04-02 会考照片，Lecture 6 课件「Hashing and Hash Table」一页。",
+   "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "课堂/会考提示"
+   ],
+   "exam": {},
+   "src": [
+    "K"
+   ],
+   "part": "mid",
+   "html": "<p><b>(a)</b> hash(k) = k % 20：</p><table class=\"ans-table \"><tr><th>entry</th><th>key</th><th>k % 20</th><th>index</th></tr><tr><td>(1, 20)</td><td>1</td><td>1 % 20 = 1</td><td>1</td></tr><tr><td>(2, 70)</td><td>2</td><td>2 % 20 = 2</td><td>2</td></tr><tr><td>(42, 80)</td><td>42</td><td>42 % 20 = 2</td><td>2</td></tr><tr><td>(4, 25)</td><td>4</td><td>4 % 20 = 4</td><td>4</td></tr><tr><td>(12, 44)</td><td>12</td><td>12 % 20 = 12</td><td>12</td></tr><tr><td>(14, 32)</td><td>14</td><td>14 % 20 = 14</td><td>14</td></tr><tr><td>(17, 11)</td><td>17</td><td>17 % 20 = 17</td><td>17</td></tr><tr><td>(13, 78)</td><td>13</td><td>13 % 20 = 13</td><td>13</td></tr><tr><td>(37, 98)</td><td>37</td><td>37 % 20 = 17</td><td>17</td></tr></table><p><b>(b)</b> 冲突：<b>2 和 42</b> 都落在下标 2；<b>17 和 37</b> 都落在下标 17。每个 bucket 用链表把冲突的条目串起来（separate chaining）：</p><table class=\"ans-table bucket\"><tr><th>index</th><th>bucket</th></tr><tr><td>0</td><td></td></tr><tr><td>1</td><td>(1, 20)</td></tr><tr><td>2</td><td>(2, 70) → (42, 80)</td></tr><tr><td>3</td><td></td></tr><tr><td>4</td><td>(4, 25)</td></tr><tr><td>5 … 11</td><td></td></tr><tr><td>12</td><td>(12, 44)</td></tr><tr><td>13</td><td>(13, 78)</td></tr><tr><td>14</td><td>(14, 32)</td></tr><tr><td>15, 16</td><td></td></tr><tr><td>17</td><td>(17, 11) → (37, 98)</td></tr><tr><td>18, 19</td><td></td></tr></table><p>哈希只用键 k，值 v 不参与计算。</p>",
+   "zh": {
+    "text": "哈希（取模）：大小 N = 20 的哈希表要以 (k, v) 形式存入 (1,20)、(2,70)、(42,80)、(4,25)、(12,44)、(14,32)、(17,11)、(13,78)、(37,98)。(a) 用取模算出每个键的下标；(b) 哪些条目冲突？画出所有条目在 bucket array 中的存放方式。",
     "options": []
    }
   },
@@ -6083,6 +6286,35 @@
    "html": "<pre class=\"code\">INSERTION-SORT(list)                         // O(n^2)\n    for i = 1 to n - 1:\n        currentElement = list[i]\n        k = i - 1\n        while k &gt;= 0 and list[k] &gt; currentElement:\n            list[k + 1] = list[k]            // 比它大的元素后移\n            k--\n        list[k + 1] = currentElement         // 插入到正确位置</pre>",
    "zh": {
     "text": "写出插入排序算法。",
+    "options": []
+   }
+  },
+  {
+   "id": 201,
+   "label": "L11-ES10",
+   "key": "qs-last",
+   "chapter": 10,
+   "bank": "essay",
+   "type": "essay",
+   "text": "With the partition technique of the quick sort, sort the following list of numbers using the last element of every sub-list as pivot:\n    10, 80, 30, 90, 40, 50, 70",
+   "options": [],
+   "answer": null,
+   "answers": [],
+   "explanation": "",
+   "note": "课堂例题：2024-05-09 会考照片（Partition around 70 / 80）；会考提示：Lecture 11 的 quick sort 会考。",
+   "references": "Lecture 11 · Sorting (Ch23)",
+   "review_revision": "2026-10-22.1",
+   "sources": [
+    "课堂/会考提示"
+   ],
+   "exam": {},
+   "src": [
+    "K"
+   ],
+   "part": "final",
+   "html": "<p>方法（课上 Partition around the last element 的画法）：pivot = 子表最后一个元素；i 标记“小于 pivot 区”的末尾，j 从左向右扫描，遇到 a[j] &lt; pivot 就 i++ 并交换 a[i]、a[j]；扫描完把 pivot 与 a[i+1] 交换，pivot 归位。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>过程</th><th>pivot 归位后</th></tr><tr><td>[10 80 30 90 40 50 70]，p=70</td><td>10 不动；30 ↔ 80 → 10 30 80 90 40 50 70；40 ↔ 80 → 10 30 40 90 80 50 70；50 ↔ 90 → 10 30 40 50 80 90 70；pivot 70 ↔ 80</td><td>[10 30 40 50] <b>70</b> [90 80]</td></tr><tr><td>[10 30 40 50]，p=50</td><td>都 &lt; 50，无交换</td><td>[10 30 40] <b>50</b></td></tr><tr><td>[10 30 40]，p=40</td><td>无交换</td><td>[10 30] <b>40</b></td></tr><tr><td>[10 30]，p=30</td><td>无交换</td><td>[10] <b>30</b></td></tr><tr><td>[90 80]，p=80</td><td>90 不小于 80；pivot 80 ↔ 90</td><td><b>80</b> [90]</td></tr></table><p>结果：<b>10 30 40 50 70 80 90</b>。划分顺序和课堂图一致：先 around 70，左边依次 around 50、40、30，右边 around 80。注意这题取<b>最后一个</b>元素为 pivot，和题库里“every first element as pivot”的题方法不同。</p>",
+   "zh": {
+    "text": "用快速排序的划分（partition）方法，每次取子表最后一个元素为 pivot，对列表 10, 80, 30, 90, 40, 50, 70 排序。",
     "options": []
    }
   },

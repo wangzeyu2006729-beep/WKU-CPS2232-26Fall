@@ -8,6 +8,26 @@
    ],
    "source_sha256": "1a0a84e6d247d91f40e236f1002f3912e411376f2d1736ca2d09fed1dee1352b"
   },
+  "L1-ES01": {
+   "text": "说明递归方法调用和迭代循环哪个更高效，并解释原因。",
+   "options": [],
+   "source_sha256": "44c58f32d907fa8c1409806603d57c0dc38de3e8657d7307d40034b0fce30b25"
+  },
+  "L1-ES02": {
+   "text": "给定表达式 s = Σ(i=1..4) Σ(j=1..5) 2i²，写出等价的 for 循环代码。",
+   "options": [],
+   "source_sha256": "0f26c10b6b3b0520fb48e942e8ab85de30d63d1614a3d7641eb6b97197624f74"
+  },
+  "L1-ES03": {
+   "text": "用迭代循环（例如 for）写程序计算斐波那契数列，分别用 n = 11 和 n = 100 测试。",
+   "options": [],
+   "source_sha256": "b2b9870c19ebab19ef457d2006db4dc476e69d9c02da50fbd656bdd45f2b5608"
+  },
+  "L1-ES04": {
+   "text": "（字符串全排列）写一个递归方法，打印字符串的所有排列，例如 abc 的排列为 abc、acb、bac、bca、cab、cba。提示：定义 displayPermutation(String s) 和辅助方法 displayPermutation(String s1, String s2)；前者直接调用 displayPermutation(\"\", s)；后者用循环把 s2 中的一个字符移到 s1，再用新的 s1、s2 递归调用；s2 为空时打印 s1。写测试程序：让用户输入字符串并输出它的所有排列。",
+   "options": [],
+   "source_sha256": "000736e6b78eec58a3d13684232ec8294e950a86955d7a942b5c98d93b3c20c6"
+  },
   "L2-TF01": {
    "text": "类总是引用它的对象。",
    "options": [
@@ -151,6 +171,11 @@
    "options": [],
    "source_sha256": "a7a5077b9742cc240c6d448ea2ceb08ef47b166c0113f14df3f3dbe3396780d3"
   },
+  "L3-ES02": {
+   "text": "用泛型类求 x = 5.5 与 y = 7.7 的乘积。",
+   "options": [],
+   "source_sha256": "99426a5e1e3a140b308de3e2aab75e9bb8ac6e5548bf8e4bb617707ca8493b7e"
+  },
   "L4-TF01": {
    "text": "Lambda 表达式可以用来实现函数式接口。",
    "options": [
@@ -250,6 +275,11 @@
    "text": "给出函数式接口 NumberMultiply（方法 double mult(double a, double b)），用 Lambda 表达式实现它，并用 2 和 3 调用。",
    "options": [],
    "source_sha256": "93fc4b54e9d01d6a76df5addbe3ba3f14f72d87349cf3db13656b6ba8000631c"
+  },
+  "L4-ES02": {
+   "text": "(a) 说明数组与 ArrayList 类的区别；(b) 用程序代码及其输出来支持你的答案。",
+   "options": [],
+   "source_sha256": "d47f8abd6741ab2a83ea82e02e5ebc77ebdaea3b660f82d522b2429419b1aeef"
   },
   "L5-MC01": {
    "text": "按约定，下列哪一个是队列 ADT 的方法？",
@@ -624,6 +654,11 @@
    "text": "迭代器对象上的 hasNext() 和 next() 的作用是 ____[1]。",
    "options": [],
    "source_sha256": "887f5fd41b92159ed954a26166170cd981a8e39a9878b43e954bf91c02e968ed"
+  },
+  "L6-ES01": {
+   "text": "哈希（取模）：大小 N = 20 的哈希表要以 (k, v) 形式存入 (1,20)、(2,70)、(42,80)、(4,25)、(12,44)、(14,32)、(17,11)、(13,78)、(37,98)。(a) 用取模算出每个键的下标；(b) 哪些条目冲突？画出所有条目在 bucket array 中的存放方式。",
+   "options": [],
+   "source_sha256": "7c53ce3c0aa57b524cd16636f9ce175b1245182cd23ff381fb1f72ad79de46cc"
   },
   "L7-MC01": {
    "text": "单链表的节点包含 ______。",
@@ -1060,6 +1095,11 @@
    "text": "写出插入排序算法。",
    "options": [],
    "source_sha256": "f9152b77f9fd3bb5a71ed929b919731c849e828ff8f3abdbaf2bc2d30ec6c787"
+  },
+  "L11-ES10": {
+   "text": "用快速排序的划分（partition）方法，每次取子表最后一个元素为 pivot，对列表 10, 80, 30, 90, 40, 50, 70 排序。",
+   "options": [],
+   "source_sha256": "37a3afbb259b6a8e8b72fbc70a8c314a15f99029f224c4cea0bffd04b81671d1"
   },
   "L13-TF01": {
    "text": "逻辑式 ∀ parentNode(n) → leftChild(l) < parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。",
