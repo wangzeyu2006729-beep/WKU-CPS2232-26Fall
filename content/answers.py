@@ -91,8 +91,8 @@ int insert(int key) {
             return index;
         }
     }
-    return -1;                            // 表满：rehash（容量翻倍后重新插入）
-}""") + "<p>开放地址法一般保持负载因子 λ &lt; 0.5，超过就 rehashing。</p>"
+    return -1;                            // 探测失败：rehash（容量翻倍后重新插入）
+}""") + "<p>线性探测、双重哈希（N 为素数）探测 N 次都失败，说明表已满。二次探测最多只能访问约一半的位置，所以要保持负载因子 λ &lt; 0.5 且 N 为素数，才能保证一定插得进去；开放地址法一般在 λ 超过 0.5 时就 rehashing。</p>"
 
 A["sum-java"] = "<p>公式：1 + 2 + … + n = n(n+1)/2 = (first + last)(last − first + 1)/2；前 5000 个数之和 = 5000 × 5001 / 2 = 12,502,500。</p>" + code("""
 public static int addNumbers() {
@@ -103,11 +103,11 @@ public static int addNumbers() {
 }""") + "<p class='muted'>题库A 学长批注漏了 int sum 声明和乘号 *，上面已补全。也可以用 for 循环累加，但公式法是 O(1)。</p>"
 
 A["tc-linear"] = "<p>i = 0 执行 1 次：O(1)<br>i &lt; n 判断 n + 1 次：O(n)<br>i++ 执行 n 次：O(n)<br>k = k + 7 执行 n 次：O(n)<br>T(n) = O(1) + O(n) + O(n) + O(n) = O(1) + 3·O(n) = <b>O(n)</b>，所以是线性的。</p>"
-A["tc-nn"] = "<p>外层循环执行 n 次；外层每执行一次，内层循环执行 n 次；循环体 k = k + 1 共执行 n × n = n² 次。<br>T(n) = c·n² + （循环控制的低阶项）= <b>O(n²)</b>。</p>"
-A["tc-n5"] = "<p>外层 n 次，内层固定 5 次，循环体执行 5n 次。<br>T(n) = 5n = <b>O(n)</b>（常数 5 忽略）。</p>"
+A["tc-nn"] = "<p>外层循环执行 n 次；外层每执行一次，内层循环执行 n 次；循环体 k = k + 1 共执行 n × n = n² 次。<br>T(n) = c·n² + （循环控制的低阶项）= <b>O(n²)</b>。</p><p class='muted'>注：题目原代码把 int k = k + 1 直接当作没有花括号的循环体，Java 无法编译（声明语句不能单独作循环体，而且 k 未初始化），这里按 k = k + 1 理解。</p>"
+A["tc-n5"] = "<p>外层 n 次，内层固定 5 次，循环体执行 5n 次。<br>T(n) = 5n = <b>O(n)</b>（常数 5 忽略）。</p><p class='muted'>注：原代码 int k = k + 1 作为无花括号循环体在 Java 中无法编译，这里按 k = k + 1 理解。</p>"
 
 QS_HEAD = ["子表 / pivot", "low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换", "pivot 归位后"]
-QS_INTRO = "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p>"
+QS_INTRO = "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p>"
 A["qs-a"] = QS_INTRO + table(QS_HEAD, [["[0 3 −1 5 2]，p=0", "3 ↔ −1", "[−1] <b>0</b> [3 5 2]"], ["[3 5 2]，p=3", "5 ↔ 2", "[2] <b>3</b> [5]"]]) + "<p>结果：<b>−1 0 2 3 5</b></p>"
 A["qs-b"] = QS_INTRO + table(QS_HEAD, [["[0 −1 3 5 2]，p=0", "无交换", "[−1] <b>0</b> [3 5 2]"], ["[3 5 2]，p=3", "5 ↔ 2", "[2] <b>3</b> [5]"]]) + "<p>结果：<b>−1 0 2 3 5</b></p>"
 A["qs-c"] = QS_INTRO + table(QS_HEAD, [
@@ -121,7 +121,8 @@ A["qs-d"] = QS_INTRO + table(QS_HEAD, [
     ["全表，p=4", "5 ↔ 3", "[3 3 2 4 1] <b>4</b> [5 9 5 8 9 7]"],
     ["[3 3 2 4 1]，p=3", "4 ↔ 1", "[1 3 2] <b>3</b> [4]"],
     ["[1 3 2]，p=1；[3 2]，p=3", "无", "<b>1</b> [3 2] → [2] <b>3</b>"],
-    ["[5 9 5 8 9 7]，p=5", "9 ↔ 5", "[5] <b>5</b> [9 8 9 7]"],
+    ["[5 9 5 8 9 7]，p=5", "9 ↔ 5 → 5 5 9 8 9 7；high 跳过 ≥ 5 的元素一直退到 pivot，pivot 不大于 list[high]，留在原位", "<b>5</b> [5 9 8 9 7]"],
+    ["[5 9 8 9 7]，p=5", "无", "<b>5</b> [9 8 9 7]"],
     ["[9 8 9 7]，p=9", "无", "[7 8 9] <b>9</b>"],
     ["[7 8 9]，p=7；[8 9]，p=8", "无", "<b>7</b> [8 9] → <b>8</b> [9]"]]) + "<p>结果：<b>1 2 3 3 4 4 5 5 7 8 9 9</b></p>"
 A["qs-e"] = QS_INTRO + table(QS_HEAD, [
@@ -272,12 +273,12 @@ A["rb-q21"] = """<p>刚插入 27（红），父亲 25（红）→ 两个红节�
     row(svg(q21[0], 0.72, "插入 27"), svg(q21[1], 0.72, "空框 1：Case 1 重新着色"), svg(q21[2], 0.72, "空框 2：左旋 15（LR→LL）"), svg(q21[3], 0.72, "右旋 34 + 换色"))
 
 A["isa-partof"] = """<p><b>(a)</b> <b>is-a</b>：泛化 / 继承（generalization / inheritance），子类是父类的一种，例如 Dog is-a Animal。<br>
-<b>isPartOf</b>：整体-部分关系（aggregation / composition），例如 Engine isPartOf Car；composition 中部分不能脱离整体独立存在。</p>
+<b>isPartOf</b>：整体-部分关系中的组合（composition），部分不能脱离整体独立存在，例如 wings isPartOf bird。Lecture 4 的类图箭头把聚合（aggregation）叫 has-part，把组合叫 is-part-of。</p>
 <p><b>(b)</b> is-a：<b>实线 + 空心三角箭头</b>，箭头指向父类（实现接口用虚线 + 空心三角）。<br>
-isPartOf：<b>菱形</b>画在整体一端；空心菱形 = aggregation（部分可独立存在），<b>实心菱形 = composition</b>（部分不能脱离整体存在）。</p>"""
+isPartOf：<b>实心菱形</b>（composition），画在整体一端。对比：空心菱形是 aggregation（has-part），部分可以独立存在。</p>"""
 
 A["genstack-diff"] = """<p><b>GenericStack&lt;T&gt;</b>：参数化（泛型）类型，使用时指定具体类型，如 GenericStack&lt;String&gt;；编译器做类型检查，取元素不用强制转换，类型错误在编译期发现，类型安全。<br>
-<b>GenericStack</b>：原始类型（raw type），相当于 GenericStack&lt;Object&gt;，什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>"""
+<b>GenericStack</b>：原始类型（raw type），大致相当于 GenericStack&lt;Object&gt;（但并不完全相同：原始类型会关闭泛型检查，GenericStack&lt;String&gt; 可以赋给原始类型，却不能赋给 GenericStack&lt;Object&gt;），什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>"""
 
 # ---- 作业 1（AS1 U1–4）与会考补充
 A["as1-rec-iter"] = """<p><b>一般来说迭代循环更高效</b>（与 L1-TF01 的结论一致）。</p>

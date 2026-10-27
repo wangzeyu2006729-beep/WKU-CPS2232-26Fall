@@ -11,7 +11,7 @@ from content import LECTURES, SOURCES, EXAMS, MID_LAST_LECTURE, MID_EXTRA_KEYS  
 from dataset import QS, PAPERS, TYPE_ZH, IDS, IDS_BY_KEY  # noqa: E402
 from practice_ui import prepare_ui, source_hash  # noqa: E402
 
-REVISION = "2026-10-22.1"
+REVISION = "2026-10-27.1"
 STORAGE_KEY = "cps2232-practice-v1"
 
 
@@ -23,7 +23,7 @@ def data_uri(name):
 def option_notes(q):
     if q["type"] == "tf":
         return [("应选。" if "AB"[i] == q["answer"] else "不选。") + q["ex"] for i in range(2)]
-    return [("应选。" if "ABCDEF"[i] == q["answer"] and not n.startswith("应选") else "") + n for i, n in enumerate(q["oe"])]
+    return [("应选。" if "ABCDEF"[i] in q["answer"] and not n.startswith("应选") else "") + n for i, n in enumerate(q["oe"])]
 
 
 def build():

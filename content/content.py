@@ -90,10 +90,10 @@ tf(2, "class-ref-obj", "A class always references its object.", "F",
 tf(2, "obj-ref-class", "An object always references its class.", "T",
    "每个对象都是某个类的实例，可以通过它找到所属的类（如 getClass()）。题库批注为 True。",
    "A B", "对象总是引用它所属的类。")
-tf(2, "default-ctor", "Default constructors must be the first statement in its method body.", "T",
-   "按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
+tf(2, "default-ctor", "Default constructors must be the first statement in its method body.", "F",
+   "False。默认构造方法是一个构造方法，不是一条“语句”，说它是“第一条语句”不成立。Java 真正的规则（Lecture 2「The Superclass Constructor is always Invoked」）是：构造方法体的第一条语句必须是 this(...) 或 super(...)；没有显式写时，编译器自动插入 super()（调用父类的无参构造方法）作为第一条语句。",
    "A B M24", "默认构造方法必须是其方法体中的第一条语句。", exam={"M24": "4"},
-   note="24春期中第 4 题学生选 True。该页 Part A 得 75/85（错 2 题），照片上没有逐题对错标记，无法确认这一题是否给分。")
+   note="题库A 批注为 True，24春期中第 4 题学生也选了 True（该页 Part A 得 75/85，照片上没有逐题对错标记）。本站按 Java 的实际规则判 False；如果考试照题库给分，那是把题意理解成“编译器插入的 super() 是第一条语句”。")
 fb(2, "new-kw", "Given the following statement\n    Progression arithmeticProgress = new Progression();\nThe function (job) of the new keyword is ____[1].",
    ["to create (instantiate) a new Progression object: allocate memory for it on the heap, call the constructor, and return its reference"],
    "new 创建对象：在堆上分配内存、调用构造方法，并把对象的引用（地址）返回给引用变量 arithmeticProgress。",
@@ -135,20 +135,20 @@ tf(3, "gen-raw-flex", "The type GenericStack can be more flexible than the Gener
 mc(3, "print-obj", "Given the code snippet, which is odd among the options?\n\npublic static void print(Object[] list) {\n    for (int i = 0; i < list.length; i++)\n        System.out.print(list[i] + \" \");\n    System.out.println();\n}",
    ["No target object is specified.", "Prone to error when lists are not consistent.", "Accept all types including primitives", "Accept only object types"], "C",
    "参数类型是 Object[]，只能接收引用类型的数组；int[]、double[] 等基本类型数组传不进去，所以 C 的说法不成立，是“odd”的一项。2024 春期中选 C 判对。",
-   ["静态方法，没有指定调用对象，描述成立。", "Object[] 可以混装不同类型的元素，类型不一致时容易出错，描述成立。", "错误说法：基本类型数组（如 int[]）不是 Object[]，不能传入。", "描述成立：只接受对象（引用类型）数组。"],
+   ["描述成立：Object[] 没有指定具体的目标元素类型，任何引用类型的数组都能传入（对比泛型方法 print(E[]) 指定了类型 E）。", "Object[] 可以混装不同类型的元素，类型不一致时容易出错，描述成立。", "错误说法：基本类型数组（如 int[]）不是 Object[]，不能传入。", "描述成立：只接受对象（引用类型）数组。"],
    "A B M24", "给定代码片段，下列哪一项与众不同（说法不对）？", ["没有指定目标对象。", "当列表元素类型不一致时容易出错。", "接受包括基本类型在内的所有类型", "只接受对象类型"],
    exam={"M24": "19"})
 mc(3, "gen-ctor", "Which of the following program statement about generic constructors is incorrect?",
    ["new GenericStack<T>( )", "new GenericStack( )", "new GenericStack<String>( )", "new GenericStack<Number>()"], "A",
-   "创建对象时必须给出具体类型，不能写类型参数 T，所以 A 不正确。B 是原始类型（raw type），可以编译。2024 春期中有同学选 B 被判错；2025 秋考试第 13 题和第 20 题重复出现此题。",
-   ["不正确：创建对象时 T 不是具体类型，无法实例化。", "原始类型构造，可以编译（有警告）。", "正确写法，具体类型 String。", "正确写法，具体类型 Number。"],
+   "在普通代码（如 main）里 T 不是已声明的类型，new GenericStack<T>() 无法编译，所以 A 不正确；只有在声明了类型参数 T 的泛型类或泛型方法内部，这种写法才合法。B 是原始类型（raw type），可以编译（有 unchecked 警告）；C、D 是正确的参数化写法。2024 春期中有同学选 B 被判错；2025 秋考试第 13 题和第 20 题重复出现此题。",
+   ["不正确：T 在这里不是已声明的类型，无法编译。", "原始类型构造，可以编译（有警告）。", "正确写法，具体类型 String。", "正确写法，具体类型 Number。"],
    "A B M24 F25", "下列关于泛型构造方法的程序语句中，哪一个是错误的？",
    ["new GenericStack<T>( )", "new GenericStack( )", "new GenericStack<String>( )", "new GenericStack<Number>()"],
    exam={"M24": "20", "F25": "13, 20"})
 mc(3, "unbounded", "Which of the following is termed as an unbounded generic wildcard.",
    ["< ? super E >", "< ? extends E >", "< E extends Object >", "< Object extends E >"], "C",
-   "无界通配符是 <?>，Liang 课本说明 “? is the same as ? extends Object”。<? extends E> 是上界通配符，<? super E> 是下界通配符。选项中只有 C（以 Object 为界，相当于不受限）最接近无界。注意：题库A 学长批注高亮的是 B，与讲义定义不符；题库A 的 D 选项印作 < E extends ? >。",
-   ["下界（lower bounded）通配符：E 或 E 的父类。", "上界（upper bounded）通配符：E 或 E 的子类，不是无界。", "以 Object 为上界，等价于不受限，最接近无界。", "写法本身不合法。"],
+   "严格说四个选项都不对：真正的无界通配符是 <?>（等价于 <? extends Object>），选项里没有。C 的 <E extends Object> 是“无界类型参数”（Liang：<E> 等同于 <E extends Object>），不是通配符，但它是唯一不设限的写法，所以只能选 C。A 是下界通配符，B 是上界通配符。题库A 学长批注高亮的是 B，与讲义定义不符；题库A 的 D 选项印作 < E extends ? >。",
+   ["下界（lower bounded）通配符：E 或 E 的父类。", "上界（upper bounded）通配符：E 或 E 的子类，不是无界。", "无界类型参数，等价于 <E>；不是通配符，但在这些选项里最接近“无界”。", "写法本身不合法。"],
    "A B F25", "下列哪一个被称为无界泛型通配符？", ["< ? super E >", "< ? extends E >", "< E extends Object >", "< Object extends E >"],
    exam={"F25": "14"})
 fb(3, "wrapper", "Wrapper classes are ____[1] types.", ["reference (object)"],
@@ -171,7 +171,7 @@ tf(4, "lambda-cannot", "Lambda expression cannot be used to implement a function
 tf(4, "lambda-obj", "With the Lambda expression, objects of functional interfaces can implement the methods of an interface.", "T",
    "Lambda 表达式生成函数式接口的对象，并实现接口中唯一的抽象方法。", "F25", "借助 Lambda 表达式，函数式接口的对象可以实现接口中的方法。", exam={"F25": "8"})
 tf(4, "iface-impl", "Methods declared in interfaces provide implementation detail.", "F",
-   "接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。", "A B M24", "接口中声明的方法提供实现细节。", exam={"M24": "2"})
+   "一般而言为 False：接口中的抽象方法只有方法头，没有方法体，具体实现由实现该接口的类提供。例外是 Java 8 起的 default、static 方法（以及 Java 9 的 private 方法）可以带方法体（见 L4-TF08），所以说接口方法“提供实现细节”不是普遍成立的。", "A B M24", "接口中声明的方法提供实现细节。", exam={"M24": "2"})
 tf(4, "iface-single", "Interfaces can have single inheritance but abstract classes can have multiple inheritance.", "F",
    "正好相反：一个接口可以继承多个接口、一个类可以实现多个接口；类（包括抽象类）只能单继承。题库A 原文为 “…abstract classes can also have multiple inheritance”。",
    "A B M24", "接口只能单继承，而抽象类可以多继承。", exam={"M24": "3"})
@@ -253,9 +253,9 @@ tf(6, "lf-eff", "In the LinkedHashMap(16, 0.75f), increase in load factor increa
 tf(6, "map-size", "The map.size() insert an object in the map and returns the number of entries.", "F",
    "size() 只返回键值对个数，不插入任何东西；插入用 put。", "A B M24", "map.size() 在 map 中插入一个对象并返回条目数。", exam={"M24": "10"})
 tf(6, "keyset-val", "The map.keySet() returns the set of values in a map.", "F", "keySet() 返回所有键组成的 Set；values() 才返回值的集合。", "B", "map.keySet() 返回 map 中值的集合。")
-mc(6, "ordered-ds", "One of the following is used to create an ordered data structure", ["HashMap", "HashSet", "LinkedHashMap", "TreeMap"], "D",
-   "TreeMap 按键排序（sorted / ordered）。LinkedHashMap 只是保持插入顺序。2024 春期中选 D 判对。",
-   ["无序。", "无序。", "保持插入顺序，但不是按大小排序。", "按键升序排列，应选。"], "A B M24",
+mc(6, "ordered-ds", "One of the following is used to create an ordered data structure", ["HashMap", "HashSet", "LinkedHashMap", "TreeMap"], "CD",
+   "C、D 都对。ordered（有序）指遍历顺序是确定的：LinkedHashMap 按插入（或访问）顺序遍历，Lecture 6 也把 LinkedHashSet 称为 ordered collection；TreeMap 按键排序，sorted 也一定是 ordered。HashMap、HashSet 无序。如果题目问的是“排序（sorted）”，才只有 D。2024 春期中选 D 判对。",
+   ["无序。", "应选。按插入（或访问）顺序遍历，是有序（ordered）结构。", "应选。按键升序排列（sorted），也是有序结构。", "无序。"], "A B M24",
    "下列哪一个用于创建有序的数据结构？", ["HashMap", "HashSet", "LinkedHashMap", "TreeMap"], exam={"M24": "21"})
 mc(6, "lhm-params", "In the following constructor statement LinkedHashMap(16, 0.75f), 16 and 0.75f are known as ____ and ____",
    ["Key and value pair", "InitialCapacity and loadfactor", "Data and operation", "Object and address"], "B",
@@ -275,15 +275,16 @@ mc(6, "sorted-ds", "One of the following is a sorted data structure", ["HashSet"
 mc(6, "not-sorted-set1", "One of the following is not a sorted set", ["SortedSet", "LinkedList", "TreeSet", "None"], "B",
    "LinkedList 不是排序集合（甚至不是 Set）。", ["排序集合接口。", "应选。", "排序集合。", "B 就是答案，所以不是 None。"],
    "A B", "下列哪一个不是排序集合（sorted set）？", ["SortedSet", "LinkedList", "TreeSet", "以上都不是"])
-mc(6, "not-sorted-set2", "One of the following is not a sorted set", ["SortedSet", "TreeSet", "TreeMap", "HashMap"], "D",
-   "SortedSet、TreeSet 排序，TreeMap 的键有序；HashMap 无序。", ["排序。", "排序。", "按键排序。", "无序，应选。"],
+mc(6, "not-sorted-set2", "One of the following is not a sorted set", ["SortedSet", "TreeSet", "TreeMap", "HashMap"], "CD",
+   "C、D 都对。SortedSet、TreeSet 是排序集合。TreeMap 虽然按键排序，但它是 Map（实现 SortedMap），不是 Set；HashMap 既不是 Set 也不排序。命题本意多半是 D，但按字面 TreeMap 同样“不是 sorted set”。",
+   ["排序集合。", "排序集合。", "应选。按键排序，但它是 Map，不是 Set。", "应选。既不是 Set，也不排序。"],
    "B", "下列哪一个不是排序集合？", ["SortedSet", "TreeSet", "TreeMap", "HashMap"])
-mc(6, "not-sorted-set3", "One of the following is not a sorted set", ["HashSet", "LinkedList", "TreeSet", "HashMap"], "B",
-   "2024 春期中原题，选 B（LinkedList）判对。严格说 HashSet、HashMap 也不是 sorted set，但考试按 LinkedList 给分。",
-   ["也不排序，但考试未按此给分。", "考试答案。", "排序集合。", "也不排序，但考试未按此给分。"],
+mc(6, "not-sorted-set3", "One of the following is not a sorted set", ["HashSet", "LinkedList", "TreeSet", "HashMap"], "ABD",
+   "A、B、D 都对，只有 TreeSet 是排序集合。HashSet 是无序的 Set；LinkedList 是 List，不是 Set；HashMap 既不是 Set 也不排序。2024 春期中这题选 B（LinkedList）判对，那只是阅卷结果，不代表 A、D 错。",
+   ["应选。是 Set，但无序。", "应选。是 List，不是 Set。", "排序集合。", "应选。是 Map，既不是 Set 也不排序。"],
    "M24", "下列哪一个不是排序集合？", ["HashSet", "LinkedList", "TreeSet", "HashMap"], exam={"M24": "18"})
 mc(6, "dup-elem", "One of the following data structures accept duplicate elements", ["HashSet", "HashMap", "LinkedHashSet", "Set"], "B",
-   "Map 的值可以重复；各种 Set 都不允许重复元素。", ["Set，不允许重复。", "值可以重复，应选。", "Set，不允许重复。", "不允许重复。"],
+   "各种 Set 都不允许重复元素。HashMap 的键不能重复，但值可以重复，所以把“元素”理解为值时选 B；题干的 elements 措辞不严谨。", ["Set，不允许重复。", "值可以重复（键不能重复），应选。", "Set，不允许重复。", "不允许重复。"],
    "A B", "下列哪一种数据结构接受重复元素？", ["HashSet", "HashMap", "LinkedHashSet", "Set"])
 mc(6, "set-iter", "To get an iterator from a set, you may use the ______ method.", ["getIterator", "findIterator", "iterator", "iterators"], "C",
    "Collection 接口的方法是 iterator()。", ["没有这个方法。", "没有这个方法。", "应选：set.iterator()。", "没有这个方法。"],
@@ -304,11 +305,11 @@ fb(6, "lf-calc", "Give a simple calculation to explain at what point the size of
    ["16 × 0.75 = 12 (when the number of elements exceeds 12, the capacity doubles to 32)"], "阈值 = 容量 × 负载因子。",
    "A B", "用简单计算说明数组何时翻倍（默认容量 16，负载因子 0.75）。阈值 = ____[1]")
 fb(6, "hs-28", "In a HashSet, if the initial capacity = 28, and load factor = 0.75. The data structure will double its capacity at ____[1].",
-   ["21"], "28 × 0.75 = 21。", "A B", "HashSet 初始容量 28、负载因子 0.75，容量在 ____[1] 时翻倍。")
+   ["21"], "按题目给的容量：28 × 0.75 = 21，元素个数超过 21 时容量翻倍。注意真实的 java.util.HashSet 会把容量取到不小于它的 2 的幂：new HashSet<>(28, 0.75f) 实际容量 32，阈值 32 × 0.75 = 24，插入第 25 个元素时扩到 64。", "A B", "HashSet 初始容量 28、负载因子 0.75，容量在 ____[1] 时翻倍。")
 fb(6, "hs-24", "In a HashSet, if the initial capacity = 24, and load factor = 0.75. The data structure will double its capacity at ____[1].",
-   ["18"], "24 × 0.75 = 18，2024 春期中判对。", "M24", "HashSet 初始容量 24、负载因子 0.75，容量在 ____[1] 时翻倍。", exam={"M24": "33"})
+   ["18"], "按题目给的容量：24 × 0.75 = 18，元素个数超过 18 时容量翻倍（2024 春期中判对）。注意真实的 java.util.HashSet 会把容量取到 2 的幂：new HashSet<>(24, 0.75f) 实际容量 32，阈值 24，插入第 25 个元素时扩到 64。", "M24", "HashSet 初始容量 24、负载因子 0.75，容量在 ____[1] 时翻倍。", exam={"M24": "33"})
 fb(6, "hs-10", "In a HashSet, if the initial capacity = 10, and load factor = 0.75. The data structure will double its capacity at ____[1].",
-   ["7.5 (i.e. when the 8th element is added)"], "10 × 0.75 = 7.5，元素个数超过 7.5，即加入第 8 个元素时扩容。", "F25",
+   ["7.5 (i.e. when the 8th element is added)"], "按题目给的容量：10 × 0.75 = 7.5，元素个数超过 7.5，即加入第 8 个元素时扩容。注意真实的 java.util.HashSet 会把容量取到 2 的幂：new HashSet<>(10, 0.75f) 实际容量 16，阈值 (int)(16 × 0.75) = 12，插入第 13 个元素时从 16 扩到 32。", "F25",
    "HashSet 初始容量 10、负载因子 0.75，容量在 ____[1] 时翻倍。", exam={"F25": "29"})
 fb(6, "set-noequal", "Complete the statement: no two elements e1 and e2 can be in a ____[1] such that e1.equals(e2) is true.", ["Set (HashSet)"],
    "这正是 Set 不含重复元素的定义。", "A B", "补全：在 ____[1] 中不能同时存在 e1.equals(e2) 为 true 的两个元素 e1 和 e2。")
@@ -334,7 +335,7 @@ fb(7, "ll-front", "The time complexity for inserting at the beginning a LinkedLi
    "只需新建节点并修改 head 指针，与表长无关。", "F25", "在 LinkedList 开头插入的时间复杂度是 ____[1]。", exam={"F25": "26"})
 fb(7, "list-del-mid", "A deletion of an element from the middle of a list will shift ____[1].",
    ["the elements after it one position towards the head of the list, filling the gap (size decreases by 1, order is kept)"],
-   "数组实现的表（ArrayList）删除中间元素后，后面的元素依次前移一位，时间 O(n)。", "A B M24 F25",
+   "对数组实现的表（ArrayList / 课上的 MyArrayList），删除中间元素后，后面的元素依次向表头方向移动一位，size 减 1，时间 O(n)。如果是链表（LinkedList），只需修改前驱节点的 next 指针，不需要移动元素。", "A B M24 F25",
    "从列表中间删除一个元素会使 ____[1]。", exam={"M24": "31", "F25": "27"},
    etext="A delete operation on an element from the middle of a list does what?\n____[1]")
 es(7, "ll-add80", "Given the LinkedList 4 → 1 → 3 → 7. Write a method (code snippet) to insert element 80 in front.", "", "M24",
@@ -346,16 +347,16 @@ tf(8, "down-ins", "In the heap data structures, down heap bubbling occurs when i
 tf(8, "down-del", "In the heap data structures, down heap bubbling occurs when delete an element.", "T",
    "删除（removeMin/Max）时把最后一个节点放到根，再向下比较交换，即 down-heap bubbling。", "B", "在堆中，删除元素时发生 down-heap bubbling（下沉）。")
 tf(8, "heap-lastnode", "In heaps, any deleted node is replaced by the last node.", "T",
-   "堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。", "B", "在堆中，任何被删除的节点都由最后一个节点替换。")
+   "堆删除后用最后一个节点（last node）填补空位，保持完全二叉树结构。删根时再向下调整（down-heap）；删任意节点时要看换上来的值，可能需要向上（up-heap）或向下调整。", "B", "在堆中，任何被删除的节点都由最后一个节点替换。")
 mc(8, "heap-rel", "Which of the following statement about the relational property of binary heap is correct.",
    ["∀ v ≠ root → key(v) ≅ key(parent(v))", "∀ v ≠ root → key(v) ≥ key(parent(v))", "∀ v ≠ root → key(v) < key(parent(v))", "∀ v ≠ root → key(v) > key(parent(v))"], "B",
    "Lecture 8 的 Heap-Order Property：除根以外每个位置 p，存放的键 ≥ 其父节点的键，符号 ∀v≠root → key(child(v)) ≥ key(parent(v))，即 B（最小堆写法）。讲义也说可以有 ≥ / ≤ 两种全序。注意：题库A 学长批注高亮的是 C，但 C 是严格小于，与讲义原文不符。",
    ["“约等于”不是堆序。", "应选：讲义原文的 heap-order property。", "严格小于，不允许相等键，且与讲义写法不同（学长批注选此项）。", "严格大于，同样不允许相等键。"],
    "A B", "下列关于二叉堆关系性质（relational property）的说法哪个正确？",
    ["∀ v ≠ root → key(v) ≅ key(parent(v))", "∀ v ≠ root → key(v) ≥ key(parent(v))", "∀ v ≠ root → key(v) < key(parent(v))", "∀ v ≠ root → key(v) > key(parent(v))"])
-mc(8, "heap-is", "Which of the following is a binary heap. (see figures a–d)", ["Figure a", "Figure b", "Figure c", "Figure d"], "A",
-   "a、b、c 都是完全二叉树且满足（最大）堆序；d 中 13 只有右孩子，不是完全二叉树。题库A 批注选 a（严格说 b、c 也是堆）。",
-   ["完全且满足堆序，批注答案。", "也是合法的最大堆（完全二叉树）。", "也是合法的最大堆（完全二叉树）。", "13 只有右孩子，不完全，不是堆。"],
+mc(8, "heap-is", "Which of the following is a binary heap. (see figures a–d)", ["Figure a", "Figure b", "Figure c", "Figure d"], "ABC",
+   "A、B、C 都对。a、b、c 都是完全二叉树且满足最大堆序（Lecture 8 允许 ≥ 或 ≤ 两种全序）；d 中 13 只有右孩子没有左孩子，不是完全二叉树。题库A 批注只标了 a。",
+   ["应选。完全二叉树，满足最大堆序。", "应选。完全二叉树，满足最大堆序。", "应选。完全二叉树，满足最大堆序。", "13 只有右孩子，不完全，不是堆。"],
    "A", "下列哪一个是二叉堆？（见图 a–d）", ["图 a", "图 b", "图 c", "图 d"], fig=["heap_abcd.png"])
 mc(8, "heap-not", "Which of the following is not a binary heap. (see figures a–d)", ["Figure a", "Figure b", "Figure c", "Figure d"], "D",
    "堆必须是完全二叉树（最后一层从左往右填）。d 中 13 没有左孩子却有右孩子 9，不完全，所以不是堆。",
@@ -406,10 +407,11 @@ mc(9, "shift-87-4", "The shift expression 87 >> 4 produces ______", ["5", "3", "
    ["应选。", "不对。", "不对。", "不对。"], "A B", "移位表达式 87 >> 4 的结果是 ______。", ["5", "3", "4", "8"])
 mc(9, "shift-87-3", "The shift expression 87 >> 3 produces ______", ["5", "10", "4", "8"], "B", "87 / 8 = 10。",
    ["这是 87 >> 4。", "应选。", "不对。", "不对。"], "B", "移位表达式 87 >> 3 的结果是 ______。", ["5", "10", "4", "8"])
-mc(9, "dh-expr", "One of the following is the math expression for double hashing", ["(K + j) % N", "(K + j²) % N", "(K + j * 7 – K % 7) % N", "(K + 1 * 7 – K % 7) % N"], "C",
-   "双重哈希：(h(K) + j·h'(K)) % N，其中 h'(K) = 7 − K % 7（PRIME = 7）。C 即 (K + j·(7 − K%7)) % N。",
+mc(9, "dh-expr", "One of the following is the math expression for double hashing", ["(K + j) % N", "(K + j²) % N", "(K + j * (7 – K % 7)) % N", "(K + 1 * 7 – K % 7) % N"], "C",
+   "双重哈希：(h(K) + j·h'(K)) % N，其中 h'(K) = 7 − K % 7（PRIME = 7），即 C。",
    ["线性探测。", "二次探测。", "应选。", "只是 j = 1 的特例。"], "B", "下列哪一个是双重哈希的数学表达式？",
-   ["(K + j) % N", "(K + j²) % N", "(K + j * 7 – K % 7) % N", "(K + 1 * 7 – K % 7) % N"])
+   ["(K + j) % N", "(K + j²) % N", "(K + j * (7 – K % 7)) % N", "(K + 1 * 7 – K % 7) % N"],
+   note="题库B 原选项 C 印作 (K + j * 7 – K % 7) % N，少了括号：按运算优先级是 K + 7j − K%7，不是双重哈希（例如 N = 11、K = 15、j = 2 时得 6，正确应为 5）。本站补上括号。")
 fb(9, "hash-4types", "The four types of hashing techniques are ____[1], ____[2], ____[3] and ____[4].", ["Division", "Extraction", "Mid-Square", "Folding"],
    "Folding 又分 shift folding 和 boundary folding。", "A B", "四种哈希技术是 ____[1]、____[2]、____[3] 和 ____[4]。")
 fb(9, "hash-parts", "The two parts of a hash function are ____[1] and ____[2].", ["hash code", "compression function"],
@@ -447,13 +449,13 @@ tf(10, "bs-between", "If a list is sorted, the best strategy to find a search ke
 tf(10, "bs-linear", "If a list is sorted, the best strategy to find a search key is through a linear search.", "F",
    "同上，有序时二分查找更好。", "A B", "如果列表已排序，查找键的最佳策略是线性查找。")
 tf(10, "n1-linear", "A search key that is located in index N-1 in a list is faster to retrieve using a linear search algorithm than binary search.", "F",
-   "位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。", "A B", "位于下标 N-1 的键用线性查找比二分查找更快。")
+   "前提是列表有序（二分查找要求有序）：位于最后的元素，线性查找要比较 N 次，二分查找约 log₂N 次，所以说法错误。", "A B", "位于下标 N-1 的键用线性查找比二分查找更快。")
 tf(10, "n1-binary", "A search key that is located in index N-1 in a list is faster to retrieve using the binary search than the linear search algorithm.", "T",
-   "二分查找约 log₂N 次比较，远少于线性查找的 N 次。", "A B", "位于下标 N-1 的键用二分查找比线性查找更快。")
+   "前提是列表有序（二分查找要求有序）：二分查找约 log₂N 次比较，远少于线性查找的 N 次。", "A B", "位于下标 N-1 的键用二分查找比线性查找更快。")
 fb(10, "loglinear", "The O(n log n) time complexity is known as ____[1].", ["log-linear (linearithmic) time complexity"],
    "归并排序、快速排序（平均）都是 O(n log n)。", "A B", "O(n log n) 时间复杂度称为 ____[1]。")
-fb(10, "exp-hanoi", "The time complexity O(2ⁿ) is applicable to ____[1] problem.", ["Towers of Hanoi (exponential time)"],
-   "O(2ⁿ) 是指数时间，讲义例子是汉诺塔。", "B", "时间复杂度 O(2ⁿ) 适用于 ____[1] 问题。")
+fb(10, "exp-hanoi", "The time complexity O(2ⁿ) is applicable to ____[1] problem.", ["Towers of Hanoi / recursive Fibonacci (exponential time)"],
+   "O(2ⁿ) 是指数时间，例如汉诺塔（移动 2ⁿ − 1 次，Lecture 1），以及 Lecture 10 举的递归求 Fibonacci。", "B", "时间复杂度 O(2ⁿ) 适用于 ____[1] 问题。")
 fb(10, "exp-sort", "The time complexity O(2ⁿ) is applicable to ____[1] sort.", ["no common sorting algorithm (O(2ⁿ) is exponential, e.g. Towers of Hanoi)"],
    "题库A 版本问的是 “… sort”，学长批注 “not any common”：常见排序都是 O(n²) 或 O(n log n)。", "A", "时间复杂度 O(2ⁿ) 适用于 ____[1] 排序。")
 fb(10, "hamilton", "A Hamiltonian cycle is a cycle that visits each ____[1] in the graph exactly once and returns to the ____[2].",
@@ -492,7 +494,7 @@ es(11, "alg-insert", "State the algorithm for InsertionSort.", "", "B", "写出�
 tf(13, "bst-dup-lt", "The following logical formula\n    ∀ parentNode(n) → leftChild(l) < parentNode(n) ≤ rightChild(r)\nstates the order of relation of nodes in a binary search tree with duplicate elements.", "T",
    "课上定义：左 < 父 ≤ 右，重复元素放到右子树。", "A B", "逻辑式 ∀ parentNode(n) → leftChild(l) < parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。")
 tf(13, "bst-dup-le", "The following logical formula\n    ∀ parentNode(n) → leftChild(l) ≤ parentNode(n) ≤ rightChild(r)\nstates the order of relation of nodes in a binary search tree with duplicate elements.", "F",
-   "左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。", "B", "逻辑式 ∀ parentNode(n) → leftChild(l) ≤ parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。")
+   "按课上（Lecture 14）的定义：左 < 父 ≤ 右，重复元素一律放右子树，左边写 ≤ 与此不符，所以为 False。注意这是定义约定：CLRS 等教材允许两边都用 ≤。另外严格地说，BST 性质要对整棵左右子树成立，而不只是直接孩子。", "B", "逻辑式 ∀ parentNode(n) → leftChild(l) ≤ parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。")
 mc(13, "bst-prop", "Which of the following satisfies the BST property (in logic formula, the property of the BST is ______)",
    ["∀parent → lChild > Parent ≤ rChild", "∀parent → lChild ≥ Parent ≥ rChild", "∀parent → lChild < Parent ≤ rChild", "∀parent → lChild ≥ Parent ≤ rChild"], "C",
    "BST：左孩子 < 父 ≤ 右孩子。题库B 另一版用 leftChild(u) < parent(x) ≤ rightChild(y) 写法，答案相同。",
@@ -501,8 +503,9 @@ mc(13, "bst-prop", "Which of the following satisfies the BST property (in logic 
 mc(13, "use-height", "One of the following uses height(s) for balancing trees.", ["Red-black trees", "Binary search trees", "AVL trees", "Priority heap"], "C",
    "AVL 树用左右子树高度差（平衡因子）判断是否旋转。", ["用颜色。", "普通 BST 不自平衡。", "应选。", "堆不是平衡 BST。"], "A B",
    "下列哪一个用高度来平衡树？", ["红黑树", "二叉搜索树", "AVL 树", "优先堆"])
-mc(13, "avl-bf", "In AVL trees, ______ is used to balance a tree.", ["node color", "node balance factor", "node height", "node depth"], "B",
-   "AVL 根据平衡因子（由高度算出）决定是否旋转、做哪种旋转。", ["红黑树用颜色。", "应选。", "高度用来计算平衡因子，题目答案取平衡因子。", "深度无关。"], "B",
+mc(13, "avl-bf", "In AVL trees, ______ is used to balance a tree.", ["node color", "node balance factor", "node height", "node depth"], "BC",
+   "B、C 都对。AVL 每个节点保存高度，由左右子树高度算出平衡因子，平衡因子超出 {−1, 0, 1} 就旋转。平衡因子是直接判据，高度是它的依据；L13-MC02 也把“用高度平衡”的树答作 AVL。",
+   ["红黑树用颜色。", "应选。直接决定是否旋转、做哪种旋转。", "应选。节点保存高度，平衡因子由高度算出。", "深度无关。"], "B",
    "在 AVL 树中，______ 用于平衡树。", ["节点颜色", "节点平衡因子", "节点高度", "节点深度"])
 fb(13, "bst-rule", "The property (rule) of a binary search tree is stated as ____[1].", ["for any node: leftChild < parent ≤ rightChild"],
    "左子树所有元素小于它，右子树所有元素大于等于它。", "A B", "二叉搜索树的性质（规则）是 ____[1]。")

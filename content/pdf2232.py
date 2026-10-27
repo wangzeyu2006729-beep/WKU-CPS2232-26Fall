@@ -108,7 +108,7 @@ def q_block(num, q, answers, label=True, src=False, exam=False):
     elif q["type"] == "mc":
         items = []
         for i, o in enumerate(q["options"]):
-            right = answers and "ABCDEF"[i] == q["answer"]
+            right = answers and "ABCDEF"[i] in q["answer"]
             items.append(f'<li class="{"right" if right else ""}">{"abcdef"[i]}) {x(o)}</li>')
         out.append(f'<ol class="opts">{"".join(items)}</ol>')
         if answers:

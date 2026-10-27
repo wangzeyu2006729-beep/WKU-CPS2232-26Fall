@@ -5,7 +5,7 @@
   "instructor": "Ehimwenma, K.",
   "term": "26Fall",
   "storage_key": "cps2232-practice-v1",
-  "review_revision": "2026-10-22.1",
+  "review_revision": "2026-10-27.1",
   "answer_basis": "lecture",
   "ui_version": "2026-10-22.zh1"
  },
@@ -239,7 +239,7 @@
    "explanation": "递归每次调用都要压栈（保存参数、局部变量和返回地址），有额外的时间和空间开销，一般不比等价的迭代写法高效；递归的优点是写法简洁、适合递归结构的问题。",
    "note": "",
    "references": "Lecture 1 · Recursion (Ch18)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -274,7 +274,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 1 · Recursion (Ch18)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -303,7 +303,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 1 · Recursion (Ch18)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -332,7 +332,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 1 · Recursion (Ch18)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -361,7 +361,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 1 · Recursion (Ch18)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -393,7 +393,7 @@
    "explanation": "是对象（通过引用变量）指向某个类的实例，而不是类去引用它的对象。2024 春期中有同学选 True 被判错。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -437,7 +437,7 @@
    "explanation": "每个对象都是某个类的实例，可以通过它找到所属的类（如 getClass()）。题库批注为 True。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -472,12 +472,12 @@
     "True",
     "False"
    ],
-   "answer": "A",
+   "answer": "B",
    "answers": [],
-   "explanation": "按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
-   "note": "24春期中第 4 题学生选 True。该页 Part A 得 75/85（错 2 题），照片上没有逐题对错标记，无法确认这一题是否给分。",
+   "explanation": "False。默认构造方法是一个构造方法，不是一条“语句”，说它是“第一条语句”不成立。Java 真正的规则（Lecture 2「The Superclass Constructor is always Invoked」）是：构造方法体的第一条语句必须是 this(...) 或 super(...)；没有显式写时，编译器自动插入 super()（调用父类的无参构造方法）作为第一条语句。",
+   "note": "题库A 批注为 True，24春期中第 4 题学生也选了 True（该页 Part A 得 75/85，照片上没有逐题对错标记）。本站按 Java 的实际规则判 False；如果考试照题库给分，那是把题意理解成“编译器插入的 super() 是第一条语句”。",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -493,8 +493,8 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "应选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。",
-    "不选。按课程答案选 True（题库A 批注为 True）。题干字面上不严谨：默认构造方法是一个构造方法，不是一条“语句”。它考的是 Lecture 2「The Superclass Constructor is always Invoked」：构造方法里没有显式调用 this(...) 或 super(...) 时，编译器会自动插入 super()（调用父类的无参构造方法）作为第一条语句；自己写 this(...) 或 super(...) 时，也必须写在方法体第一行。"
+    "不选。False。默认构造方法是一个构造方法，不是一条“语句”，说它是“第一条语句”不成立。Java 真正的规则（Lecture 2「The Superclass Constructor is always Invoked」）是：构造方法体的第一条语句必须是 this(...) 或 super(...)；没有显式写时，编译器自动插入 super()（调用父类的无参构造方法）作为第一条语句。",
+    "应选。False。默认构造方法是一个构造方法，不是一条“语句”，说它是“第一条语句”不成立。Java 真正的规则（Lecture 2「The Superclass Constructor is always Invoked」）是：构造方法体的第一条语句必须是 this(...) 或 super(...)；没有显式写时，编译器自动插入 super()（调用父类的无参构造方法）作为第一条语句。"
    ],
    "zh": {
     "text": "默认构造方法必须是其方法体中的第一条语句。",
@@ -520,7 +520,7 @@
    "explanation": "new 创建对象：在堆上分配内存、调用构造方法，并把对象的引用（地址）返回给引用变量 arithmeticProgress。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -556,7 +556,7 @@
    "explanation": "引用变量是等号左边保存对象地址的变量名 arithmeticProgress；Progression 是类型。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -592,7 +592,7 @@
    "explanation": "引用变量存放的是对象在堆中的地址，通过它访问对象。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -624,7 +624,7 @@
    "explanation": "运行时用 new 创建的对象都放在堆（heap）上，属于动态内存分配；局部变量和方法调用在栈（stack）上。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -656,7 +656,7 @@
    "explanation": "实心菱形 = composition（组合）；空心菱形 = aggregation（聚合）。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -692,7 +692,7 @@
    "explanation": "组合是强的整体-部分关系，部分不能脱离整体独立存在，例如 bird 与 wings、car 与 engine。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -728,7 +728,7 @@
    "explanation": "虚线 + 空心三角箭头 = realization（实现），箭头指向被实现的接口；实线 + 空心三角是继承（generalization）。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -760,7 +760,7 @@
    "explanation": "表示类实现（implements）某个接口。",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -790,7 +790,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 2 · Objects, Classes & References",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -801,7 +801,7 @@
     "B"
    ],
    "part": "mid",
-   "html": "<p><b>(a)</b> <b>is-a</b>：泛化 / 继承（generalization / inheritance），子类是父类的一种，例如 Dog is-a Animal。<br>\n<b>isPartOf</b>：整体-部分关系（aggregation / composition），例如 Engine isPartOf Car；composition 中部分不能脱离整体独立存在。</p>\n<p><b>(b)</b> is-a：<b>实线 + 空心三角箭头</b>，箭头指向父类（实现接口用虚线 + 空心三角）。<br>\nisPartOf：<b>菱形</b>画在整体一端；空心菱形 = aggregation（部分可独立存在），<b>实心菱形 = composition</b>（部分不能脱离整体存在）。</p>",
+   "html": "<p><b>(a)</b> <b>is-a</b>：泛化 / 继承（generalization / inheritance），子类是父类的一种，例如 Dog is-a Animal。<br>\n<b>isPartOf</b>：整体-部分关系中的组合（composition），部分不能脱离整体独立存在，例如 wings isPartOf bird。Lecture 4 的类图箭头把聚合（aggregation）叫 has-part，把组合叫 is-part-of。</p>\n<p><b>(b)</b> is-a：<b>实线 + 空心三角箭头</b>，箭头指向父类（实现接口用虚线 + 空心三角）。<br>\nisPartOf：<b>实心菱形</b>（composition），画在整体一端。对比：空心菱形是 aggregation（has-part），部分可以独立存在。</p>",
    "zh": {
     "text": "(a) UML 中 is-a 关系与 isPartOf 关系有什么区别？(b) 画出/指出 UML 中 isPartOf 与 is-a 的符号。",
     "options": []
@@ -824,7 +824,7 @@
    "explanation": "使用泛型后编译器知道元素类型，取出元素时不需要显式强制类型转换，类型错误在编译期就能发现。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -868,7 +868,7 @@
    "explanation": "泛型的实际类型参数必须是引用类型，例如 ArrayList<Integer>，不能写 ArrayList<int>；基本类型要用包装类。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -912,7 +912,7 @@
    "explanation": "GenericStack 是原始类型（raw type），编译器不做类型检查，取出元素要强转，容易在运行时出错，不能说比泛型类型“更灵活”。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -958,7 +958,7 @@
    "explanation": "参数类型是 Object[]，只能接收引用类型的数组；int[]、double[] 等基本类型数组传不进去，所以 C 的说法不成立，是“odd”的一项。2024 春期中选 C 判对。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -974,7 +974,7 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "静态方法，没有指定调用对象，描述成立。",
+    "描述成立：Object[] 没有指定具体的目标元素类型，任何引用类型的数组都能传入（对比泛型方法 print(E[]) 指定了类型 E）。",
     "Object[] 可以混装不同类型的元素，类型不一致时容易出错，描述成立。",
     "应选。错误说法：基本类型数组（如 int[]）不是 Object[]，不能传入。",
     "描述成立：只接受对象（引用类型）数组。"
@@ -1005,10 +1005,10 @@
    ],
    "answer": "A",
    "answers": [],
-   "explanation": "创建对象时必须给出具体类型，不能写类型参数 T，所以 A 不正确。B 是原始类型（raw type），可以编译。2024 春期中有同学选 B 被判错；2025 秋考试第 13 题和第 20 题重复出现此题。",
+   "explanation": "在普通代码（如 main）里 T 不是已声明的类型，new GenericStack<T>() 无法编译，所以 A 不正确；只有在声明了类型参数 T 的泛型类或泛型方法内部，这种写法才合法。B 是原始类型（raw type），可以编译（有 unchecked 警告）；C、D 是正确的参数化写法。2024 春期中有同学选 B 被判错；2025 秋考试第 13 题和第 20 题重复出现此题。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1027,7 +1027,7 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "应选。不正确：创建对象时 T 不是具体类型，无法实例化。",
+    "应选。不正确：T 在这里不是已声明的类型，无法编译。",
     "原始类型构造，可以编译（有警告）。",
     "正确写法，具体类型 String。",
     "正确写法，具体类型 Number。"
@@ -1058,10 +1058,10 @@
    ],
    "answer": "C",
    "answers": [],
-   "explanation": "无界通配符是 <?>，Liang 课本说明 “? is the same as ? extends Object”。<? extends E> 是上界通配符，<? super E> 是下界通配符。选项中只有 C（以 Object 为界，相当于不受限）最接近无界。注意：题库A 学长批注高亮的是 B，与讲义定义不符；题库A 的 D 选项印作 < E extends ? >。",
+   "explanation": "严格说四个选项都不对：真正的无界通配符是 <?>（等价于 <? extends Object>），选项里没有。C 的 <E extends Object> 是“无界类型参数”（Liang：<E> 等同于 <E extends Object>），不是通配符，但它是唯一不设限的写法，所以只能选 C。A 是下界通配符，B 是上界通配符。题库A 学长批注高亮的是 B，与讲义定义不符；题库A 的 D 选项印作 < E extends ? >。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1079,7 +1079,7 @@
    "option_explanations": [
     "下界（lower bounded）通配符：E 或 E 的父类。",
     "上界（upper bounded）通配符：E 或 E 的子类，不是无界。",
-    "应选。以 Object 为上界，等价于不受限，最接近无界。",
+    "应选。无界类型参数，等价于 <E>；不是通配符，但在这些选项里最接近“无界”。",
     "写法本身不合法。"
    ],
    "zh": {
@@ -1108,7 +1108,7 @@
    "explanation": "包装类（Integer、Double、Character…）把基本类型包装成对象，属于引用类型，可以放进泛型集合。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1144,7 +1144,7 @@
    "explanation": "泛型就是把类型参数化：定义时用类型参数 <T>，使用时代入具体类型，由编译器检查类型。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -1179,7 +1179,7 @@
    "explanation": "extends 设上界，接受 T 及其子类；super 设下界，接受 T 及其父类。",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -1209,7 +1209,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -1220,7 +1220,7 @@
     "B"
    ],
    "part": "mid",
-   "html": "<p><b>GenericStack&lt;T&gt;</b>：参数化（泛型）类型，使用时指定具体类型，如 GenericStack&lt;String&gt;；编译器做类型检查，取元素不用强制转换，类型错误在编译期发现，类型安全。<br>\n<b>GenericStack</b>：原始类型（raw type），相当于 GenericStack&lt;Object&gt;，什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>",
+   "html": "<p><b>GenericStack&lt;T&gt;</b>：参数化（泛型）类型，使用时指定具体类型，如 GenericStack&lt;String&gt;；编译器做类型检查，取元素不用强制转换，类型错误在编译期发现，类型安全。<br>\n<b>GenericStack</b>：原始类型（raw type），大致相当于 GenericStack&lt;Object&gt;（但并不完全相同：原始类型会关闭泛型检查，GenericStack&lt;String&gt; 可以赋给原始类型，却不能赋给 GenericStack&lt;Object&gt;），什么对象都能放进去，编译器不检查；取出时要强转，类型不对会在运行时抛 ClassCastException。</p>",
    "zh": {
     "text": "说明引用类型 GenericStack<T> 与类型 GenericStack 的区别。",
     "options": []
@@ -1240,7 +1240,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 3 · Generics (Ch19)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -1272,7 +1272,7 @@
    "explanation": "函数式接口只有一个抽象方法，Lambda 表达式就是这个方法的实现。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -1312,7 +1312,7 @@
    "explanation": "与上一题相反，Lambda 正是用来实现函数式接口的。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -1350,7 +1350,7 @@
    "explanation": "Lambda 表达式生成函数式接口的对象，并实现接口中唯一的抽象方法。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -1387,10 +1387,10 @@
    ],
    "answer": "B",
    "answers": [],
-   "explanation": "接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。",
+   "explanation": "一般而言为 False：接口中的抽象方法只有方法头，没有方法体，具体实现由实现该接口的类提供。例外是 Java 8 起的 default、static 方法（以及 Java 9 的 private 方法）可以带方法体（见 L4-TF08），所以说接口方法“提供实现细节”不是普遍成立的。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1406,8 +1406,8 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "不选。接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。",
-    "应选。接口中（抽象）方法只有方法头，没有方法体，具体实现由实现该接口的类提供。"
+    "不选。一般而言为 False：接口中的抽象方法只有方法头，没有方法体，具体实现由实现该接口的类提供。例外是 Java 8 起的 default、static 方法（以及 Java 9 的 private 方法）可以带方法体（见 L4-TF08），所以说接口方法“提供实现细节”不是普遍成立的。",
+    "应选。一般而言为 False：接口中的抽象方法只有方法头，没有方法体，具体实现由实现该接口的类提供。例外是 Java 8 起的 default、static 方法（以及 Java 9 的 private 方法）可以带方法体（见 L4-TF08），所以说接口方法“提供实现细节”不是普遍成立的。"
    ],
    "zh": {
     "text": "接口中声明的方法提供实现细节。",
@@ -1434,7 +1434,7 @@
    "explanation": "正好相反：一个接口可以继承多个接口、一个类可以实现多个接口；类（包括抽象类）只能单继承。题库A 原文为 “…abstract classes can also have multiple inheritance”。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1478,7 +1478,7 @@
    "explanation": "接口可多继承，类只能 extends 一个父类。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -1516,7 +1516,7 @@
    "explanation": "抽象类也是类，只能单继承。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -1556,7 +1556,7 @@
    "explanation": "Java 8 起，接口中可以用 default 关键字定义带方法体的默认方法。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1600,7 +1600,7 @@
    "explanation": "default 方法让接口自己提供方法实现，实现类可以直接继承或重写。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -1640,7 +1640,7 @@
    "explanation": "从数组表中删除一个元素后，它后面的元素都向表头（head）方向前移一位来填补空位，不是向表尾移动。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1683,7 +1683,7 @@
    "explanation": "接口只声明“能做什么”，由实现类决定“怎么做”。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1719,7 +1719,7 @@
    "explanation": "add(e) 追加到末尾：[23, 12, 37]；add(2, 10) 插到下标 2，原来的 37 后移：[23, 12, 10, 37]。（原题把 new 印成了 newe）",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1755,7 +1755,7 @@
    "explanation": "[23] → [23,12] → [23,12,37] → add(1,56)：[23,56,12,37] → add(17)：[23,56,12,37,17] → add(4,83)：[23,56,12,37,83,17]。",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -1785,7 +1785,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -1820,7 +1820,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 4 · ADTs, Interfaces & Lists (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "作业1 · AS CPS2232 DSA_Unit1-4.pdf"
    ],
@@ -1854,7 +1854,7 @@
    "explanation": "按 ADT 约定，队列的操作是 enqueue / dequeue，栈的操作是 push / pop。（Java 的 Queue 接口也有 add/offer，但题目问 ADT 约定）",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf",
     "2025 秋季考试真题"
@@ -1902,7 +1902,7 @@
    "explanation": "栈 ADT：push、pop、peek。原卷选项字母印作 e–h（另一版 i–l）。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -1943,7 +1943,7 @@
    "explanation": "栈只在栈顶 push / pop，后进先出。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -1975,7 +1975,7 @@
    "explanation": "队列在 rear 入队、在 front 出队，先进先出。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -2007,7 +2007,7 @@
    "explanation": "出队（dequeue）只能在 front 端；入队（enqueue）在 rear（back）端。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2043,7 +2043,7 @@
    "explanation": "课上公式：No. of elements = (Back − Front) + 1（rear 也叫 back）。2024 春期中有人写 getSize() 被判错；会考提示中也强调了这个公式。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2084,7 +2084,7 @@
    "explanation": "front 是第一个有元素的下标 3，rear 是最后一个下标 5：(5 − 3) + 1 = 3。2024 春期中写 6 被判错，写 3 判对。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2123,7 +2123,7 @@
    "explanation": "front = 2，rear = 5：(5 − 2) + 1 = 4。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -2153,7 +2153,7 @@
    "explanation": "后进先出：最后压入的 3 最先弹出。",
    "note": "",
    "references": "Lecture 5 · Stacks & Queues (Ch20)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -2186,7 +2186,7 @@
    "explanation": "HashMap 按哈希值存放，输出顺序不确定。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2230,7 +2230,7 @@
    "explanation": "LinkedHashMap 用双向链表记录插入顺序（默认），遍历时按插入顺序输出。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2274,7 +2274,7 @@
    "explanation": "LinkedHashMap 默认按插入顺序输出，不是随机顺序。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -2314,7 +2314,7 @@
    "explanation": "LinkedHashSet 按插入顺序输出。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -2354,7 +2354,7 @@
    "explanation": "LinkedHashSet = HashSet + 链表记录插入顺序。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2398,7 +2398,7 @@
    "explanation": "TreeMap 按键排序（默认升序，基于红黑树）。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2442,7 +2442,7 @@
    "explanation": "所有 Set 都不允许重复元素。2024 春期中选 False 判对。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2486,7 +2486,7 @@
    "explanation": "Set 不允许重复元素，add 重复元素会返回 false。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -2526,7 +2526,7 @@
    "explanation": "HashSet 无序；要保持插入顺序用 LinkedHashSet。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -2566,7 +2566,7 @@
    "explanation": "Set 是不含重复元素的集合（Liang：store unordered, non-duplicate elements）。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -2606,7 +2606,7 @@
    "explanation": "Map 的键唯一；put 已存在的键会覆盖旧值。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2650,7 +2650,7 @@
    "explanation": "不同的键可以对应相同的值。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2697,7 +2697,7 @@
    "explanation": "两参数构造器（初始容量 16、负载因子 0.75）按插入顺序；要按访问顺序需要 LinkedHashMap(16, 0.75f, true)。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2741,7 +2741,7 @@
    "explanation": "第三个参数 accessOrder = true 时，按访问顺序（最近访问的在最后）输出。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -2779,7 +2779,7 @@
    "explanation": "无参构造器默认 accessOrder = false，即插入顺序。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -2819,7 +2819,7 @@
    "explanation": "负载因子越大，扩容前表越满，冲突越多，查找反而变慢；提高负载因子只节省空间。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -2859,7 +2859,7 @@
    "explanation": "size() 只返回键值对个数，不插入任何东西；插入用 put。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2903,7 +2903,7 @@
    "explanation": "keySet() 返回所有键组成的 Set；values() 才返回值的集合。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -2938,12 +2938,12 @@
     "LinkedHashMap",
     "TreeMap"
    ],
-   "answer": "D",
+   "answer": "CD",
    "answers": [],
-   "explanation": "TreeMap 按键排序（sorted / ordered）。LinkedHashMap 只是保持插入顺序。2024 春期中选 D 判对。",
+   "explanation": "C、D 都对。ordered（有序）指遍历顺序是确定的：LinkedHashMap 按插入（或访问）顺序遍历，Lecture 6 也把 LinkedHashSet 称为 ordered collection；TreeMap 按键排序，sorted 也一定是 ordered。HashMap、HashSet 无序。如果题目问的是“排序（sorted）”，才只有 D。2024 春期中选 D 判对。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -2960,9 +2960,9 @@
    "part": "mid",
    "option_explanations": [
     "无序。",
-    "无序。",
-    "保持插入顺序，但不是按大小排序。",
-    "应选。按键升序排列，应选。"
+    "应选。按插入（或访问）顺序遍历，是有序（ordered）结构。",
+    "应选。按键升序排列（sorted），也是有序结构。",
+    "应选。无序。"
    ],
    "zh": {
     "text": "下列哪一个用于创建有序的数据结构？",
@@ -2993,7 +2993,7 @@
    "explanation": "第一个参数是初始容量，第二个是负载因子。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -3043,7 +3043,7 @@
    "explanation": "要求“Map”且“按递增顺序”→ TreeMap。TreeSet 不是 Map。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -3096,7 +3096,7 @@
    "explanation": "SortedSet、TreeSet、TreeMap 都按顺序排列元素；LinkedList 只按插入位置存放。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf",
     "2025 秋季考试真题"
@@ -3144,7 +3144,7 @@
    "explanation": "TreeSet 按元素大小排序。原卷选项字母印作 e–h。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -3188,7 +3188,7 @@
    "explanation": "LinkedList 不是排序集合（甚至不是 Set）。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3229,12 +3229,12 @@
     "TreeMap",
     "HashMap"
    ],
-   "answer": "D",
+   "answer": "CD",
    "answers": [],
-   "explanation": "SortedSet、TreeSet 排序，TreeMap 的键有序；HashMap 无序。",
+   "explanation": "C、D 都对。SortedSet、TreeSet 是排序集合。TreeMap 虽然按键排序，但它是 Map（实现 SortedMap），不是 Set；HashMap 既不是 Set 也不排序。命题本意多半是 D，但按字面 TreeMap 同样“不是 sorted set”。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -3244,10 +3244,10 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "排序。",
-    "排序。",
-    "按键排序。",
-    "应选。无序，应选。"
+    "排序集合。",
+    "排序集合。",
+    "应选。按键排序，但它是 Map，不是 Set。",
+    "应选。既不是 Set，也不排序。"
    ],
    "zh": {
     "text": "下列哪一个不是排序集合？",
@@ -3273,12 +3273,12 @@
     "TreeSet",
     "HashMap"
    ],
-   "answer": "B",
+   "answer": "ABD",
    "answers": [],
-   "explanation": "2024 春期中原题，选 B（LinkedList）判对。严格说 HashSet、HashMap 也不是 sorted set，但考试按 LinkedList 给分。",
+   "explanation": "A、B、D 都对，只有 TreeSet 是排序集合。HashSet 是无序的 Set；LinkedList 是 List，不是 Set；HashMap 既不是 Set 也不排序。2024 春期中这题选 B（LinkedList）判对，那只是阅卷结果，不代表 A、D 错。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2023/24 春季期中真题"
    ],
@@ -3290,10 +3290,10 @@
    ],
    "part": "mid",
    "option_explanations": [
-    "也不排序，但考试未按此给分。",
-    "应选。考试答案。",
+    "应选。是 Set，但无序。",
+    "应选。是 List，不是 Set。",
     "排序集合。",
-    "也不排序，但考试未按此给分。"
+    "应选。是 Map，既不是 Set 也不排序。"
    ],
    "zh": {
     "text": "下列哪一个不是排序集合？",
@@ -3321,10 +3321,10 @@
    ],
    "answer": "B",
    "answers": [],
-   "explanation": "Map 的值可以重复；各种 Set 都不允许重复元素。",
+   "explanation": "各种 Set 都不允许重复元素。HashMap 的键不能重复，但值可以重复，所以把“元素”理解为值时选 B；题干的 elements 措辞不严谨。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3337,7 +3337,7 @@
    "part": "mid",
    "option_explanations": [
     "Set，不允许重复。",
-    "应选。值可以重复，应选。",
+    "应选。值可以重复（键不能重复），应选。",
     "Set，不允许重复。",
     "不允许重复。"
    ],
@@ -3370,7 +3370,7 @@
    "explanation": "Collection 接口的方法是 iterator()。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -3416,7 +3416,7 @@
    "explanation": "equals 相等则 hashCode 必须相等（hashCode 约定）；反过来 hashCode 相等不一定 equals。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -3462,7 +3462,7 @@
    "explanation": "addAll 求并集，重复的 2 只保留一个。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -3506,7 +3506,7 @@
    "explanation": "阈值 = capacity × load factor，元素数超过阈值时容量翻倍（rehashing）。2024 春期中判对。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -3542,7 +3542,7 @@
    "explanation": "阈值 = 容量 × 负载因子。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3571,10 +3571,10 @@
    "answers": [
     "21"
    ],
-   "explanation": "28 × 0.75 = 21。",
+   "explanation": "按题目给的容量：28 × 0.75 = 21，元素个数超过 21 时容量翻倍。注意真实的 java.util.HashSet 会把容量取到不小于它的 2 的幂：new HashSet<>(28, 0.75f) 实际容量 32，阈值 32 × 0.75 = 24，插入第 25 个元素时扩到 64。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3603,10 +3603,10 @@
    "answers": [
     "18"
    ],
-   "explanation": "24 × 0.75 = 18，2024 春期中判对。",
+   "explanation": "按题目给的容量：24 × 0.75 = 18，元素个数超过 18 时容量翻倍（2024 春期中判对）。注意真实的 java.util.HashSet 会把容量取到 2 的幂：new HashSet<>(24, 0.75f) 实际容量 32，阈值 24，插入第 25 个元素时扩到 64。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2023/24 春季期中真题"
    ],
@@ -3635,10 +3635,10 @@
    "answers": [
     "7.5 (i.e. when the 8th element is added)"
    ],
-   "explanation": "10 × 0.75 = 7.5，元素个数超过 7.5，即加入第 8 个元素时扩容。",
+   "explanation": "按题目给的容量：10 × 0.75 = 7.5，元素个数超过 7.5，即加入第 8 个元素时扩容。注意真实的 java.util.HashSet 会把容量取到 2 的幂：new HashSet<>(10, 0.75f) 实际容量 16，阈值 (int)(16 × 0.75) = 12，插入第 13 个元素时从 16 扩到 32。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -3670,7 +3670,7 @@
    "explanation": "这正是 Set 不含重复元素的定义。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3702,7 +3702,7 @@
    "explanation": "HashSet() 默认初始容量 16、负载因子 0.75。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3734,7 +3734,7 @@
    "explanation": "按键取值；put(key, value) 插入。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3766,7 +3766,7 @@
    "explanation": "注意 Map 没有 add 方法，应为 put。keySet() 返回所有键组成的 Set。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3798,7 +3798,7 @@
    "explanation": "Map 本身没有 iterator()，要先取 keySet() 或 entrySet() 视图。",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3830,7 +3830,7 @@
    "explanation": "典型写法：while (it.hasNext()) System.out.println(it.next());",
    "note": "",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -3860,7 +3860,7 @@
    "explanation": "",
    "note": "课堂例题：2024-04-02 会考照片，Lecture 6 课件「Hashing and Hash Table」一页。",
    "references": "Lecture 6 · Sets, Maps & Hash Tables (Ch21)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "课堂/会考提示"
    ],
@@ -3894,7 +3894,7 @@
    "explanation": "单链表的每个节点保存数据 element 和指向下一个节点的 next 引用；head、tail 是链表对象的字段。",
    "note": "",
    "references": "Lecture 7 · List Implementation (Ch24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf",
     "2025 秋季考试真题"
@@ -3939,7 +3939,7 @@
    "explanation": "只需新建节点并修改 head 指针，与表长无关。",
    "note": "",
    "references": "Lecture 7 · List Implementation (Ch24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -3968,10 +3968,10 @@
    "answers": [
     "the elements after it one position towards the head of the list, filling the gap (size decreases by 1, order is kept)"
    ],
-   "explanation": "数组实现的表（ArrayList）删除中间元素后，后面的元素依次前移一位，时间 O(n)。",
+   "explanation": "对数组实现的表（ArrayList / 课上的 MyArrayList），删除中间元素后，后面的元素依次向表头方向移动一位，size 减 1，时间 O(n)。如果是链表（LinkedList），只需修改前驱节点的 next 指针，不需要移动元素。",
    "note": "",
    "references": "Lecture 7 · List Implementation (Ch24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -4008,7 +4008,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 7 · List Implementation (Ch24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2023/24 春季期中真题"
    ],
@@ -4042,7 +4042,7 @@
    "explanation": "插入时新元素放在最后位置，再向上比较交换，是 up-heap bubbling（上浮）。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4080,7 +4080,7 @@
    "explanation": "删除（removeMin/Max）时把最后一个节点放到根，再向下比较交换，即 down-heap bubbling。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4115,10 +4115,10 @@
    ],
    "answer": "A",
    "answers": [],
-   "explanation": "堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。",
+   "explanation": "堆删除后用最后一个节点（last node）填补空位，保持完全二叉树结构。删根时再向下调整（down-heap）；删任意节点时要看换上来的值，可能需要向上（up-heap）或向下调整。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4128,8 +4128,8 @@
    ],
    "part": "final",
    "option_explanations": [
-    "应选。堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。",
-    "不选。堆删除后用最后一个节点（last node）填补，保持完全二叉树结构，再下沉调整。"
+    "应选。堆删除后用最后一个节点（last node）填补空位，保持完全二叉树结构。删根时再向下调整（down-heap）；删任意节点时要看换上来的值，可能需要向上（up-heap）或向下调整。",
+    "不选。堆删除后用最后一个节点（last node）填补空位，保持完全二叉树结构。删根时再向下调整（down-heap）；删任意节点时要看换上来的值，可能需要向上（up-heap）或向下调整。"
    ],
    "zh": {
     "text": "在堆中，任何被删除的节点都由最后一个节点替换。",
@@ -4158,7 +4158,7 @@
    "explanation": "Lecture 8 的 Heap-Order Property：除根以外每个位置 p，存放的键 ≥ 其父节点的键，符号 ∀v≠root → key(child(v)) ≥ key(parent(v))，即 B（最小堆写法）。讲义也说可以有 ≥ / ≤ 两种全序。注意：题库A 学长批注高亮的是 C，但 C 是严格小于，与讲义原文不符。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4199,12 +4199,12 @@
     "Figure c",
     "Figure d"
    ],
-   "answer": "A",
+   "answer": "ABC",
    "answers": [],
-   "explanation": "a、b、c 都是完全二叉树且满足（最大）堆序；d 中 13 只有右孩子，不是完全二叉树。题库A 批注选 a（严格说 b、c 也是堆）。",
+   "explanation": "A、B、C 都对。a、b、c 都是完全二叉树且满足最大堆序（Lecture 8 允许 ≥ 或 ≤ 两种全序）；d 中 13 只有右孩子没有左孩子，不是完全二叉树。题库A 批注只标了 a。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf"
    ],
@@ -4214,9 +4214,9 @@
    ],
    "part": "final",
    "option_explanations": [
-    "应选。完全且满足堆序，批注答案。",
-    "也是合法的最大堆（完全二叉树）。",
-    "也是合法的最大堆（完全二叉树）。",
+    "应选。完全二叉树，满足最大堆序。",
+    "应选。完全二叉树，满足最大堆序。",
+    "应选。完全二叉树，满足最大堆序。",
     "13 只有右孩子，不完全，不是堆。"
    ],
    "zh": {
@@ -4248,7 +4248,7 @@
    "explanation": "堆必须是完全二叉树（最后一层从左往右填）。d 中 13 没有左孩子却有右孩子 9，不完全，所以不是堆。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4292,7 +4292,7 @@
    "explanation": "根下标为 0 时：左 2i+1、右 2i+2、父 (i−1)/2（整除）。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4336,7 +4336,7 @@
    "explanation": "根下标为 1 时：左 2i、右 2i+1、父 i/2（整除）。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4380,7 +4380,7 @@
    "explanation": "用最后一个节点替换，再 down-heap bubbling。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4421,7 +4421,7 @@
    "explanation": "保持完全二叉树形状，再下沉恢复堆序。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4454,7 +4454,7 @@
    "explanation": "关系性质规定父子键的大小关系；结构性质要求是完全二叉树。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4486,7 +4486,7 @@
    "explanation": "结构性质（完全二叉树）决定堆的形状。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4518,7 +4518,7 @@
    "explanation": "Goodrich 定义：堆是在各位置存放条目的二叉树，并满足两条性质。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4552,7 +4552,7 @@
    "explanation": "根下标 1：左 2i = 28，右 2i+1 = 29，父 i/2 = 7。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4586,7 +4586,7 @@
    "explanation": "根下标 0：左 2i+1 = 29，右 2i+2 = 30，父 (i−1)/2 = 6（整除）。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4620,7 +4620,7 @@
    "explanation": "左 34，右 35，父 17/2 = 8（整除）。",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4648,7 +4648,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 8 · Heaps & Priority Queues (Ch20/24)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4684,7 +4684,7 @@
    "explanation": "讲义的四种哈希技术：Division、Extraction、Mid-Square、Folding。没有 Mean square。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4730,7 +4730,7 @@
    "explanation": "按 3 位分段：164 + 281 + 150 + 9 = 604；604 % 11 = 10。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4776,7 +4776,7 @@
    "explanation": "Boundary folding：隔一段反转。123 | 456 | 789 → 123 + 654 + 789 = 1566；1566 % 11 = 4。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4822,7 +4822,7 @@
    "explanation": "右移 4 位 = 整除 2⁴：67 / 16 = 4。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4868,7 +4868,7 @@
    "explanation": "67 / 8 = 8。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4912,7 +4912,7 @@
    "explanation": "87 / 16 = 5。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -4958,7 +4958,7 @@
    "explanation": "87 / 8 = 10。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -4994,15 +4994,15 @@
    "options": [
     "(K + j) % N",
     "(K + j²) % N",
-    "(K + j * 7 – K % 7) % N",
+    "(K + j * (7 – K % 7)) % N",
     "(K + 1 * 7 – K % 7) % N"
    ],
    "answer": "C",
    "answers": [],
-   "explanation": "双重哈希：(h(K) + j·h'(K)) % N，其中 h'(K) = 7 − K % 7（PRIME = 7）。C 即 (K + j·(7 − K%7)) % N。",
-   "note": "",
+   "explanation": "双重哈希：(h(K) + j·h'(K)) % N，其中 h'(K) = 7 − K % 7（PRIME = 7），即 C。",
+   "note": "题库B 原选项 C 印作 (K + j * 7 – K % 7) % N，少了括号：按运算优先级是 K + 7j − K%7，不是双重哈希（例如 N = 11、K = 15、j = 2 时得 6，正确应为 5）。本站补上括号。",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -5022,7 +5022,7 @@
     "options": [
      "(K + j) % N",
      "(K + j²) % N",
-     "(K + j * 7 – K % 7) % N",
+     "(K + j * (7 – K % 7)) % N",
      "(K + 1 * 7 – K % 7) % N"
     ]
    }
@@ -5046,7 +5046,7 @@
    "explanation": "Folding 又分 shift folding 和 boundary folding。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5079,7 +5079,7 @@
    "explanation": "讲义 “Parts of a Hash Function”：hash code 把 key 映射成整数，compression function 把整数压到 [0, N−1]。题库A 学长批注写的 perfect / good hash function 是哈希函数的种类，不是两部分。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5112,7 +5112,7 @@
    "explanation": "分段 164 | 281 | 509。Shift：164 + 281 + 509 = 954，954 % 11 = 8。Boundary（第二段反转为 182）：164 + 182 + 509 = 855，855 % 11 = 8。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5145,7 +5145,7 @@
    "explanation": "h(89) = 89 % 11 = 1；h'(89) = 7 − 89 % 7 = 7 − 5 = 2。i=1：(1 + 1×2) % 11 = 3；i=2：(1 + 2×2) % 11 = 5。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5178,7 +5178,7 @@
    "explanation": "h(15) = 15 % 11 = 4；h'(15) = 7 − 15 % 7 = 7 − 1 = 6。i=1：(4 + 6) % 11 = 10；i=2：(4 + 12) % 11 = 5。",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -5206,7 +5206,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf",
@@ -5243,7 +5243,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -5274,7 +5274,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "2023/24 春季期中真题"
@@ -5307,7 +5307,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "2025 秋季考试真题"
    ],
@@ -5338,7 +5338,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf",
     "课堂/会考提示"
@@ -5369,7 +5369,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5400,7 +5400,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 9 · Hashing (Ch27)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -5409,7 +5409,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>三种都是开放地址法（open addressing），从 k = h(key) = key % N 开始，位置被占就按规则找下一个（j = 0, 1, 2, …）：</p><p><b>(a) Linear probing</b>：index = (k + j) % N，逐格往后找；缺点是一次聚集（primary clustering）。<br><b>(b) Quadratic probing</b>：index = (k + j²) % N，依次看 k, k+1, k+4, k+9, …；避免一次聚集，但有二次聚集（secondary clustering）。<br><b>(c) Double hashing</b>：index = (h(key) + j·h'(key)) % N，h'(key) = PRIME − key % PRIME（PRIME 是小于 N 的素数，如 7）。</p><pre class=\"code\">int insert(int key) {\n    int k = key % N;\n    for (int j = 0; j &lt; N; j++) {\n        int index = (k + j) % N;          // (b) 改为 (k + j*j) % N；(c) 改为 (k + j*h2(key)) % N\n        if (table[index] == null) {\n            table[index] = key;\n            return index;\n        }\n    }\n    return -1;                            // 表满：rehash（容量翻倍后重新插入）\n}</pre><p>开放地址法一般保持负载因子 λ &lt; 0.5，超过就 rehashing。</p>",
+   "html": "<p>三种都是开放地址法（open addressing），从 k = h(key) = key % N 开始，位置被占就按规则找下一个（j = 0, 1, 2, …）：</p><p><b>(a) Linear probing</b>：index = (k + j) % N，逐格往后找；缺点是一次聚集（primary clustering）。<br><b>(b) Quadratic probing</b>：index = (k + j²) % N，依次看 k, k+1, k+4, k+9, …；避免一次聚集，但有二次聚集（secondary clustering）。<br><b>(c) Double hashing</b>：index = (h(key) + j·h'(key)) % N，h'(key) = PRIME − key % PRIME（PRIME 是小于 N 的素数，如 7）。</p><pre class=\"code\">int insert(int key) {\n    int k = key % N;\n    for (int j = 0; j &lt; N; j++) {\n        int index = (k + j) % N;          // (b) 改为 (k + j*j) % N；(c) 改为 (k + j*h2(key)) % N\n        if (table[index] == null) {\n            table[index] = key;\n            return index;\n        }\n    }\n    return -1;                            // 探测失败：rehash（容量翻倍后重新插入）\n}</pre><p>线性探测、双重哈希（N 为素数）探测 N 次都失败，说明表已满。二次探测最多只能访问约一半的位置，所以要保持负载因子 λ &lt; 0.5 且 N 为素数，才能保证一定插得进去；开放地址法一般在 λ 超过 0.5 时就 rehashing。</p>",
    "zh": {
     "text": "分别写出线性探测、二次探测和双重哈希的算法。",
     "options": []
@@ -5432,7 +5432,7 @@
    "explanation": "有序表应使用二分查找 O(log n)，线性查找是 O(n)。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5472,7 +5472,7 @@
    "explanation": "同上，有序时二分查找更好。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5509,10 +5509,10 @@
    ],
    "answer": "B",
    "answers": [],
-   "explanation": "位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。",
+   "explanation": "前提是列表有序（二分查找要求有序）：位于最后的元素，线性查找要比较 N 次，二分查找约 log₂N 次，所以说法错误。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5524,8 +5524,8 @@
    ],
    "part": "final",
    "option_explanations": [
-    "不选。位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。",
-    "应选。位于最后的元素：线性查找要比较 N 次，二分查找约 log₂N 次。"
+    "不选。前提是列表有序（二分查找要求有序）：位于最后的元素，线性查找要比较 N 次，二分查找约 log₂N 次，所以说法错误。",
+    "应选。前提是列表有序（二分查找要求有序）：位于最后的元素，线性查找要比较 N 次，二分查找约 log₂N 次，所以说法错误。"
    ],
    "zh": {
     "text": "位于下标 N-1 的键用线性查找比二分查找更快。",
@@ -5549,10 +5549,10 @@
    ],
    "answer": "A",
    "answers": [],
-   "explanation": "二分查找约 log₂N 次比较，远少于线性查找的 N 次。",
+   "explanation": "前提是列表有序（二分查找要求有序）：二分查找约 log₂N 次比较，远少于线性查找的 N 次。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5564,8 +5564,8 @@
    ],
    "part": "final",
    "option_explanations": [
-    "应选。二分查找约 log₂N 次比较，远少于线性查找的 N 次。",
-    "不选。二分查找约 log₂N 次比较，远少于线性查找的 N 次。"
+    "应选。前提是列表有序（二分查找要求有序）：二分查找约 log₂N 次比较，远少于线性查找的 N 次。",
+    "不选。前提是列表有序（二分查找要求有序）：二分查找约 log₂N 次比较，远少于线性查找的 N 次。"
    ],
    "zh": {
     "text": "位于下标 N-1 的键用二分查找比线性查找更快。",
@@ -5591,7 +5591,7 @@
    "explanation": "归并排序、快速排序（平均）都是 O(n log n)。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5618,12 +5618,12 @@
    "options": [],
    "answer": null,
    "answers": [
-    "Towers of Hanoi (exponential time)"
+    "Towers of Hanoi / recursive Fibonacci (exponential time)"
    ],
-   "explanation": "O(2ⁿ) 是指数时间，讲义例子是汉诺塔。",
+   "explanation": "O(2ⁿ) 是指数时间，例如汉诺塔（移动 2ⁿ − 1 次，Lecture 1），以及 Lecture 10 举的递归求 Fibonacci。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -5653,7 +5653,7 @@
    "explanation": "题库A 版本问的是 “… sort”，学长批注 “not any common”：常见排序都是 O(n²) 或 O(n log n)。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf"
    ],
@@ -5684,7 +5684,7 @@
    "explanation": "哈密顿回路经过每个顶点恰好一次并回到起点。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5718,7 +5718,7 @@
    "explanation": "2⁴ = 16，2⁵ = 32，2⁸ = 256。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5750,7 +5750,7 @@
    "explanation": "忽略常数系数和低阶项。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5782,7 +5782,7 @@
    "explanation": "两层各约 n 次。（原题内外层都写 i，实际会编译错误，按两层 n 次理解）",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5814,7 +5814,7 @@
    "explanation": "公式 1 + 2 + … + n = n(n+1)/2。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5846,7 +5846,7 @@
    "explanation": "公式 n(n+1)/2。",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -5874,7 +5874,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5905,7 +5905,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5936,7 +5936,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5947,7 +5947,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>外层循环执行 n 次；外层每执行一次，内层循环执行 n 次；循环体 k = k + 1 共执行 n × n = n² 次。<br>T(n) = c·n² + （循环控制的低阶项）= <b>O(n²)</b>。</p>",
+   "html": "<p>外层循环执行 n 次；外层每执行一次，内层循环执行 n 次；循环体 k = k + 1 共执行 n × n = n² 次。<br>T(n) = c·n² + （循环控制的低阶项）= <b>O(n²)</b>。</p><p class='muted'>注：题目原代码把 int k = k + 1 直接当作没有花括号的循环体，Java 无法编译（声明语句不能单独作循环体，而且 k 未初始化），这里按 k = k + 1 理解。</p>",
    "zh": {
     "text": "计算下面两层 n 次循环的时间复杂度，写出步骤。",
     "options": []
@@ -5967,7 +5967,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 10 · Analysis of Algorithms (Ch22)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -5978,7 +5978,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>外层 n 次，内层固定 5 次，循环体执行 5n 次。<br>T(n) = 5n = <b>O(n)</b>（常数 5 忽略）。</p>",
+   "html": "<p>外层 n 次，内层固定 5 次，循环体执行 5n 次。<br>T(n) = 5n = <b>O(n)</b>（常数 5 忽略）。</p><p class='muted'>注：原代码 int k = k + 1 作为无花括号循环体在 Java 中无法编译，这里按 k = k + 1 理解。</p>",
    "zh": {
     "text": "计算外层 n 次、内层 5 次的循环的时间复杂度。",
     "options": []
@@ -6000,7 +6000,7 @@
    "explanation": "每次 pivot 都选到最大或最小值（例如已排好序的表取第一个元素为 pivot），划分极不平衡。",
    "note": "",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -6028,7 +6028,7 @@
    "explanation": "",
    "note": "题库原文写成 “partition technique of the selection sort”，按课上的快速排序理解。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6039,7 +6039,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 3 −1 5 2]，p=0</td><td>3 ↔ −1</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
+   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 3 −1 5 2]，p=0</td><td>3 ↔ −1</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 3 -1 5 2 排序。",
     "options": []
@@ -6059,7 +6059,7 @@
    "explanation": "",
    "note": "题库原文写成 “partition technique of the selection sort”，按课上的快速排序理解。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6070,7 +6070,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 −1 3 5 2]，p=0</td><td>无交换</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
+   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>[0 −1 3 5 2]，p=0</td><td>无交换</td><td>[−1] <b>0</b> [3 5 2]</td></tr><tr><td>[3 5 2]，p=3</td><td>5 ↔ 2</td><td>[2] <b>3</b> [5]</td></tr></table><p>结果：<b>−1 0 2 3 5</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 0 -1 3 5 2 排序。",
     "options": []
@@ -6090,7 +6090,7 @@
    "explanation": "",
    "note": "题库原文写成 “partition technique of the selection sort”，按课上的快速排序理解。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6101,7 +6101,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=38</td><td>81 ↔ 14，48 ↔ 13</td><td>[13 14 22] <b>38</b> [48 69 93 81 45 58 79 72]</td></tr><tr><td>[13 14 22]，p=13</td><td>无</td><td><b>13</b> [14 22]，再 p=14 → <b>14</b> [22]</td></tr><tr><td>[48 69 93 81 45 58 79 72]，p=48</td><td>69 ↔ 45</td><td>[45] <b>48</b> [93 81 69 58 79 72]</td></tr><tr><td>[93 81 69 58 79 72]，p=93</td><td>无</td><td>[72 81 69 58 79] <b>93</b></td></tr><tr><td>[72 81 69 58 79]，p=72</td><td>81 ↔ 58</td><td>[69 58] <b>72</b> [81 79]</td></tr><tr><td>[69 58]，p=69；[81 79]，p=81</td><td>无</td><td>58 <b>69</b>；79 <b>81</b></td></tr></table><p>结果：<b>13 14 22 38 45 48 58 69 72 79 81 93</b></p>",
+   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=38</td><td>81 ↔ 14，48 ↔ 13</td><td>[13 14 22] <b>38</b> [48 69 93 81 45 58 79 72]</td></tr><tr><td>[13 14 22]，p=13</td><td>无</td><td><b>13</b> [14 22]，再 p=14 → <b>14</b> [22]</td></tr><tr><td>[48 69 93 81 45 58 79 72]，p=48</td><td>69 ↔ 45</td><td>[45] <b>48</b> [93 81 69 58 79 72]</td></tr><tr><td>[93 81 69 58 79 72]，p=93</td><td>无</td><td>[72 81 69 58 79] <b>93</b></td></tr><tr><td>[72 81 69 58 79]，p=72</td><td>81 ↔ 58</td><td>[69 58] <b>72</b> [81 79]</td></tr><tr><td>[69 58]，p=69；[81 79]，p=81</td><td>无</td><td>58 <b>69</b>；79 <b>81</b></td></tr></table><p>结果：<b>13 14 22 38 45 48 58 69 72 79 81 93</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 38 81 22 48 13 69 93 14 45 58 79 72 排序。",
     "options": []
@@ -6121,7 +6121,7 @@
    "explanation": "",
    "note": "题库原文写成 “partition technique of the selection sort”，按课上的快速排序理解。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6132,7 +6132,7 @@
     "B"
    ],
    "part": "final",
-   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=4</td><td>5 ↔ 3</td><td>[3 3 2 4 1] <b>4</b> [5 9 5 8 9 7]</td></tr><tr><td>[3 3 2 4 1]，p=3</td><td>4 ↔ 1</td><td>[1 3 2] <b>3</b> [4]</td></tr><tr><td>[1 3 2]，p=1；[3 2]，p=3</td><td>无</td><td><b>1</b> [3 2] → [2] <b>3</b></td></tr><tr><td>[5 9 5 8 9 7]，p=5</td><td>9 ↔ 5</td><td>[5] <b>5</b> [9 8 9 7]</td></tr><tr><td>[9 8 9 7]，p=9</td><td>无</td><td>[7 8 9] <b>9</b></td></tr><tr><td>[7 8 9]，p=7；[8 9]，p=8</td><td>无</td><td><b>7</b> [8 9] → <b>8</b> [9]</td></tr></table><p>结果：<b>1 2 3 3 4 4 5 5 7 8 9 9</b></p>",
+   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=4</td><td>5 ↔ 3</td><td>[3 3 2 4 1] <b>4</b> [5 9 5 8 9 7]</td></tr><tr><td>[3 3 2 4 1]，p=3</td><td>4 ↔ 1</td><td>[1 3 2] <b>3</b> [4]</td></tr><tr><td>[1 3 2]，p=1；[3 2]，p=3</td><td>无</td><td><b>1</b> [3 2] → [2] <b>3</b></td></tr><tr><td>[5 9 5 8 9 7]，p=5</td><td>9 ↔ 5 → 5 5 9 8 9 7；high 跳过 ≥ 5 的元素一直退到 pivot，pivot 不大于 list[high]，留在原位</td><td><b>5</b> [5 9 8 9 7]</td></tr><tr><td>[5 9 8 9 7]，p=5</td><td>无</td><td><b>5</b> [9 8 9 7]</td></tr><tr><td>[9 8 9 7]，p=9</td><td>无</td><td>[7 8 9] <b>9</b></td></tr><tr><td>[7 8 9]，p=7；[8 9]，p=8</td><td>无</td><td><b>7</b> [8 9] → <b>8</b> [9]</td></tr></table><p>结果：<b>1 2 3 3 4 4 5 5 7 8 9 9</b></p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 4 5 2 4 1 3 5 9 3 8 9 7 排序。",
     "options": []
@@ -6152,7 +6152,7 @@
    "explanation": "",
    "note": "课堂板书例题；会考提示：Lecture 11 的 quick sort 会考。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf",
     "课堂/会考提示"
@@ -6163,7 +6163,7 @@
     "K"
    ],
    "part": "final",
-   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，把 pivot 与 high 位置的元素交换，pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=5</td><td>9 ↔ 1，8 ↔ 0 → 5 2 1 3 0 4 8 9 6 7</td><td>[4 2 1 3 0] <b>5</b> [8 9 6 7]</td></tr><tr><td>[4 2 1 3 0]，p=4</td><td>无</td><td>[0 2 1 3] <b>4</b></td></tr><tr><td>[0 2 1 3]，p=0；[2 1 3]，p=2</td><td>无</td><td><b>0</b> [2 1 3] → [1] <b>2</b> [3]</td></tr><tr><td>[8 9 6 7]，p=8</td><td>9 ↔ 7</td><td>[6 7] <b>8</b> [9]</td></tr><tr><td>[6 7]，p=6</td><td>无</td><td><b>6</b> [7]</td></tr></table><p>结果：<b>0 1 2 3 4 5 6 7 8 9</b>（第一轮的两次交换与课堂板书一致）</p>",
+   "html": "<p>方法（Liang Listing 23.8，课上用的 partition）：pivot = 子表第一个元素；low 从第二个元素向右找第一个 <b>&gt; pivot</b> 的元素，high 从最后向左找第一个 <b>≤ pivot</b> 的元素；low &lt; high 时交换；两者交错后，high 继续向左跳过 <b>≥ pivot</b> 的元素（但不越过 pivot 本身）；若 pivot &gt; list[high]，把 pivot 与 list[high] 交换，否则 pivot 留在原位。pivot 就到了最终位置，再对左右两段递归。</p><table class=\"ans-table \"><tr><th>子表 / pivot</th><th>low 找第一个 &gt; pivot、high 找第一个 ≤ pivot，交换</th><th>pivot 归位后</th></tr><tr><td>全表，p=5</td><td>9 ↔ 1，8 ↔ 0 → 5 2 1 3 0 4 8 9 6 7</td><td>[4 2 1 3 0] <b>5</b> [8 9 6 7]</td></tr><tr><td>[4 2 1 3 0]，p=4</td><td>无</td><td>[0 2 1 3] <b>4</b></td></tr><tr><td>[0 2 1 3]，p=0；[2 1 3]，p=2</td><td>无</td><td><b>0</b> [2 1 3] → [1] <b>2</b> [3]</td></tr><tr><td>[8 9 6 7]，p=8</td><td>9 ↔ 7</td><td>[6 7] <b>8</b> [9]</td></tr><tr><td>[6 7]，p=6</td><td>无</td><td><b>6</b> [7]</td></tr></table><p>结果：<b>0 1 2 3 4 5 6 7 8 9</b>（第一轮的两次交换与课堂板书一致）</p>",
    "zh": {
     "text": "用快速排序的划分（partition）方法，每次取第一个元素为 pivot，对列表 5 2 9 3 8 4 0 1 6 7 排序。",
     "options": []
@@ -6183,7 +6183,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6214,7 +6214,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6245,7 +6245,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -6274,7 +6274,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -6303,7 +6303,7 @@
    "explanation": "",
    "note": "课堂例题：2024-05-09 会考照片（Partition around 70 / 80）；会考提示：Lecture 11 的 quick sort 会考。",
    "references": "Lecture 11 · Sorting (Ch23)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "课堂/会考提示"
    ],
@@ -6335,7 +6335,7 @@
    "explanation": "课上定义：左 < 父 ≤ 右，重复元素放到右子树。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6372,10 +6372,10 @@
    ],
    "answer": "B",
    "answers": [],
-   "explanation": "左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。",
+   "explanation": "按课上（Lecture 14）的定义：左 < 父 ≤ 右，重复元素一律放右子树，左边写 ≤ 与此不符，所以为 False。注意这是定义约定：CLRS 等教材允许两边都用 ≤。另外严格地说，BST 性质要对整棵左右子树成立，而不只是直接孩子。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -6385,8 +6385,8 @@
    ],
    "part": "final",
    "option_explanations": [
-    "不选。左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。",
-    "应选。左边用了 ≤，与课上定义（左子严格小于父）不符；重复元素只放一侧。"
+    "不选。按课上（Lecture 14）的定义：左 < 父 ≤ 右，重复元素一律放右子树，左边写 ≤ 与此不符，所以为 False。注意这是定义约定：CLRS 等教材允许两边都用 ≤。另外严格地说，BST 性质要对整棵左右子树成立，而不只是直接孩子。",
+    "应选。按课上（Lecture 14）的定义：左 < 父 ≤ 右，重复元素一律放右子树，左边写 ≤ 与此不符，所以为 False。注意这是定义约定：CLRS 等教材允许两边都用 ≤。另外严格地说，BST 性质要对整棵左右子树成立，而不只是直接孩子。"
    ],
    "zh": {
     "text": "逻辑式 ∀ parentNode(n) → leftChild(l) ≤ parentNode(n) ≤ rightChild(r) 描述了含重复元素的 BST 中节点的大小关系。",
@@ -6415,7 +6415,7 @@
    "explanation": "BST：左孩子 < 父 ≤ 右孩子。题库B 另一版用 leftChild(u) < parent(x) ≤ rightChild(y) 写法，答案相同。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6461,7 +6461,7 @@
    "explanation": "AVL 树用左右子树高度差（平衡因子）判断是否旋转。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6502,12 +6502,12 @@
     "node height",
     "node depth"
    ],
-   "answer": "B",
+   "answer": "BC",
    "answers": [],
-   "explanation": "AVL 根据平衡因子（由高度算出）决定是否旋转、做哪种旋转。",
+   "explanation": "B、C 都对。AVL 每个节点保存高度，由左右子树高度算出平衡因子，平衡因子超出 {−1, 0, 1} 就旋转。平衡因子是直接判据，高度是它的依据；L13-MC02 也把“用高度平衡”的树答作 AVL。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -6518,8 +6518,8 @@
    "part": "final",
    "option_explanations": [
     "红黑树用颜色。",
-    "应选。",
-    "高度用来计算平衡因子，题目答案取平衡因子。",
+    "应选。直接决定是否旋转、做哪种旋转。",
+    "应选。节点保存高度，平衡因子由高度算出。",
     "深度无关。"
    ],
    "zh": {
@@ -6548,7 +6548,7 @@
    "explanation": "左子树所有元素小于它，右子树所有元素大于等于它。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6580,7 +6580,7 @@
    "explanation": "Lecture 13 的做法：Case 1 无左孩子 → 父节点直接连右孩子；Case 2 有左孩子 → 用左子树最右节点替换。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6612,7 +6612,7 @@
    "explanation": "课上主写法 bf = h(right) − h(left)；讲义也提到可以用 left − right。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6644,7 +6644,7 @@
    "explanation": "超出这个范围就要旋转。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6678,7 +6678,7 @@
    "explanation": "AVL 一章按节点数算高度（叶子 = 1）：100 → 67 → 87，高度 3；55 子树高 2。bf(60) = 3 − 2 = 1，bf ≥ +1 为 right-heavy。（BST 一章定义单节点高度 0，若按那个算 height(100) = 2，bf 不变。）",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6710,7 +6710,7 @@
    "explanation": "115 有左子树（13 → 20 → 32），左子树最右节点是 32。若用右子树最小节点则是 200，但课上规则是左子树最右。",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6740,7 +6740,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6771,7 +6771,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6802,7 +6802,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6833,7 +6833,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6864,7 +6864,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6895,7 +6895,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6926,7 +6926,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6957,7 +6957,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -6988,7 +6988,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 13 · BST & AVL Trees (Ch26)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7022,7 +7022,7 @@
    "explanation": "红黑树性质：从任一节点到其后代叶子（NIL）的每条简单路径上黑节点数相同（black height）。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7062,7 +7062,7 @@
    "explanation": "红节点的孩子必须是黑色，不能有两个相邻（父子）红节点；出现即违规，需要重新着色或旋转。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7104,7 +7104,7 @@
    "explanation": "叶子（NIL）节点是黑色的。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7150,7 +7150,7 @@
    "explanation": "两个连续红节点是违规，树是不平衡（imbalanced）的，要重新着色/旋转。C 说“balanced”是错的。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7196,7 +7196,7 @@
    "explanation": "black height 相同。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7240,7 +7240,7 @@
    "explanation": "Lecture 14 编号：Case 1 叔叔红；Case 2(a) LR、Case 2(b) RL（双旋）；Case 3(a) LL、Case 3(b) RR（单旋）。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7284,7 +7284,7 @@
    "explanation": "RL：先右旋父节点 p，变成 RR，再按 RR 处理（左旋 g）。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7328,7 +7328,7 @@
    "explanation": "LL：右旋祖父 g，并交换 g 与 p 的颜色。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7372,7 +7372,7 @@
    "explanation": "Case 1：p、u 涂黑，g 涂红（若 g 是根再涂黑，否则继续向上检查）。不需要旋转。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7416,7 +7416,7 @@
    "explanation": "Case 3(b) RR：左旋 g，交换 g 与 p 的颜色。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
@@ -7460,7 +7460,7 @@
    "explanation": "红黑树用节点颜色维持平衡。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7503,7 +7503,7 @@
    "explanation": "新节点先涂红，不改变黑高，再修复可能出现的连续红。",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7533,7 +7533,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7564,7 +7564,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7595,7 +7595,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7626,7 +7626,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7657,7 +7657,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库A · Stud_Bank.pdf",
     "题库B · 2025.12.8 DSA Bank.pdf"
@@ -7688,7 +7688,7 @@
    "explanation": "",
    "note": "",
    "references": "Lecture 14 · Red-Black Trees (Ch43)",
-   "review_revision": "2026-10-22.1",
+   "review_revision": "2026-10-27.1",
    "sources": [
     "题库B · 2025.12.8 DSA Bank.pdf"
    ],
